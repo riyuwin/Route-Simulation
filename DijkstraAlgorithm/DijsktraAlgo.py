@@ -78,7 +78,7 @@ def CreateGraph():
     customGraph.addNode("ALAWIHAOP8")
     customGraph.addNode("ALAWIHAOP9")
     customGraph.addNode("ALAWIHAOP10")
-    customGraph.addNode("HATDOG")   
+    customGraph.addNode("HATDOG12345")   
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
