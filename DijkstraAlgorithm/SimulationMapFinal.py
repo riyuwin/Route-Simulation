@@ -132,23 +132,72 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1145746, 122.9415359]) 
 
             raw_routes.append(LAGON6)
-        
-         # MANTAGABAC
-        if i == 'MANTAGBACP9':
-            MANTAGBACP9 = map_widget.set_marker(14.1177123, 122.9460971, text="MANTAGBACP9")
-            MANTAGBACP9R1 = map_widget.set_marker(14.1169254, 122.9463036, text="")
-            MANTAGBACP9R2 = map_widget.set_marker(14.1168019, 122.9462929, text="")
+
+
+        if i == 'ALAWIHAOP1':
+            ALAWIHAOPR1 = map_widget.set_marker(14.1116075, 122.9333130, text="ALAWIHAOP1") 
             
-            raw_coordinates.append([14.1177123, 122.9460971]) 
-            raw_coordinates.append([14.1169254, 122.9463036])
-            raw_coordinates.append([14.1168019, 122.9462929])
+            raw_coordinates.append([14.1116075, 122.9333130])  
 
-            raw_routes.append(MANTAGBACP9)
-            raw_routes.append(MANTAGBACP9R1)
-            raw_routes.append(MANTAGBACP9R2)
+            raw_routes.append(ALAWIHAOPR1)
+
+        if i == 'ALAWIHAOP2':
+            ALAWIHAOPR2 = map_widget.set_marker(14.110115305360178, 122.9301106387936, text="ALAWIHAOP2") 
+            
+            raw_coordinates.append([14.110115305360178, 122.9301106387936]) # 
+
+            raw_routes.append(ALAWIHAOPR2)
+
+        if i == 'ALAWIHAOP3':
+            ALAWIHAOPR3 = map_widget.set_marker(14.1071302, 122.9266863, text="ALAWIHAOP3") 
+            
+            raw_coordinates.append([14.1071302, 122.9266863]) #14.1072151 122.9266099 
+
+            raw_routes.append(ALAWIHAOPR3)
+
+        if i == 'ALAWIHAOP4':
+            ALAWIHAOPR41 = map_widget.set_marker(14.1063920, 122.9255939, text="ALAWIHAOP4")
+            ALAWIHAOPR42 = map_widget.set_marker(14.1060704, 122.9241374, text="ALAWIHAOP4") #14.1063095 122.9223818
+            ALAWIHAOPR43 = map_widget.set_marker(14.1063095, 122.9223818, text="ALAWIHAOP4")
+            
+            raw_coordinates.append([14.1063920, 122.9255939]) #14.1067043, 122.9184628
+            raw_coordinates.append([14.1060704, 122.9241374])
+            raw_coordinates.append([14.1063095, 122.9223818])
+
+            raw_routes.append(ALAWIHAOPR41)
+            raw_routes.append(ALAWIHAOPR42)
+            raw_routes.append(ALAWIHAOPR43)
+        
+        if i == 'ALAWIHAOP6':
+            ALAWIHAOPR6 = map_widget.set_marker(14.1067139, 122.9174642, text="ALAWIHAOP6")
+            
+            raw_coordinates.append([14.1067139, 122.9174642])
+            
+            raw_routes.append(ALAWIHAOPR6)
+
+        if i == 'ALAWIHAOP8':
+            ALAWIHAOPR8 = map_widget.set_marker(14.1066948, 122.9174276, text="ALAWIHAOP8")
+            
+            raw_coordinates.append([14.1066948, 122.9174276])
+            
+            raw_routes.append(ALAWIHAOPR8)
+           
+        if i == 'ALAWIHAOP5':
+            ALAWIHAOPR5 = map_widget.set_marker(14.1055357, 122.9174664, text="ALAWIHAOP5")
+            
+            raw_coordinates.append([14.1055357, 122.9174664])
+            
+            raw_routes.append(ALAWIHAOPR5)
+
+        if i == 'ALAWIHAOP8':
+            ALAWIHAOPR8 = map_widget.set_marker(14.1060501, 122.9142542, text="ALAWIHAOP8")
+            
+            raw_coordinates.append([14.1060501, 122.9142542])
+            
+            raw_routes.append(ALAWIHAOPR8)
 
 
-
+        
     return raw_routes, raw_coordinates
 
 def Set(destination):
@@ -214,6 +263,10 @@ map_widget.set_zoom(14)
 
 map_widget.pack()
 
+
+
+
+
 lagon_btn = Button(my_label, text="LAGON", command=lambda:Set('LAGON'))
 lagon_btn.pack(side="left")
 
@@ -238,14 +291,39 @@ lagonp6_btn.pack(side="left")
 lagonp7_btn = Button(my_label, text="LAGONP7", command=lambda:Set('LAGONP7'))
 lagonp7_btn.pack(side="left")
 
-
-
-
-
-
-
 lagonp6_btn = Button(my_label, text="LAGONP6", command=lambda:Set('LAGONP6'))
 lagonp6_btn.pack(side="left")
+
+alawihaop1_btn = Button(my_label, text="ALAWIHAOP1", command=lambda:Set('ALAWIHAOP1'))
+alawihaop1_btn.pack(side="left")
+
+alawihaop2_btn = Button(my_label, text="ALAWIHAOP2", command=lambda:Set('ALAWIHAOP2'))
+alawihaop2_btn.pack(side="left")
+
+alawihaop3_btn = Button(my_label, text="ALAWIHAOP3", command=lambda:Set('ALAWIHAOP3'))
+alawihaop3_btn.pack(side="left")
+
+alawihaop4_btn = Button(my_label, text="ALAWIHAOP4", command=lambda:Set('ALAWIHAOP4'))
+alawihaop4_btn.pack(side="left")
+
+alawihaop5_btn = Button(my_label, text="ALAWIHAOP5", command=lambda:Set('ALAWIHAOP5'))
+alawihaop5_btn.pack(side="left")
+
+alawihaop6_btn = Button(my_label, text="ALAWIHAOP6", command=lambda:Set('ALAWIHAOP6'))
+alawihaop6_btn.pack(side="left")
+
+alawihaop7_btn = Button(my_label, text="ALAWIHAOP7", command=lambda:Set('ALAWIHAOP7'))
+alawihaop7_btn.pack(side="left")
+
+alawihaop8_btn = Button(my_label, text="ALAWIHAOP8", command=lambda:Set('ALAWIHAOP8'))
+alawihaop8_btn.pack(side="left")
+
+alawihaop9_btn = Button(my_label, text="ALAWIHAOP9", command=lambda:Set('ALAWIHAOP9'))
+alawihaop9_btn.pack(side="left")
+
+alawihaop10_btn = Button(my_label, text="ALAWIHAOP10", command=lambda:Set('ALAWIHAOP10'))
+alawihaop10_btn.pack(side="left")
+
 
 remove_coordinates_button = Button(root, text="Reset", background="black", fg="gold", width=10, height=2, command=RemoveCoordinates)
 canvas.create_window(1130, 600, window=remove_coordinates_button)
