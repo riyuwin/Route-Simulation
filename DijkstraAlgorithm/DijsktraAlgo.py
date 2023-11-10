@@ -68,8 +68,16 @@ def CreateGraph():
     customGraph.addNode("LAGONP5")
     customGraph.addNode("LAGONP6")
     customGraph.addNode("LAGONP7")  
-    customGraph.addNode("MANTAGBACP9")  
-    customGraph.addNode("MANTAGBACP10") 
+    customGraph.addNode("ALAWIHAOP1") 
+    customGraph.addNode("ALAWIHAOP2")  
+    customGraph.addNode("ALAWIHAOP3")
+    customGraph.addNode("ALAWIHAOP4")
+    customGraph.addNode("ALAWIHAOP5")
+    customGraph.addNode("ALAWIHAOP6") 
+    customGraph.addNode("ALAWIHAOP7")  
+    customGraph.addNode("ALAWIHAOP8")
+    customGraph.addNode("ALAWIHAOP9")
+    customGraph.addNode("ALAWIHAOP10")    
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
@@ -79,7 +87,16 @@ def CreateGraph():
     customGraph.addEdge("LAGON", "LAGONP5", 400, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP7", 550, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP6", 130, 1, 2)
-    customGraph.addEdge("BFP", "MANTAGBACP9", 500, 1, 2)
+    customGraph.addEdge("LAGONP7", "ALAWIHAOP1", 650, 1, 2)
+    customGraph.addEdge("ALAWIHAOP1", "ALAWIHAOP2", 290, 1, 2)
+    customGraph.addEdge("ALAWIHAOP2", "ALAWIHAOP3", 700, 1, 2)
+    customGraph.addEdge("ALAWIHAOP3", "ALAWIHAOP4", 700, 1, 2)
+    customGraph.addEdge("ALAWIHAOP4", "ALAWIHAOP6", 350, 1, 2)
+    customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP5", 350, 1, 2)
+    customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP7", 350, 1, 2)
+    customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP9", 640, 1, 2)
+    customGraph.addEdge("ALAWIHAOP7", "ALAWIHAOP10", 450, 1, 2)
+    customGraph.addEdge("ALAWIHAOP8", "ALAWIHAOP5", 290, 1, 2)
 
     return customGraph
 
@@ -193,4 +210,4 @@ def GetShortestPath(Initial, Destination):
 
     return shortest_path, shortest_distance
 
-GetShortestPath("BFP", "LAGONP2")
+GetShortestPath("BFP", "ALAWIHAOP10")
