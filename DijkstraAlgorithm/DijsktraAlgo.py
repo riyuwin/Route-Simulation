@@ -68,6 +68,7 @@ def CreateGraph():
     customGraph.addNode("LAGONP5")
     customGraph.addNode("LAGONP6")
     customGraph.addNode("LAGONP7")  
+    customGraph.addNode("MANTAGBACP9")  
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
@@ -77,6 +78,7 @@ def CreateGraph():
     customGraph.addEdge("LAGON", "LAGONP5", 400, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP7", 550, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP6", 130, 1, 2)
+    customGraph.addEdge("BFP", "MANTAGBACP9", 500, 1, 2)
 
     return customGraph
 
