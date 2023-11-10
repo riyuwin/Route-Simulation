@@ -132,6 +132,21 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1145746, 122.9415359]) 
 
             raw_routes.append(LAGON6)
+        
+         # MANTAGABAC
+        if i == 'MANTAGBACP9':
+            MANTAGBACP9 = map_widget.set_marker(14.1177123, 122.9460971, text="MANTAGBACP9")
+            MANTAGBACP9R1 = map_widget.set_marker(14.1169254, 122.9463036, text="")
+            MANTAGBACP9R2 = map_widget.set_marker(14.1168019, 122.9462929, text="")
+            
+            raw_coordinates.append([14.1177123, 122.9460971]) 
+            raw_coordinates.append([14.1169254, 122.9463036])
+            raw_coordinates.append([14.1168019, 122.9462929])
+
+            raw_routes.append(MANTAGBACP9)
+            raw_routes.append(MANTAGBACP9R1)
+            raw_routes.append(MANTAGBACP9R2)
+
 
 
     return raw_routes, raw_coordinates
@@ -198,10 +213,6 @@ map_widget.set_address("Daet, Camarines Norte, Philippines")
 map_widget.set_zoom(14)
 
 map_widget.pack()
-
-
-
-
 
 lagon_btn = Button(my_label, text="LAGON", command=lambda:Set('LAGON'))
 lagon_btn.pack(side="left")
