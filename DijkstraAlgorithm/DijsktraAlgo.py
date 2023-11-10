@@ -80,19 +80,13 @@ def CreateGraph():
     customGraph.addNode("ALAWIHAOP10")
     customGraph.addNode("HATDOG12345")  
     customGraph.addNode("HATDOG1234523")
-    customGraph.addNode("HATDOG12345241525232")      
-<<<<<<< Updated upstream
+    customGraph.addNode("HATDOG12345241525232")       
     customGraph.addNode("xenia")
     customGraph.addNode("SEAN LADO")
-    customGraph.addNode("AYYYY NAKO") 
-<<<<<<< Updated upstream
-    customGraph.addNode("CAMI") 
-=======
-=======
+    customGraph.addNode("AYYYY NAKO")  
+    customGraph.addNode("CAMI")  
     customGraph.addNode("xenia") 
-    customGraph.addNode("sida NA")
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    customGraph.addNode("sida NA") 
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
