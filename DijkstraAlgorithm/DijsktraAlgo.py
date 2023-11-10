@@ -86,7 +86,7 @@ def CreateGraph():
     customGraph.addNode("AYYYY NAKO")  
     customGraph.addNode("CAMI")  
     customGraph.addNode("xenia") 
-    customGraph.addNode("sida NA") 
+    customGraph.addNode("sida NA")
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
@@ -106,6 +106,22 @@ def CreateGraph():
     customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP9", 640, 1, 2)
     customGraph.addEdge("ALAWIHAOP7", "ALAWIHAOP10", 450, 1, 2)
     customGraph.addEdge("ALAWIHAOP8", "ALAWIHAOP5", 290, 1, 2)
+
+    # Cobangbang
+    customGraph.addNode("COBANGBANGP1")
+    customGraph.addNode("COBANGBANGP2") 
+    customGraph.addNode("COBANGBANGP3") 
+    customGraph.addNode("COBANGBANGP4") 
+    customGraph.addNode("COBANGBANGP5") 
+    customGraph.addNode("COBANGBANGP6")
+    
+    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 3, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP2", 2700, 3, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 3, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP4", 3100, 3, 2)  
+    customGraph.addEdge("BFP", "COBANGBANGP5", 3100, 3, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP6", 3400, 3, 2)
+    
 
     return customGraph
 
