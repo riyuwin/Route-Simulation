@@ -336,15 +336,14 @@ def GetCoordinates(routes):
             raw_routes.append(COBANGBANGR11)
             raw_routes.append(COBANGBANGR12)
 
-        if i == 'COBANGBANGP6':
+        if i == 'COBANGBANGP1':
             COBANGBANGR1 = map_widget.set_marker(14.1176768, 122.9459699, text="")
             COBANGBANGR2 = map_widget.set_marker(14.1191045, 122.9504538, text="")
             COBANGBANGR3 = map_widget.set_marker(14.1156229, 122.9560923, text="")
             COBANGBANGR4 = map_widget.set_marker(14.1155481, 122.9565657, text="")
             COBANGBANGR5 = map_widget.set_marker(14.1129123, 122.9560684, text="")
             COBANGBANGR6 = map_widget.set_marker(14.1051243, 122.9562600, text="")
-            COBANGBANGR7 = map_widget.set_marker(14.1050619, 122.9565872, text="COBANGBANGP6")
-
+            COBANGBANGR7 = map_widget.set_marker(14.1050619, 122.9565872, text="COBANGBANGP1")
 
             raw_coordinates.append([14.1176768, 122.9459699])
             raw_coordinates.append([14.1191045, 122.9504538])
@@ -362,6 +361,45 @@ def GetCoordinates(routes):
             raw_routes.append(COBANGBANGR6)
             raw_routes.append(COBANGBANGR7)
 
+        if i == 'COBANGBANGP6':
+            COBANGBANGR1 = map_widget.set_marker(14.1176768, 122.9459699, text="")
+            COBANGBANGR2 = map_widget.set_marker(14.1191045, 122.9504538, text="")
+            COBANGBANGR3 = map_widget.set_marker(14.1156229, 122.9560923, text="")
+            COBANGBANGR4 = map_widget.set_marker(14.1155481, 122.9565657, text="")
+            COBANGBANGR5 = map_widget.set_marker(14.1129123, 122.9560684, text="")
+            COBANGBANGR6 = map_widget.set_marker(14.1123827, 122.9589967, text="")
+            COBANGBANGR7 = map_widget.set_marker(14.1092531, 122.9591187, text="")
+            COBANGBANGR8 = map_widget.set_marker(14.1068418, 122.9604321, text="")
+            COBANGBANGR9 = map_widget.set_marker(14.1057139, 122.9609740, text="")
+            COBANGBANGR10 = map_widget.set_marker(14.1048514, 122.9616246, text="")
+            COBANGBANGR11 = map_widget.set_marker(14.1039100, 122.9635519, text="")
+            COBANGBANGR12 = map_widget.set_marker(14.1027421, 122.9658796, text="COBANGBANGP6")
+
+            raw_coordinates.append([14.1176768, 122.9459699])
+            raw_coordinates.append([14.1191045, 122.9504538])
+            raw_coordinates.append([14.1156229, 122.9560923])
+            raw_coordinates.append([14.1155481, 122.9565657])
+            raw_coordinates.append([14.1129123, 122.9560684])
+            raw_coordinates.append([14.1123827, 122.9589967])
+            raw_coordinates.append([14.1092531, 122.9591187])
+            raw_coordinates.append([14.1068418, 122.9604321])
+            raw_coordinates.append([14.1057139, 122.9609740])
+            raw_coordinates.append([14.1048514, 122.9616246])
+            raw_coordinates.append([14.1039100, 122.9635519])
+            raw_coordinates.append([14.1027421, 122.9658796])
+
+            raw_routes.append(COBANGBANGR1)
+            raw_routes.append(COBANGBANGR2)
+            raw_routes.append(COBANGBANGR3)
+            raw_routes.append(COBANGBANGR4)
+            raw_routes.append(COBANGBANGR5)
+            raw_routes.append(COBANGBANGR6)
+            raw_routes.append(COBANGBANGR7)
+            raw_routes.append(COBANGBANGR8)
+            raw_routes.append(COBANGBANGR9)
+            raw_routes.append(COBANGBANGR10)
+            raw_routes.append(COBANGBANGR11)
+            raw_routes.append(COBANGBANGR12)
 
 
     return raw_routes, raw_coordinates
