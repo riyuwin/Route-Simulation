@@ -87,6 +87,7 @@ def CreateGraph():
     customGraph.addNode("CAMI")  
     customGraph.addNode("xenia") 
     customGraph.addNode("sida NA")
+
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
@@ -114,14 +115,23 @@ def CreateGraph():
     customGraph.addNode("COBANGBANGP4") 
     customGraph.addNode("COBANGBANGP5") 
     customGraph.addNode("COBANGBANGP6")
+
+    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 2, 2)
+    customGraph.addEdge("COBANGBANGP3", "COBANGBANGP2", 2700, 1, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 1, 2)
+    customGraph.addEdge("COBANGBANGP2", "COBANGBANGP4", 3100, 1, 2)  
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP5", 3100, 1, 2)
+    customGraph.addEdge("COBANGBANGP5", "COBANGBANGP6", 3400, 1, 2)
     
-    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 3, 2)
-    customGraph.addEdge("BFP", "COBANGBANGP2", 2700, 3, 2)
-    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 3, 2)
-    customGraph.addEdge("BFP", "COBANGBANGP4", 3100, 3, 2)  
-    customGraph.addEdge("BFP", "COBANGBANGP5", 3100, 3, 2)
-    customGraph.addEdge("BFP", "COBANGBANGP6", 3400, 3, 2)
-    
+    # AWITAN
+
+    customGraph.addNode("AWITANP3")
+    customGraph.addNode("AWITANP1")
+    customGraph.addNode("AWITANP2")
+
+    customGraph.addEdge("LAGONP3", "AWITANP3", 3500, 2, 2)
+    customGraph.addEdge("AWITANP3", "AWITANP1", 3800, 2, 2)
+    customGraph.addEdge("AWITANP1", "AWITANP2", 4100, 2, 2)
 
     return customGraph
 
@@ -235,4 +245,4 @@ def GetShortestPath(Initial, Destination):
 
     return shortest_path, shortest_distance
 
-GetShortestPath("BFP", "ALAWIHAOP10")
+GetShortestPath("BFP", "COBANGBANGP1")
