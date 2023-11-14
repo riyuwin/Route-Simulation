@@ -6,6 +6,8 @@ paths_list = []
 
 routes_label_list = []
 
+# Pycharm Github Test
+
 def GetCoordinates(routes): 
 
     raw_routes = []
