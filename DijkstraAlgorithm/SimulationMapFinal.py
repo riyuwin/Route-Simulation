@@ -199,6 +199,7 @@ def GetCoordinates(routes):
             raw_routes.append(ALAWIHAOPR8)
 
         if i == 'COBANGBANGP3':
+            BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
             COBANGBANGR1 = map_widget.set_marker(14.1176768, 122.9459699, text="")
             COBANGBANGR2 = map_widget.set_marker(14.1191045, 122.9504538, text="")
             COBANGBANGR3 = map_widget.set_marker(14.1156229, 122.9560923, text="")
@@ -208,6 +209,7 @@ def GetCoordinates(routes):
             COBANGBANGR7 = map_widget.set_marker(14.1092531, 122.9591187, text="")
             COBANGBANGR8 = map_widget.set_marker(14.1068418, 122.9604321, text="COBANGBANGP3")
 
+            raw_coordinates.append([14.1181492, 122.9458283]) 
             raw_coordinates.append([14.1176768, 122.9459699])
             raw_coordinates.append([14.1191045, 122.9504538])
             raw_coordinates.append([14.1156229, 122.9560923])
@@ -217,6 +219,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1092531, 122.9591187])
             raw_coordinates.append([14.1068418, 122.9604321])
             
+            raw_routes.append(BFP)
             raw_routes.append(COBANGBANGR1)
             raw_routes.append(COBANGBANGR2)
             raw_routes.append(COBANGBANGR3)
@@ -243,6 +246,7 @@ def GetCoordinates(routes):
             raw_routes.append(COBANGBANGR12)
 
         if i == 'COBANGBANGP1':
+            BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
             COBANGBANGR1 = map_widget.set_marker(14.1176768, 122.9459699, text="")
             COBANGBANGR2 = map_widget.set_marker(14.1191045, 122.9504538, text="")
             COBANGBANGR3 = map_widget.set_marker(14.1156229, 122.9560923, text="")
@@ -251,6 +255,7 @@ def GetCoordinates(routes):
             COBANGBANGR6 = map_widget.set_marker(14.1051243, 122.9562600, text="")
             COBANGBANGR7 = map_widget.set_marker(14.1050619, 122.9565872, text="COBANGBANGP1")
 
+            raw_coordinates.append([14.1181492, 122.9458283])
             raw_coordinates.append([14.1176768, 122.9459699])
             raw_coordinates.append([14.1191045, 122.9504538])
             raw_coordinates.append([14.1156229, 122.9560923])
@@ -259,6 +264,8 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1051243, 122.9562600])
             raw_coordinates.append([14.1050619, 122.9565872])
 
+
+            raw_routes.append(BFP)
             raw_routes.append(COBANGBANGR1)
             raw_routes.append(COBANGBANGR2)
             raw_routes.append(COBANGBANGR3)
@@ -313,7 +320,120 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1408167, 122.9650377])
             raw_routes.append(AWITANPR1)
             raw_routes.append(AWITANPR2)
-   
+
+        # BARANGAY 1
+
+        if i == 'BARANGAY1P1':
+            BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
+            COBANGBANGR1 = map_widget.set_marker(14.1176768, 122.9459699, text="")
+            COBANGBANGR2 = map_widget.set_marker(14.1191045, 122.9504538, text="")
+            COBANGBANGR3 = map_widget.set_marker(14.1156229, 122.9560923, text="")
+            COBANGBANGR4 = map_widget.set_marker(14.1155481, 122.9565657, text="")
+            COBANGBANGR5 = map_widget.set_marker(14.1129123, 122.9560684, text="BARANGAY1P1")
+
+            raw_coordinates.append([14.1181492, 122.9458283])
+            raw_coordinates.append([14.1176768, 122.9459699])
+            raw_coordinates.append([14.1191045, 122.9504538])
+            raw_coordinates.append([14.1156229, 122.9560923])
+            raw_coordinates.append([14.1155481, 122.9565657])
+            raw_coordinates.append([14.1129123, 122.9560684])
+
+            raw_routes.append(BFP)
+            raw_routes.append(COBANGBANGR1)
+            raw_routes.append(COBANGBANGR2)
+            raw_routes.append(COBANGBANGR3)
+            raw_routes.append(COBANGBANGR4)
+            raw_routes.append(COBANGBANGR5)
+
+        if i == 'BARANGAY1P2':
+            COBANGBANGR6 = map_widget.set_marker(14.1125961, 122.9570849, text="BARANGAY1P2")
+            raw_coordinates.append([14.1125961, 122.9570849])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P3':
+            COBANGBANGR6 = map_widget.set_marker(14.1124742, 122.9581552, text="BARANGAY1P3")
+            raw_coordinates.append([14.1124742, 122.9581552])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P4':
+            COBANGBANGR6 = map_widget.set_marker(14.1108681, 122.9559878, text="BARANGAY1P4")
+            raw_coordinates.append([14.1108681, 122.9559878])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P5':
+            COBANGBANGR6 = map_widget.set_marker(14.1102707, 122.9559953, text="BARANGAY1P5")
+            raw_coordinates.append([14.1102707, 122.9559953])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P6':
+            COBANGBANGR6 = map_widget.set_marker(14.1123945, 122.9589966, text="BARANGAY1P6")
+            raw_coordinates.append([14.1123945, 122.9589966])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P7':
+            COBANGBANGR6 = map_widget.set_marker(14.1121612, 122.9598197, text="BARANGAY1P7")
+            raw_coordinates.append([14.1121612, 122.9598197])
+            raw_routes.append(COBANGBANGR6)
+
+        if i == 'BARANGAY1P8':
+            COBANGBANGR6 = map_widget.set_marker(14.1119425, 122.9605981, text="BARANGAY1P8")
+            raw_coordinates.append([14.1119425, 122.9605981])
+            raw_routes.append(COBANGBANGR6)
+
+        # BORABOD
+
+        if i == 'BORABODP1':
+            BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
+            BORABODP1R1 = map_widget.set_marker(14.1176829, 122.9459697, text="")
+            BORABODP1R2 = map_widget.set_marker(14.1190924, 122.9504048, text="")
+            BORABODP1R3 = map_widget.set_marker(14.1201678, 122.9511875, text="")
+            BORABODP1R4 = map_widget.set_marker(14.1175244, 122.9556175, text="")
+            BORABODP1R5 = map_widget.set_marker(14.1240610, 122.9589386, text="BORABODP1")
+
+            raw_coordinates.append([14.1181492, 122.9458283]) 
+            raw_coordinates.append([14.1176829, 122.9459697])
+            raw_coordinates.append([14.1190924, 122.9504048])
+            raw_coordinates.append([14.1201678, 122.9511875])
+            raw_coordinates.append([14.1175244, 122.9556175])
+            raw_coordinates.append([14.1240610, 122.9589386])
+
+            raw_routes.append(BFP)
+            raw_routes.append(BORABODP1R1)
+            raw_routes.append(BORABODP1R2)
+            raw_routes.append(BORABODP1R3)
+            raw_routes.append(BORABODP1R4)
+            raw_routes.append(BORABODP1R5)
+
+        if i == 'BORABODP2':
+            BORABODP2R1 = map_widget.set_marker(14.1257225, 122.9597660, text="")
+            BORABODP2R2 = map_widget.set_marker(14.1265685, 122.9613863, text="BORABODP2")
+            raw_coordinates.append([14.1257225, 122.9597660])
+            raw_coordinates.append([14.1265685, 122.9613863])
+            raw_routes.append(BORABODP2R1)
+            raw_routes.append(BORABODP2R2)
+
+        if i == 'BORABODP3':
+            BORABODP3R1 = map_widget.set_marker(14.1266691, 122.9615567, text="BORABODP3")
+            raw_coordinates.append([14.1266691, 122.9615567])
+            raw_routes.append(BORABODP3R1)
+
+        if i == 'BORABODP4':
+            BORABODP4R1 = map_widget.set_marker(14.1279800, 122.9644454, text="BORABODP4")
+            raw_coordinates.append([14.1279800, 122.9644454])
+            raw_routes.append(BORABODP4R1)
+
+        if i == 'BORABODP5':
+            BORABODP5R1 = map_widget.set_marker(14.1305585, 122.9699444, text="BORABODP5")
+            raw_coordinates.append([14.1305585, 122.9699444])
+            raw_routes.append(BORABODP5R1)
+
+        if i == 'BORABODP6':
+            BORABODP6R1 = map_widget.set_marker(14.1316511, 122.9697172, text="")
+            BORABODP6R2 = map_widget.set_marker(14.1334507, 122.9679562, text="BORABODP6")
+            raw_coordinates.append([14.1316511, 122.9697172])
+            raw_coordinates.append([14.1334507, 122.9679562])
+            raw_routes.append(BORABODP6R1)
+            raw_routes.append(BORABODP6R2)
 
     return raw_routes, raw_coordinates
 
@@ -472,6 +592,52 @@ awitanp1.pack(side="bottom")
 
 awitanp2 = Button(my_label, text="AWITANP2", command=lambda:Set('AWITANP2'))
 awitanp2.pack(side="bottom")
+
+# BARANGAY 1
+
+barangay1p1 = Button(my_label, text="BARANGAY1P1", command=lambda:Set('BARANGAY1P1'))
+barangay1p1.pack(side="bottom")
+
+barangay1p2 = Button(my_label, text="BARANGAY1P2", command=lambda:Set('BARANGAY1P2'))
+barangay1p2.pack(side="bottom")
+
+barangay1p3 = Button(my_label, text="BARANGAY1P3", command=lambda:Set('BARANGAY1P3'))
+barangay1p3.pack(side="bottom")
+
+barangay1p4 = Button(my_label, text="BARANGAY1P4", command=lambda:Set('BARANGAY1P4'))
+barangay1p4.pack(side="bottom")
+
+barangay1p5 = Button(my_label, text="BARANGAY1P5", command=lambda:Set('BARANGAY1P5'))
+barangay1p5.pack(side="bottom")
+
+barangay1p6 = Button(my_label, text="BARANGAY1P6", command=lambda:Set('BARANGAY1P6'))
+barangay1p6.pack(side="bottom")
+
+barangay1p7 = Button(my_label, text="BARANGAY1P7", command=lambda:Set('BARANGAY1P7'))
+barangay1p7.pack(side="bottom")
+
+barangay1p8 = Button(my_label, text="BARANGAY1P8", command=lambda:Set('BARANGAY1P8'))
+barangay1p8.pack(side="bottom")
+
+# BORABOD
+
+borabodp1 = Button(my_label, text="BORABODP1", command=lambda:Set('BORABODP1'))
+borabodp1.pack(side="bottom")
+
+borabodp2 = Button(my_label, text="BORABODP2", command=lambda:Set('BORABODP2'))
+borabodp2.pack(side="bottom")
+
+borabodp3 = Button(my_label, text="BORABODP3", command=lambda:Set('BORABODP3'))
+borabodp3.pack(side="bottom")
+
+borabodp4 = Button(my_label, text="BORABODP4", command=lambda:Set('BORABODP4'))
+borabodp4.pack(side="bottom")
+
+borabodp5 = Button(my_label, text="BORABODP5", command=lambda:Set('BORABODP5'))
+borabodp5.pack(side="bottom")
+
+borabodp6 = Button(my_label, text="BORABODP6", command=lambda:Set('BORABODP6'))
+borabodp6.pack(side="bottom")
 
 remove_coordinates_button = Button(root, text="Reset", background="black", fg="gold", width=10, height=2, command=RemoveCoordinates)
 canvas.create_window(1130, 600, window=remove_coordinates_button)
