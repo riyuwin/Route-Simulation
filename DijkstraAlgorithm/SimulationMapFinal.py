@@ -435,6 +435,70 @@ def GetCoordinates(routes):
             raw_routes.append(BORABODP6R1)
             raw_routes.append(BORABODP6R2)
 
+        # BAGASBAS
+        if i == 'BAGASBASP1':
+            BAGASBASP1R1 = map_widget.set_marker(14.1347075, 122.9772225, text="")
+            BAGASBASP1R2 = map_widget.set_marker(14.1340089, 122.9778572, text="BAGASBASP1")
+            raw_coordinates.append([14.1347075, 122.9772225])
+            raw_coordinates.append([14.1340089, 122.9778572])
+            raw_routes.append(BAGASBASP1R1)
+            raw_routes.append(BAGASBASP1R2)
+
+        if i == 'BAGASBASP2':
+            BAGASBASP2R1 = map_widget.set_marker(14.1347047, 122.9772304, text="")
+            BAGASBASP2R2 = map_widget.set_marker(14.1357867, 122.9791636, text="")
+            BAGASBASP2R3 = map_widget.set_marker(14.1337333, 122.9802586, text="BAGASBASP2")
+            BAGASBASP2R4 = map_widget.set_marker(14.1357927, 122.9791616, text="")
+            BAGASBASP2R5 = map_widget.set_marker(14.1361226, 122.9798357, text="")
+            BAGASBASP2R6 = map_widget.set_marker(14.1341280, 122.9810421, text="BAGASBASP2")
+            BAGASBASP2R7 = map_widget.set_marker(14.1361226, 122.9798357, text="")
+            raw_coordinates.append([14.1347047, 122.9772304])
+            raw_coordinates.append([14.1357867, 122.9791636])
+            raw_coordinates.append([14.1337333, 122.9802586])
+            raw_coordinates.append([14.1357927, 122.9791616])
+            raw_coordinates.append([14.1361226, 122.9798357])
+            raw_coordinates.append([14.1341280, 122.9810421])
+            raw_coordinates.append([14.1361226, 122.9798357])
+            raw_routes.append(BAGASBASP2R1)
+            raw_routes.append(BAGASBASP2R2)
+            raw_routes.append(BAGASBASP2R3)
+            raw_routes.append(BAGASBASP2R4)
+            raw_routes.append(BAGASBASP2R5)
+            raw_routes.append(BAGASBASP2R6)
+            raw_routes.append(BAGASBASP2R7)
+
+        if i == 'BAGASBASP3':
+            BAGASBASP3R1 = map_widget.set_marker(14.1369528, 122.9813355, text="BAGASBASP3")
+            raw_coordinates.append([14.1369528, 122.9813355])
+            raw_routes.append(BAGASBASP3R1)
+
+        if i == 'BAGASBASP4':
+            BAGASBASP4R1 = map_widget.set_marker(14.1372615, 122.9818765, text="")
+            BAGASBASP4R2 = map_widget.set_marker(14.1382192, 122.9815507, text="BAGASBASP4")
+            raw_coordinates.append([14.1372615, 122.9818765])
+            raw_coordinates.append([14.1382192, 122.9815507])
+            raw_routes.append(BAGASBASP4R1)
+            raw_routes.append(BAGASBASP4R2)
+
+        if i == 'BAGASBASP5':
+            BAGASBASP5R1 = map_widget.set_marker(14.1394659, 122.9811681, text="")
+            BAGASBASP5R2 = map_widget.set_marker(14.1396144, 122.9795064, text="BAGASBASP5")
+            raw_coordinates.append([14.1394659, 122.9811681])
+            raw_coordinates.append([14.1396144, 122.9795064])
+            raw_routes.append(BAGASBASP5R1)
+            raw_routes.append(BAGASBASP5R2)
+
+        if i == 'BAGASBASP6':
+            BAGASBASP5R1 = map_widget.set_marker(14.1406582, 122.9782365, text="")
+            BAGASBASP5R2 = map_widget.set_marker(14.1413147, 122.9779582, text="BAGASBASP6")
+            BAGASBASP5R3 = map_widget.set_marker(14.1410821, 122.9775614, text="BAGASBASP6")
+            raw_coordinates.append([14.1406582, 122.9782365])
+            raw_coordinates.append([14.1413147, 122.9779582])
+            raw_coordinates.append([14.1410821, 122.9775614])
+            raw_routes.append(BAGASBASP5R1)
+            raw_routes.append(BAGASBASP5R2)
+            raw_routes.append(BAGASBASP5R3)
+
     return raw_routes, raw_coordinates
 
 def Set(destination):
@@ -638,6 +702,26 @@ borabodp5.pack(side="bottom")
 
 borabodp6 = Button(my_label, text="BORABODP6", command=lambda:Set('BORABODP6'))
 borabodp6.pack(side="bottom")
+
+# BAGASBAS
+
+bagasbasp1 = Button(my_label, text="BAGASBASP1", command=lambda:Set('BAGASBASP1'))
+bagasbasp1.pack(side="bottom")
+
+bagasbasp2 = Button(my_label, text="BAGASBASP2", command=lambda:Set('BAGASBASP2'))
+bagasbasp2.pack(side="bottom")
+
+bagasbasp3 = Button(my_label, text="BAGASBASP3", command=lambda:Set('BAGASBASP3'))
+bagasbasp3.pack(side="bottom")
+
+bagasbasp4 = Button(my_label, text="BAGASBASP4", command=lambda:Set('BAGASBASP4'))
+bagasbasp4.pack(side="bottom")
+
+bagasbasp5 = Button(my_label, text="BAGASBASP5", command=lambda:Set('BAGASBASP5'))
+bagasbasp5.pack(side="bottom")
+
+bagasbasp6 = Button(my_label, text="BAGASBASP6", command=lambda:Set('BAGASBASP6'))
+bagasbasp6.pack(side="bottom")
 
 remove_coordinates_button = Button(root, text="Reset", background="black", fg="gold", width=10, height=2, command=RemoveCoordinates)
 canvas.create_window(1130, 600, window=remove_coordinates_button)
