@@ -183,7 +183,7 @@ def CreateGraph():
     customGraph.addEdge("BAGASBASP2", "BAGASBASP3", 4900, 2, 2)
     customGraph.addEdge("BAGASBASP3", "BAGASBASP4", 5000, 2, 2)
     customGraph.addEdge("BAGASBASP4", "BAGASBASP5", 5300, 2, 2)
-    customGraph.addEdge("BAGASBASP5", "BAGASBASP6", 4900, 2, 2)
+    customGraph.addEdge("BAGASBASP5", "BAGASBASP6", 5500, 2, 2)
 
     return customGraph
 
