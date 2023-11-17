@@ -263,7 +263,8 @@ def update_purok_combobox(*args):
     if barangayDestination:
         purok_combo_box["state"] = "readonly"
 
-            
+        # dito na kayo maglagay conditionals tapos gamitin nyo yong list sa pinakataas
+        # ito lang babaguhan nyo tapos yong list sa taas, tapos kung may idadagdag kayong location lagay nyo rin sa barangay            
         if barangayDestination == "Lagon":
             purok_combo_box["values"] = all_lagon_purok
         elif barangayDestination == "Camambugan":

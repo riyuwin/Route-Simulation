@@ -77,7 +77,17 @@ def CreateGraph():
     customGraph.addNode("ALAWIHAOP7")  
     customGraph.addNode("ALAWIHAOP8")
     customGraph.addNode("ALAWIHAOP9")
-    customGraph.addNode("ALAWIHAOP10")    
+    customGraph.addNode("ALAWIHAOP10")
+    customGraph.addNode("HATDOG12345")  
+    customGraph.addNode("HATDOG1234523")
+    customGraph.addNode("HATDOG12345241525232")       
+    customGraph.addNode("xenia")
+    customGraph.addNode("SEAN LADO")
+    customGraph.addNode("AYYYY NAKO")  
+    customGraph.addNode("CAMI")  
+    customGraph.addNode("xenia") 
+    customGraph.addNode("sida NA")
+
     customGraph.addEdge("BFP", "LAGONP1", 350, 2, 2) 
     customGraph.addEdge("BFP", "LAGONP4", 400, 1, 2) 
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
@@ -97,6 +107,83 @@ def CreateGraph():
     customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP9", 640, 1, 2)
     customGraph.addEdge("ALAWIHAOP7", "ALAWIHAOP10", 450, 1, 2)
     customGraph.addEdge("ALAWIHAOP8", "ALAWIHAOP5", 290, 1, 2)
+
+    # Cobangbang
+    customGraph.addNode("COBANGBANGP1")
+    customGraph.addNode("COBANGBANGP2") 
+    customGraph.addNode("COBANGBANGP3") 
+    customGraph.addNode("COBANGBANGP4") 
+    customGraph.addNode("COBANGBANGP5") 
+    customGraph.addNode("COBANGBANGP6")
+
+    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 2, 2)
+    customGraph.addEdge("COBANGBANGP3", "COBANGBANGP2", 2700, 1, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 1, 2)
+    customGraph.addEdge("COBANGBANGP2", "COBANGBANGP4", 3100, 1, 2)  
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP5", 3100, 1, 2)
+    customGraph.addEdge("COBANGBANGP5", "COBANGBANGP6", 3400, 1, 2)
+    
+    # AWITAN
+
+    customGraph.addNode("AWITANP3")
+    customGraph.addNode("AWITANP1")
+    customGraph.addNode("AWITANP2")
+
+    customGraph.addEdge("LAGONP3", "AWITANP3", 3500, 2, 2)
+    customGraph.addEdge("AWITANP3", "AWITANP1", 3800, 2, 2)
+    customGraph.addEdge("AWITANP1", "AWITANP2", 4100, 2, 2)
+
+    # Barangay 1
+
+    customGraph.addNode("BARANGAY1P1")
+    customGraph.addNode("BARANGAY1P2")
+    customGraph.addNode("BARANGAY1P3")
+    customGraph.addNode("BARANGAY1P4")
+    customGraph.addNode("BARANGAY1P5")
+    customGraph.addNode("BARANGAY1P6")
+    customGraph.addNode("BARANGAY1P7")
+    customGraph.addNode("BARANGAY1P8")
+    
+    customGraph.addEdge("BFP", "BARANGAY1P1", 1600, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P2", 1700, 2, 2)
+    customGraph.addEdge("BARANGAY1P2", "BARANGAY1P3", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P4", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P4", "BARANGAY1P5", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P3", "BARANGAY1P6", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P6", "BARANGAY1P7", 2000, 2, 2)
+    customGraph.addEdge("BARANGAY1P7", "BARANGAY1P8", 2000, 2, 2)
+
+    # BORABOD
+
+    customGraph.addNode("BORABODP1")
+    customGraph.addNode("BORABODP2")
+    customGraph.addNode("BORABODP3")
+    customGraph.addNode("BORABODP4")
+    customGraph.addNode("BORABODP5")
+    customGraph.addNode("BORABODP6")
+
+    customGraph.addEdge("BFP", "BORABODP1", 2100, 2, 2)
+    customGraph.addEdge("BORABODP1", "BORABODP2", 2300, 2, 2)
+    customGraph.addEdge("BORABODP2", "BORABODP3", 2500, 2, 2)
+    customGraph.addEdge("BORABODP3", "BORABODP4", 2800, 2, 2)
+    customGraph.addEdge("BORABODP4", "BORABODP5", 3500, 2, 2)
+    customGraph.addEdge("BORABODP5", "BORABODP6", 3700, 2, 2)
+
+    # BAGASBAS
+
+    customGraph.addNode("BAGASBASP1")
+    customGraph.addNode("BAGASBASP2")
+    customGraph.addNode("BAGASBASP3")
+    customGraph.addNode("BAGASBASP4")
+    customGraph.addNode("BAGASBASP5")
+    customGraph.addNode("BAGASBASP6")
+
+    customGraph.addEdge("BORABODP5", "BAGASBASP1", 4300, 2, 2)
+    customGraph.addEdge("BAGASBASP1", "BAGASBASP2", 4600, 2, 2)
+    customGraph.addEdge("BAGASBASP2", "BAGASBASP3", 4900, 2, 2)
+    customGraph.addEdge("BAGASBASP3", "BAGASBASP4", 5000, 2, 2)
+    customGraph.addEdge("BAGASBASP4", "BAGASBASP5", 5300, 2, 2)
+    customGraph.addEdge("BAGASBASP5", "BAGASBASP6", 5500, 2, 2)
 
     return customGraph
 
@@ -210,4 +297,4 @@ def GetShortestPath(Initial, Destination):
 
     return shortest_path, shortest_distance
 
-GetShortestPath("BFP", "ALAWIHAOP10")
+GetShortestPath("BFP", "COBANGBANGP1")
