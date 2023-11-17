@@ -221,6 +221,9 @@ def StartingPage():
     start_root.title('Daet Map')
     start_root.geometry('600x400+400+150')
 
+    # Load the background image
+    background_image = PhotoImage(file="bg.png")
+
     start_canvas = Canvas(start_root, width=600, height=400, bg='black')
     start_canvas.pack()
 

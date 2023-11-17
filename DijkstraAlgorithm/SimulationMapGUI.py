@@ -1,10 +1,26 @@
 from tkinter import *
+from tkinter import ttk  # Import the ttk module for themed widgets
 import tkintermapview
 from DijsktraAlgo import GetShortestPath
 
 paths_list = []
 
 routes_label_list = []
+
+
+# Get location
+all_barangay = ["Alawihao", "Bibirao", "Camambugan", 
+                "Lagon",  "Pasig", "Gahonon", 
+                "Mancruz", "Pamorangon", "Cobangbang"]
+
+all_lagon_purok = ["LAGON", "LAGONP1", "LAGONP2",
+                    "LAGONP3", "LAGONP4", "LAGONP5",
+                   "LAGONP6", "LAGONP7"]
+
+all_camambugan_purok = ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3",
+                    "CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6",
+                   "CAMAMBUGANP7"]
+
 
 def GetCoordinates(routes): 
 
@@ -200,6 +216,8 @@ def GetCoordinates(routes):
         
     return raw_routes, raw_coordinates
 
+# ----> Algorithm Pang determine ng destination <-------------------
+
 def Set(destination):
     global specific_routes_label
 
@@ -207,9 +225,9 @@ def Set(destination):
 
     routes, coordinates = GetCoordinates(destination_routes)
 
-    y_axis = 220
+    y_axis = 450
     for i in destination_routes:
-        specific_routes_label = canvas.create_text(1020, y_axis, text=i, anchor='center', fill='white', font=('courier new', 10))
+        specific_routes_label = canvas.create_text(160, y_axis, text=i, anchor='center', fill='white', font=('courier new', 10))
         y_axis+=30
         routes_label_list.append(specific_routes_label)
 
@@ -221,21 +239,48 @@ def Set(destination):
     for i in range(len(coordinates) - 1):
         path_1 = map_widget.set_path([routes[i].position, routes[i+1].position, coordinates[i]])
 
+# ----> Algorithm Pang reset ng lahat ng fields <-------------------
+
 def RemoveCoordinates():
     map_widget.delete_all_path()
     map_widget.delete_all_marker()
     
     canvas.itemconfig(routes_label, text=f"")
     canvas.itemconfig(total_distance_label, text=f"")
+    canvas.itemconfig(barangay_combo_var, text=f"")
+    canvas.itemconfig(purok_combo_box, text=f"")
 
     for i in routes_label_list:
         canvas.itemconfig(i, text=f"")
 
+# ----> Algorithm Pang determine kung nagfill up na sa barangay <-------------------
+# ----> Dito rin maconditionals kung anong mga purok ng barangay <-------------------
+
+def update_purok_combobox(*args):
+    # Enable the purok_combobox if a barangay is selected
+    barangayDestination = barangay_combo_var.get()
+
+    if barangayDestination:
+        purok_combo_box["state"] = "readonly"
+
+            
+        if barangayDestination == "Lagon":
+            purok_combo_box["values"] = all_lagon_purok
+        elif barangayDestination == "Camambugan":
+            purok_combo_box["values"] = all_camambugan_purok
+        else:
+            purok_combo_box["state"] = "disabled"
+
+    else:
+        purok_combo_box.set("")  # Clear the selection
+        purok_combo_box["state"] = "disabled"
+
+
 def MainMenu():
-    global canvas, map_widget, routes_label, total_distance_label
+    global canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box
     root = Tk()
     root.title('Daet Map')
-    root.geometry('1200x700+50+0')
+    root.geometry('1200x650+70+20')
 
     canvas = Canvas(root, width=1200, height=700, bg='#686362')
     canvas.pack()
@@ -243,90 +288,40 @@ def MainMenu():
     my_label = LabelFrame(root)
     my_label.pack(pady=20)
 
-    label_text = "Simulation Map"
-    label = Label(canvas, text=label_text, bg='white', font=('Arial', 15)) 
-    label_window = canvas.create_window(450, 50, window=label)
-
     text = "Details:"
-    canvas.create_text(930, 130, text=text, anchor='center', fill='white', font=('courier new', 12))
-    routes_label = canvas.create_text(925, 190, text="", anchor='center', fill='white', font=('courier new', 10))
-    total_distance_label = canvas.create_text(1000, 160, text="", anchor='center', fill='white', font=('courier new', 10))
+    canvas.create_text(100, 360, text=text, anchor='center', fill='white', font=('courier new', 12))
+    routes_label = canvas.create_text(160, 390, text="", anchor='center', fill='white', font=('courier new', 10))
+    total_distance_label = canvas.create_text(160, 420, text="", anchor='center', fill='white', font=('courier new', 10))
 
-    map_widget = tkintermapview.TkinterMapView(my_label, width=600, height=400, corner_radius=0)
+    map_widget = tkintermapview.TkinterMapView(my_label, width=650, height=400, corner_radius=0)
     #map_widget.set_position(14.0996, 122.9550)
 
-    canvas.create_window(450, 360, window=my_label)
+    canvas.create_window(830, 300, window=my_label)
 
     map_widget.set_address("Daet, Camarines Norte, Philippines")
-
-
     map_widget.set_zoom(14)
-
     map_widget.pack()
 
 
-    lagon_btn = Button(my_label, text="LAGON", command=lambda:Set('LAGON'))
-    lagon_btn.pack(side="left")
+    # Add a ComboBox to the canvas 
+    canvas.create_text(120, 120, text="Select barangay:", anchor='center', fill='white', font=('century gothic', 10))
+    barangay_combo_var = StringVar()
+    combo_box = ttk.Combobox(canvas, textvariable=barangay_combo_var, values=all_barangay, width=30, height=3, font=('century gothic', 10))   
+    canvas.create_window(190, 150, window=combo_box)
 
-    lagonp1_btn = Button(my_label, text="LAGONP1", command=lambda:Set('LAGONP1'))
-    lagonp1_btn.pack(side="left")
+    canvas.create_text(105, 180, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
+    purok_combo_var = StringVar()
+    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, values=all_barangay, width=30, height=5, font=('century gothic', 10), state='disabled')   
+    canvas.create_window(190, 210, window=purok_combo_box)
 
-    lagonp2_btn = Button(my_label, text="LAGONP2", command=lambda:Set('LAGONP2'))
-    lagonp2_btn.pack(side="left")
+    # Bind the function to the <<ComboboxSelected>> event
+    combo_box.bind("<<ComboboxSelected>>", update_purok_combobox)
 
-    lagonp3_btn = Button(my_label, text="LAGONP3", command=lambda:Set('LAGONP3'))
-    lagonp3_btn.pack(side="left")
+    search_btn = Button(canvas, text="Search", command=lambda:Set(purok_combo_var.get()), width=30, height=1)
+    canvas.create_window(190, 280, window=search_btn)
 
-    lagonp4_btn = Button(my_label, text="LAGONP4", command=lambda:Set('LAGONP4'))
-    lagonp4_btn.pack(side="left")
-
-    lagonp5_btn = Button(my_label, text="LAGONP5", command=lambda:Set('LAGONP5'))
-    lagonp5_btn.pack(side="left")
-
-    lagonp6_btn = Button(my_label, text="LAGONP6", command=lambda:Set('LAGONP6'))
-    lagonp6_btn.pack(side="left")
-
-    lagonp7_btn = Button(my_label, text="LAGONP7", command=lambda:Set('LAGONP7'))
-    lagonp7_btn.pack(side="left")
-
-
-    '''
-    lagonp6_btn = Button(my_label, text="LAGONP6", command=lambda:Set('LAGONP6'))
-    lagonp6_btn.pack(side="left")
-
-    alawihaop1_btn = Button(my_label, text="ALAWIHAOP1", command=lambda:Set('ALAWIHAOP1'))
-    alawihaop1_btn.pack(side="left")
-
-    alawihaop2_btn = Button(my_label, text="ALAWIHAOP2", command=lambda:Set('ALAWIHAOP2'))
-    alawihaop2_btn.pack(side="left")
-
-    alawihaop3_btn = Button(my_label, text="ALAWIHAOP3", command=lambda:Set('ALAWIHAOP3'))
-    alawihaop3_btn.pack(side="left")
-
-    alawihaop4_btn = Button(my_label, text="ALAWIHAOP4", command=lambda:Set('ALAWIHAOP4'))
-    alawihaop4_btn.pack(side="left")
-
-    alawihaop5_btn = Button(my_label, text="ALAWIHAOP5", command=lambda:Set('ALAWIHAOP5'))
-    alawihaop5_btn.pack(side="left")
-
-    alawihaop6_btn = Button(my_label, text="ALAWIHAOP6", command=lambda:Set('ALAWIHAOP6'))
-    alawihaop6_btn.pack(side="left")
-
-    alawihaop7_btn = Button(my_label, text="ALAWIHAOP7", command=lambda:Set('ALAWIHAOP7'))
-    alawihaop7_btn.pack(side="left")
-
-    alawihaop8_btn = Button(my_label, text="ALAWIHAOP8", command=lambda:Set('ALAWIHAOP8'))
-    alawihaop8_btn.pack(side="left")
-
-    alawihaop9_btn = Button(my_label, text="ALAWIHAOP9", command=lambda:Set('ALAWIHAOP9'))
-    alawihaop9_btn.pack(side="left")
-
-    alawihaop10_btn = Button(my_label, text="ALAWIHAOP10", command=lambda:Set('ALAWIHAOP10'))
-    alawihaop10_btn.pack(side="left")'''
-
-
-    remove_coordinates_button = Button(root, text="Reset", background="black", fg="gold", width=10, height=2, command=RemoveCoordinates)
-    canvas.create_window(1130, 600, window=remove_coordinates_button)
+    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, command=RemoveCoordinates)
+    canvas.create_window(1110, 550, window=remove_coordinates_button)
 
     root.mainloop()
 
