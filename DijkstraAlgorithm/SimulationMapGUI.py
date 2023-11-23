@@ -21,6 +21,21 @@ all_camambugan_purok = ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3",
                     "CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6",
                    "CAMAMBUGANP7"]
 
+def show_notifier(message):
+    notifier_window = Toplevel(root)
+    notifier_window.title("Notifier")
+    notifier_window.geometry("300x500+400+300")  # Adjust the size and position as needed
+
+    full_message = '\n'.join(message)
+    
+    label1 = ttk.Label(notifier_window, text='Route details:', font=('century gothic', 12))
+    label1.pack(pady=20)
+
+    label = ttk.Label(notifier_window, text=full_message, font=('century gothic', 12))
+    label.pack(pady=20)
+
+    ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
+    ok_button.pack()
 
 def GetCoordinates(routes): 
 
@@ -211,6 +226,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1060501, 122.9142542])
             
             raw_routes.append(ALAWIHAOPR8)
+        
 
 
         
@@ -219,11 +235,14 @@ def GetCoordinates(routes):
 # ----> Algorithm Pang determine ng destination <-------------------
 
 def Set(destination):
-    global specific_routes_label
+    global specific_routes_label, specific_routes_label
 
     destination_routes, shortest_distance_path = GetShortestPath("BFP", destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
+
+    
+    view_btn['command'] = lambda:show_notifier(destination_routes)
 
     y_axis = 450
     for i in destination_routes:
@@ -239,12 +258,18 @@ def Set(destination):
     for i in range(len(coordinates) - 1):
         path_1 = map_widget.set_path([routes[i].position, routes[i+1].position, coordinates[i]])
 
+
+    view_btn['state'] = 'normal'
+
 # ----> Algorithm Pang reset ng lahat ng fields <-------------------
 
 def RemoveCoordinates():
     map_widget.delete_all_path()
     map_widget.delete_all_marker()
-    
+
+    purok_combo_var.set("")
+    barangay_combo_var.set("")
+
     canvas.itemconfig(routes_label, text=f"")
     canvas.itemconfig(total_distance_label, text=f"")
     canvas.itemconfig(barangay_combo_var, text=f"")
@@ -263,8 +288,7 @@ def update_purok_combobox(*args):
     if barangayDestination:
         purok_combo_box["state"] = "readonly"
 
-        # dito na kayo maglagay conditionals tapos gamitin nyo yong list sa pinakataas
-        # ito lang babaguhan nyo tapos yong list sa taas, tapos kung may idadagdag kayong location lagay nyo rin sa barangay            
+            
         if barangayDestination == "Lagon":
             purok_combo_box["values"] = all_lagon_purok
         elif barangayDestination == "Camambugan":
@@ -278,7 +302,7 @@ def update_purok_combobox(*args):
 
 
 def MainMenu():
-    global canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box
+    global root, canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box, purok_combo_var, view_btn
     root = Tk()
     root.title('Daet Map')
     root.geometry('1200x650+70+20')
@@ -290,7 +314,7 @@ def MainMenu():
     my_label.pack(pady=20)
 
     text = "Details:"
-    canvas.create_text(100, 360, text=text, anchor='center', fill='white', font=('courier new', 12))
+    canvas.create_text(100, 380, text=text, anchor='center', fill='white', font=('courier new', 12))
     routes_label = canvas.create_text(160, 390, text="", anchor='center', fill='white', font=('courier new', 10))
     total_distance_label = canvas.create_text(160, 420, text="", anchor='center', fill='white', font=('courier new', 10))
 
@@ -320,6 +344,9 @@ def MainMenu():
 
     search_btn = Button(canvas, text="Search", command=lambda:Set(purok_combo_var.get()), width=30, height=1)
     canvas.create_window(190, 280, window=search_btn)
+
+    view_btn = Button(canvas, text="View", command=lambda:show_notifier("Hey"), width=30, height=1, state="disabled")
+    canvas.create_window(190, 340, window=view_btn)
 
     remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, command=RemoveCoordinates)
     canvas.create_window(1110, 550, window=remove_coordinates_button)
