@@ -10,47 +10,14 @@ routes_label_list = []
 
 # get location
 all_location = {
-    'Lagon': ["LAGON", "LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
-    'Camambugan': ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3","CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6","CAMAMBUGANP7"],
-    'Borabod': ["BORABODP1","BORABODP2","BORABODP3","BORABODP4","BORABODP5","BORABODP6"],
-    'Cobangbang': ["COBANGBANGP1","COBANGBANGP2","COBANGBANGP3","COBANGBANGP4","COBANGBANGP5","COBANGBANGP6"],
-    'Bagasbas': ["BAGASBASP1","BAGASBASP2","BAGASBASP3", "BAGASBASP4","BAGASBASP5","BAGASBASP6"],
     'Awitan': ["AWITANP1","AWITANP2","AWITANP3"],
-    'Barangay1': ["BARANGAY1P1","BARANGAY1P2","BARANGAY1P3","BARANGAY1P4","BARANGAY1P5","BARANGAY1P6","BARANGAY1P7","BARANGAY1P8"]
-    
+    'Lagon': ["LAGON", "LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
+    'Bagasbas': ["BAGASBASP1","BAGASBASP2","BAGASBASP3", "BAGASBASP4","BAGASBASP5","BAGASBASP6"],
+    'Barangay1': ["BARANGAY1P1","BARANGAY1P2","BARANGAY1P3","BARANGAY1P4","BARANGAY1P5","BARANGAY1P6","BARANGAY1P7","BARANGAY1P8"],
+    'Borabod': ["BORABODP1","BORABODP2","BORABODP3","BORABODP4","BORABODP5","BORABODP6"],
+    'Camambugan': ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3","CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6","CAMAMBUGANP7"],
+    'Cobangbang': ["COBANGBANGP1","COBANGBANGP2","COBANGBANGP3","COBANGBANGP4","COBANGBANGP5","COBANGBANGP6"],
 }
-
-# Get location
-all_barangay = ["Alawihao", "Bibirao", "Camambugan", 
-                "Lagon",  "Pasig", "Gahonon", 
-                "Mancruz", "Pamorangon", "Cobangbang", 
-                "BarangayI", "Borabod", "Awitan", "Bagasbas"]
-
-all_lagon_purok = ["LAGON", "LAGONP1", "LAGONP2",
-                    "LAGONP3", "LAGONP4", "LAGONP5",
-                   "LAGONP6", "LAGONP7"]
-
-all_camambugan_purok = ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3",
-                    "CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6",
-                   "CAMAMBUGANP7"]
-
-# All purok
-    
-all_cobangbang_purok = ["COBANGBANGP1","COBANGBANGP2","COBANGBANGP3",
-                        "COBANGBANGP4","COBANGBANGP5","COBANGBANGP6"]
-
-all_awitan_purok = ["AWITANP1","AWITANP2","AWITANP3"]
-
-all_barangay1_purok = ["BARANGAY1P1","BARANGAY1P2","BARANGAY1P3",
-                       "BARANGAY1P4","BARANGAY1P5","BARANGAY1P6",
-                       "BARANGAY1P7","BARANGAY1P8"]
-
-all_borabod_purok = ["BORABODP1","BORABODP2","BORABODP3",
-                       "BORABODP4","BORABODP5","BORABODP6"]
-
-all_bagasbas_purok = ["BAGASBASP1","BAGASBASP2","BAGASBASP3",
-                       "BAGASBASP4","BAGASBASP5","BAGASBASP6"]
-
 
 
 def show_notifier(message):
@@ -76,6 +43,7 @@ def GetCoordinates(routes):
 
     
     for i in routes:
+
         if i == 'BFP':
             
             if routes[1] == "LAGONP1":
@@ -559,7 +527,6 @@ def GetCoordinates(routes):
             raw_routes.append(BAGASBASP5R1)
             raw_routes.append(BAGASBASP5R2)
             raw_routes.append(BAGASBASP5R3)
-
         
     return raw_routes, raw_coordinates
 
@@ -656,16 +623,18 @@ def MainMenu():
     map_widget.set_zoom(14)
     map_widget.pack()
 
+    # Get only the keys (names) from the dictionary
+    all_barangay_names = list(all_location.keys())
 
     # Add a ComboBox to the canvas 
     canvas.create_text(120, 120, text="Select barangay:", anchor='center', fill='white', font=('century gothic', 10))
     barangay_combo_var = StringVar()
-    combo_box = ttk.Combobox(canvas, textvariable=barangay_combo_var, values=all_barangay, width=30, height=3, font=('century gothic', 10))   
+    combo_box = ttk.Combobox(canvas, textvariable=barangay_combo_var, values=all_barangay_names, width=30, height=3, font=('century gothic', 10))   
     canvas.create_window(190, 150, window=combo_box)
 
     canvas.create_text(105, 180, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
     purok_combo_var = StringVar()
-    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, values=all_barangay, width=30, height=5, font=('century gothic', 10), state='disabled')   
+    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10), state='disabled')   
     canvas.create_window(190, 210, window=purok_combo_box)
 
     # Bind the function to the <<ComboboxSelected>> event
