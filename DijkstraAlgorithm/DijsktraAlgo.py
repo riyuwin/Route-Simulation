@@ -4,7 +4,7 @@ ct = datetime.now()
 
 formatted_time = ct.strftime("%Y-%m-%d %H:%M:%S")
 
-#Test
+#Sean
 
 print(f"Current Time: {formatted_time}")
 
