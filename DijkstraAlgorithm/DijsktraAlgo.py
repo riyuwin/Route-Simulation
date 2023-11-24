@@ -130,6 +130,13 @@ def CreateGraph():
     customGraph.addNode("BRGY6P4")
     customGraph.addNode("BRGY6P4R1")
     customGraph.addNode("BRGY6P5") 
+    
+    # BARANGAY6
+    customGraph.addNode("BIBIRAOP1")
+    customGraph.addNode("BIBIRAOP2")
+    customGraph.addNode("BIBIRAOP3")
+    customGraph.addNode("BIBIRAOP4")
+    customGraph.addNode("BIBIRAOP5") 
 
     customGraph.addEdge("LAGONP4R1", "BRGY6P4", 600, 3, 4)
     customGraph.addEdge("BRGY6P4", "BRGY4P4R1", 200, 3, 4)
@@ -169,6 +176,13 @@ def CreateGraph():
     customGraph.addEdge("MANTAGBACP8", "MANTAGBACP3", 100, 1, 2)
     customGraph.addEdge("MANTAGBACP3", "MANTAGBACP2", 300, 1, 2)
     customGraph.addEdge("MANTAGBACP2", "MANTAGBACP1", 400, 1, 2)
+
+    
+    customGraph.addEdge("CAMAMBUGANP1", "BIBIRAOP1", 1804, 1, 2)
+    customGraph.addEdge("BIBIRAOP1", "BIBIRAOP2", 497, 1, 2)
+    customGraph.addEdge("BIBIRAOP2", "BIBIRAOP3", 787, 1, 2)
+    customGraph.addEdge("BIBIRAOP3", "BIBIRAOP4", 946, 1, 2)
+    customGraph.addEdge("BIBIRAOP4", "BIBIRAOP5", 279, 1, 2)
 
     '''customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
     customGraph.addEdge("BRGY8P1", "BRGY8P3", 200, 1, 2)
