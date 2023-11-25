@@ -271,6 +271,28 @@ def CreateGraph():
     customGraph.addEdge("BRGY8P8", "BRGY8P9", 300, 1, 2)
     customGraph.addEdge("BRGY8P9", "BRGY8P10", 200, 1, 2)'''
 
+    # Cobangbang
+    customGraph.addNode("COBANGBANGP1")
+    customGraph.addNode("COBANGBANGP2") 
+    customGraph.addNode("COBANGBANGP3") 
+    customGraph.addNode("COBANGBANGP4") 
+    customGraph.addNode("COBANGBANGP5") 
+    customGraph.addNode("COBANGBANGP6")
+
+    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 2, 2)
+    customGraph.addEdge("COBANGBANGP3", "COBANGBANGP2", 2700, 1, 2)
+    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 1, 2)
+    customGraph.addEdge("COBANGBANGP2", "COBANGBANGP4", 3100, 1, 2)  
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP5", 3100, 1, 2)
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP6", 3400, 1, 2)
+
+    # AWITAN
+    customGraph.addNode("AWITANP3")
+    customGraph.addNode("AWITANP1")
+    customGraph.addNode("AWITANP2")
+    customGraph.addEdge("LAGONP3", "AWITANP3", 3500, 2, 2)
+    customGraph.addEdge("AWITANP3", "AWITANP1", 3800, 2, 2)
+    customGraph.addEdge("AWITANP1", "AWITANP2", 4100, 2, 2)
 
     return customGraph
 
