@@ -51,8 +51,6 @@ def GetCoordinates(routes):
     for i in routes:
 
         if i == 'BFP':
-
-
             
             if routes[1] == "LAGONP4":
                 BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
@@ -721,45 +719,65 @@ def GetCoordinates(routes):
 
         # BARANGAY VIII
         if i == 'BRGY8P1':
-            BFP = map_widget.set_marker(14.1181476, 122.9458182, text="BFP")
-            BRGY8P1 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY8P1R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY8P1R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY8P1R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY8P1R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY8P1R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY8P1R6 = map_widget.set_marker(14.1148785, 122.9564332, text="")
-            BRGY8P1R7 = map_widget.set_marker(14.1148224, 122.9568969, text="BRGY8P1")
-
-            raw_coordinates.append([14.1181476, 122.9458182])
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
+            BRGY6P4R2 = map_widget.set_marker(14.1148785, 122.9564332, text="")
+            BRGY8P1 = map_widget.set_marker(14.1148224, 122.9568969, text="BRGY8P1")
+            
             raw_coordinates.append([14.1148785, 122.9564332])
             raw_coordinates.append([14.1148224, 122.9568969])
-
-            raw_routes.append(BFP)
+            
+            
+            
+            raw_routes.append(BRGY6P4R2)
             raw_routes.append(BRGY8P1)
-            raw_routes.append(BRGY8P1R1)
-            raw_routes.append(BRGY8P1R2)
-            raw_routes.append(BRGY8P1R3)
-            raw_routes.append(BRGY8P1R4)
-            raw_routes.append(BRGY8P1R5)
-            raw_routes.append(BRGY8P1R6)
-            raw_routes.append(BRGY8P1R7)
+           
+        ''' BFP = map_widget.set_marker(14.1181476, 122.9458182, text="BFP")
+        BRGY8P1 = map_widget.set_marker(14.1176880, 122.9459791, text="")
+        BRGY8P1R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
+        BRGY8P1R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
+        BRGY8P1R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
+        BRGY8P1R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
+        BRGY8P1R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
+        BRGY8P1R6 = map_widget.set_marker(14.1148785, 122.9564332, text="")
+        BRGY8P1R7 = map_widget.set_marker(14.1148224, 122.9568969, text="BRGY8P1")
+
+        raw_coordinates.append([14.1181476, 122.9458182])
+        raw_coordinates.append([14.1176880, 122.9459791])
+        raw_coordinates.append([14.1188031, 122.9495429])
+        raw_coordinates.append([14.1191171, 122.9504186])
+        raw_coordinates.append([14.1174605, 122.9531266])
+        raw_coordinates.append([14.1156273, 122.9560826])
+        raw_coordinates.append([14.1155496, 122.9565470])
+        raw_coordinates.append([14.1148785, 122.9564332])
+        raw_coordinates.append([14.1148224, 122.9568969])
+
+        raw_routes.append(BFP)
+        raw_routes.append(BRGY8P1)
+        raw_routes.append(BRGY8P1R1)
+        raw_routes.append(BRGY8P1R2)
+        raw_routes.append(BRGY8P1R3)
+        raw_routes.append(BRGY8P1R4)
+        raw_routes.append(BRGY8P1R5)
+        raw_routes.append(BRGY8P1R6)
+        raw_routes.append(BRGY8P1R7)'''
 
         if i == 'BRGY8P2':
-            BRGY8P2 = map_widget.set_marker(14.1176880, 122.9459791, text="")
+            BRGY6P4R2 = map_widget.set_marker(14.1148785, 122.9564332, text="")
+            BRGY6P4R3 = map_widget.set_marker(14.1141362, 122.9563149, text="")
+            BRGY8P2 = map_widget.set_marker(14.1140385, 122.9568769, text="BRGY8P2")
+            
+            raw_coordinates.append([14.1148785, 122.9564332])
+            raw_coordinates.append([14.1141362, 122.9563149])
+            raw_coordinates.append([14.1140385, 122.9568769])
+            
+            raw_routes.append(BRGY6P4R2)
+            raw_routes.append(BRGY6P4R3)
+            raw_routes.append(BRGY8P2)
+            '''BRGY8P2 = map_widget.set_marker(14.1176880, 122.9459791, text="")
             BRGY8P2R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
             BRGY8P2R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
             BRGY8P2R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
             BRGY8P2R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
             BRGY8P2R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY8P2R6 = map_widget.set_marker(14.1141362, 122.9563149, text="")
-            BRGY8P2R7 = map_widget.set_marker(14.1140385, 122.9568769, text="BRGY8P2")
 
             raw_coordinates.append([14.1176880, 122.9459791])
             raw_coordinates.append([14.1188031, 122.9495429])
@@ -767,17 +785,13 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1174605, 122.9531266])
             raw_coordinates.append([14.1156273, 122.9560826])
             raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1141362, 122.9563149])
-            raw_coordinates.append([14.1140385, 122.9568769])
 
             raw_routes.append(BRGY8P2)
             raw_routes.append(BRGY8P2R1)
             raw_routes.append(BRGY8P2R2)
             raw_routes.append(BRGY8P2R3)
             raw_routes.append(BRGY8P2R4)
-            raw_routes.append(BRGY8P2R5)
-            raw_routes.append(BRGY8P2R6)
-            raw_routes.append(BRGY8P2R7)
+            raw_routes.append(BRGY8P2R5)'''
 
         if i == 'BRGY8P3':
             BRGY8R1P3 = map_widget.set_marker(14.1147994, 122.9570564, text="Leon D. Hernandez Hospital")
@@ -788,6 +802,9 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGY8R1P3)
             raw_routes.append(BRGY8P3)
+            
+ 
+
 
         if i == 'BRGY8P4':
             BRGY8P4 = map_widget.set_marker(14.1138253, 122.9580020, text="BRGY8P4")
@@ -841,35 +858,33 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGY8P10)
 
-        if i == 'BRGY7P1':
-            BRGY7P1 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY7P1R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY7P1R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY7P1R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY7P1R4 = map_widget.set_marker(14.1160692, 122.9553302, text="BRGY7P1")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
+# BARANGAY 7
+        if i == 'BRGY7P1':
+            BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
+            BRGY7P1 = map_widget.set_marker(14.1160692, 122.9553302, text="BRGY7P1")
+
+            raw_coordinates.append([14.1156730, 122.9559872])
             raw_coordinates.append([14.1160692, 122.9553302])
 
+
+            raw_routes.append(BRGY6P4R1)
             raw_routes.append(BRGY7P1)
-            raw_routes.append(BRGY7P1R1)
-            raw_routes.append(BRGY7P1R2)
-            raw_routes.append(BRGY7P1R3)
-            raw_routes.append(BRGY7P1R4)
+
+
 
         if i == 'BRGY7P2':
-            BRGY7P2R1 = map_widget.set_marker(14.1155595, 122.9565466, text="")
+            BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
             BRGY7P2 = map_widget.set_marker(14.1154326, 122.9580293, text="BRGY7P2")
 
-            raw_coordinates.append([14.1155595, 122.9565466])
+            raw_coordinates.append([14.1156730, 122.9559872])
             raw_coordinates.append([14.1154326, 122.9580293])
 
-            raw_routes.append(BRGY7P2R1)
+            raw_routes.append(BRGY6P4R1)
             raw_routes.append(BRGY7P2)
-
+            
+            
+          
         if i == 'BRGY7P3':
             BRGY7P3 = map_widget.set_marker(14.1152903, 122.9601384, text="BRGY7P3")
 
@@ -892,67 +907,26 @@ def GetCoordinates(routes):
             raw_routes.append(BRGY7P5)
 
         if i == 'BRGY7P6':
-            BRGY7P6 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY7P6R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY7P6R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY7P6R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY7P6R4 = map_widget.set_marker(14.1163322, 122.9549532, text="")
-            BRGY7P6R5 = map_widget.set_marker(14.1168385, 122.9552549, text="Sanitary Bakery and Grocery Store")
-            BRGY7P6R6 = map_widget.set_marker(14.1176766, 122.9556925, text="Novo Supermart & Department Store")
-            BRGY7P6R7 = map_widget.set_marker(14.1182856, 122.9559222, text="Coffee & Tea Gallery")
-            BRGY7P6R8 = map_widget.set_marker(14.1188806, 122.9561363, text="")
-            BRGY7P6R9 = map_widget.set_marker(14.1194953, 122.9566490, text="BRGY7P6")
+                BRGY7P6 = map_widget.set_marker(14.1188769, 122.9561232, text="BRGY7P6")   
+                BRGY6P3 = map_widget.set_marker(14.1194950, 122.9566621, text="BRGY6P3")   
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1163322, 122.9549532])
-            raw_coordinates.append([14.1168385, 122.9552549])
-            raw_coordinates.append([14.1176766, 122.9556925])
-            raw_coordinates.append([14.1182856, 122.9559222])
-            raw_coordinates.append([14.1188806, 122.9561363])
-            raw_coordinates.append([14.1194953, 122.9566490])
+                raw_coordinates.append([14.1188769, 122.9561232])  
+                raw_coordinates.append([14.1194950, 122.9566621])  
+                
 
-            raw_routes.append(BRGY7P6)
-            raw_routes.append(BRGY7P6R1)
-            raw_routes.append(BRGY7P6R2)
-            raw_routes.append(BRGY7P6R3)
-            raw_routes.append(BRGY7P6R4)
-            raw_routes.append(BRGY7P6R5)
-            raw_routes.append(BRGY7P6R6)
-            raw_routes.append(BRGY7P6R7)
-            raw_routes.append(BRGY7P6R8)
-            raw_routes.append(BRGY7P6R9)
+                raw_routes.append(BRGY7P6)  
+                raw_routes.append(BRGY6P3) 
 
         if i == 'BRGY7P7':
-            BRGY7P7 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY7P7R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY7P7R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY7P7R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY7P7R4 = map_widget.set_marker(14.1163322, 122.9549532, text="")
-            BRGY7P7R5 = map_widget.set_marker(14.1182856, 122.9559222, text="Coffee & Tea Gallery")
-            BRGY7P7R6 = map_widget.set_marker(14.1168646, 122.9612083, text="Diego Liñan")
-            BRGY7P7R7 = map_widget.set_marker(14.1175618, 122.9615195, text="BRGY7P7")
+            BRGY7P7 = map_widget.set_marker(14.1152903, 122.9601384, text="BRGY7P7")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1163322, 122.9549532])
-            raw_coordinates.append([14.1182856, 122.9559222])
-            raw_coordinates.append([14.1168646, 122.9612083])
-            raw_coordinates.append([14.1175618, 122.9615195])
+            raw_coordinates.append([14.1152903, 122.9601384])
 
             raw_routes.append(BRGY7P7)
-            raw_routes.append(BRGY7P7R1)
-            raw_routes.append(BRGY7P7R2)
-            raw_routes.append(BRGY7P7R3)
-            raw_routes.append(BRGY7P7R4)
-            raw_routes.append(BRGY7P7R5)
-            raw_routes.append(BRGY7P7R6)
-            raw_routes.append(BRGY7P7R7)
 
+
+
+# GUBAT
         if i == 'BRGYGUBATP1GUYABANO':
             BRGYGUBATP1GUYABANO = map_widget.set_marker(14.1148391, 122.9666635, text="BRGYGUBATP1GUYABANO")
 
@@ -988,237 +962,92 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGYGUBATP5TSIKO)
 
-        # BRGY 2 PASIG
-        if i == 'BRGY2PASIGP6':
-            BRGY2PASIGP6R1 = map_widget.set_marker(14.1168942, 122.9432198, text="")
-            BRGY2PASIGP6R2 = map_widget.set_marker(14.1156250, 122.9409886, text="TOTAL")
-            BRGY2PASIGP6R3 = map_widget.set_marker(14.1031818, 122.9525520, text="BRGY2PASIGP6")
 
-            raw_coordinates.append([14.1168942, 122.9432198])
-            raw_coordinates.append([14.1156250, 122.9409886])
+
+# BRGY 2 PASIG
+        if i == 'BRGY2PASIGP6':
+            BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
+            LAGONP1 = map_widget.set_marker(14.1168800, 122.9432159, text="LAGONP1")
+            LAGON = map_widget.set_marker(14.1156366, 122.9409842, text="LAGON")
+            BRGY2PASIGP6 = map_widget.set_marker(14.1031818, 122.9525520, text="BRGY2PASIGP6")
+
+            raw_coordinates.append([14.1181492, 122.9458283]) 
+            raw_coordinates.append([14.1168800, 122.9432159])
+            raw_coordinates.append([14.1156366, 122.9409842])
             raw_coordinates.append([14.1031818, 122.9525520])
 
-            raw_routes.append(BRGY2PASIGP6R1)
-            raw_routes.append(BRGY2PASIGP6R2)
-            raw_routes.append(BRGY2PASIGP6R3)
+            raw_routes.append(BFP)
+            raw_routes.append(LAGONP1)
+            raw_routes.append(LAGON)
+            raw_routes.append(BRGY2PASIGP6)
 
         if i == 'BRGY2PASIGP5':
-            BRGY2PASIGP5 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP5R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP5R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP5R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP5R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP5R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP5R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP5R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP5R8 = map_widget.set_marker(14.1056096, 122.9562315, text="BRGY2PASIGP5")
+            BRGY2PASIGP5 = map_widget.set_marker(14.1056096, 122.9562315, text="BRGY2PASIGP5")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1056096, 122.9562315])
 
             raw_routes.append(BRGY2PASIGP5)
-            raw_routes.append(BRGY2PASIGP5R1)
-            raw_routes.append(BRGY2PASIGP5R2)
-            raw_routes.append(BRGY2PASIGP5R3)
-            raw_routes.append(BRGY2PASIGP5R4)
-            raw_routes.append(BRGY2PASIGP5R5)
-            raw_routes.append(BRGY2PASIGP5R6)
-            raw_routes.append(BRGY2PASIGP5R7)
-            raw_routes.append(BRGY2PASIGP5R8)
 
 
         if i == 'BRGY2PASIGP7':
-            BRGY2PASIGP7 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP7R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP7R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP7R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP7R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP7R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP7R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP7R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
             BRGY2PASIGP7R8 = map_widget.set_marker(14.1056096, 122.9562315, text="BRGY2PASIGP7")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1056096, 122.9562315])
 
-            raw_routes.append(BRGY2PASIGP7)
-            raw_routes.append(BRGY2PASIGP7R1)
-            raw_routes.append(BRGY2PASIGP7R2)
-            raw_routes.append(BRGY2PASIGP7R3)
-            raw_routes.append(BRGY2PASIGP7R4)
-            raw_routes.append(BRGY2PASIGP7R5)
-            raw_routes.append(BRGY2PASIGP7R6)
-            raw_routes.append(BRGY2PASIGP7R7)
             raw_routes.append(BRGY2PASIGP7R8)
 
         if i == 'BRGY2PASIGP4':
-            BRGY2PASIGP4 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP4R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP4R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP4R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP4R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP4R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP4R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP4R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP4R8 = map_widget.set_marker(14.1061997, 122.9561878, text="BRGY2PASIGP4")
+            BRGY2PASIGP4 = map_widget.set_marker(14.1061997, 122.9561878, text="BRGY2PASIGP4")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1061997, 122.9561878])
 
             raw_routes.append(BRGY2PASIGP4)
-            raw_routes.append(BRGY2PASIGP4R1)
-            raw_routes.append(BRGY2PASIGP4R2)
-            raw_routes.append(BRGY2PASIGP4R3)
-            raw_routes.append(BRGY2PASIGP4R4)
-            raw_routes.append(BRGY2PASIGP4R5)
-            raw_routes.append(BRGY2PASIGP4R6)
-            raw_routes.append(BRGY2PASIGP4R7)
-            raw_routes.append(BRGY2PASIGP4R8)
 
         if i == 'BRGY2PASIGP3':
-            BRGY2PASIGP3 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP3R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP3R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP3R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP3R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP3R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP3R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP3R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP3R8 = map_widget.set_marker(14.1068290, 122.9561473, text="BRGY2PASIGP3")
+            BRGY2PASIGP3 = map_widget.set_marker(14.1068290, 122.9561473, text="BRGY2PASIGP3")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1068290, 122.9561473])
 
             raw_routes.append(BRGY2PASIGP3)
-            raw_routes.append(BRGY2PASIGP3R1)
-            raw_routes.append(BRGY2PASIGP3R2)
-            raw_routes.append(BRGY2PASIGP3R3)
-            raw_routes.append(BRGY2PASIGP3R4)
-            raw_routes.append(BRGY2PASIGP3R5)
-            raw_routes.append(BRGY2PASIGP3R6)
-            raw_routes.append(BRGY2PASIGP3R7)
-            raw_routes.append(BRGY2PASIGP3R8)
 
         if i == 'BRGY2PASIGP2':
-            BRGY2PASIGP2 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP2R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP2R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP2R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP2R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP2R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP2R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP2R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP2R8 = map_widget.set_marker(14.1074794, 122.9561044, text="BRGY2PASIGP2")
+            BRGY2PASIGP2 = map_widget.set_marker(14.1074794, 122.9561044, text="BRGY2PASIGP2")
 
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
-            raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1074794, 122.9561044])
 
             raw_routes.append(BRGY2PASIGP2)
-            raw_routes.append(BRGY2PASIGP2R1)
-            raw_routes.append(BRGY2PASIGP2R2)
-            raw_routes.append(BRGY2PASIGP2R3)
-            raw_routes.append(BRGY2PASIGP2R4)
-            raw_routes.append(BRGY2PASIGP2R5)
-            raw_routes.append(BRGY2PASIGP2R6)
-            raw_routes.append(BRGY2PASIGP2R7)
-            raw_routes.append(BRGY2PASIGP2R8)
 
         if i == 'BRGY2PASIGP1':
-            BRGY2PASIGP1 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP1R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP1R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP1R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP1R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP1R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP1R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP1R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP1R8 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP1")
-
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
+            BRGY6P4R2 = map_widget.set_marker(14.1148785, 122.9564332, text="")
+            BRGY6P4R3 = map_widget.set_marker(14.1141362, 122.9563149, text="")
+            BRGY2P8R1 = map_widget.set_marker(14.1129875, 122.9560712, text="")
+            BRGY2PASIGP1 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP1")
+            
+            raw_coordinates.append([14.1148785, 122.9564332])
+            raw_coordinates.append([14.1141362, 122.9563149])
             raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1081609, 122.9560615])
-
+            
+            raw_routes.append(BRGY6P4R2)
+            raw_routes.append(BRGY6P4R3)
+            raw_routes.append(BRGY2P8R1)
             raw_routes.append(BRGY2PASIGP1)
-            raw_routes.append(BRGY2PASIGP1R1)
-            raw_routes.append(BRGY2PASIGP1R2)
-            raw_routes.append(BRGY2PASIGP1R3)
-            raw_routes.append(BRGY2PASIGP1R4)
-            raw_routes.append(BRGY2PASIGP1R5)
-            raw_routes.append(BRGY2PASIGP1R6)
-            raw_routes.append(BRGY2PASIGP1R7)
-            raw_routes.append(BRGY2PASIGP1R8)
 
         if i == 'BRGY2PASIGP8':
-            BRGY2PASIGP8 = map_widget.set_marker(14.1176880, 122.9459791, text="")
-            BRGY2PASIGP8R1 = map_widget.set_marker(14.1188031, 122.9495429, text="Bok's Kinalas")
-            BRGY2PASIGP8R2 = map_widget.set_marker(14.1191171, 122.9504186, text="")
-            BRGY2PASIGP8R3 = map_widget.set_marker(14.1174605, 122.9531266, text="SM Hypermart")
-            BRGY2PASIGP8R4 = map_widget.set_marker(14.1156273, 122.9560826, text="Jollibee")
-            BRGY2PASIGP8R5 = map_widget.set_marker(14.1155496, 122.9565470, text="")
-            BRGY2PASIGP8R6 = map_widget.set_marker(14.1129875, 122.9560712, text="Daet Bridge 1")
-            BRGY2PASIGP8R7 = map_widget.set_marker(14.1103960, 122.9559972, text="Infinitea")
-            BRGY2PASIGP8R8 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP8")
-
-            raw_coordinates.append([14.1176880, 122.9459791])
-            raw_coordinates.append([14.1188031, 122.9495429])
-            raw_coordinates.append([14.1191171, 122.9504186])
-            raw_coordinates.append([14.1174605, 122.9531266])
-            raw_coordinates.append([14.1156273, 122.9560826])
-            raw_coordinates.append([14.1155496, 122.9565470])
+            BRGY6P4R2 = map_widget.set_marker(14.1148785, 122.9564332, text="")
+            BRGY6P4R3 = map_widget.set_marker(14.1141362, 122.9563149, text="")
+            BRGY2P8R1 = map_widget.set_marker(14.1129875, 122.9560712, text="")
+            BRGY2PASIGP8 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP8")
+            
+            raw_coordinates.append([14.1148785, 122.9564332])
+            raw_coordinates.append([14.1141362, 122.9563149])
             raw_coordinates.append([14.1129875, 122.9560712])
-            raw_coordinates.append([14.1103960, 122.9559972])
             raw_coordinates.append([14.1081609, 122.9560615])
-
+            
+            raw_routes.append(BRGY6P4R2)
+            raw_routes.append(BRGY6P4R3)
+            raw_routes.append(BRGY2P8R1)
             raw_routes.append(BRGY2PASIGP8)
-            raw_routes.append(BRGY2PASIGP8R1)
-            raw_routes.append(BRGY2PASIGP8R2)
-            raw_routes.append(BRGY2PASIGP8R3)
-            raw_routes.append(BRGY2PASIGP8R4)
-            raw_routes.append(BRGY2PASIGP8R5)
-            raw_routes.append(BRGY2PASIGP8R6)
-            raw_routes.append(BRGY2PASIGP8R7)
-            raw_routes.append(BRGY2PASIGP8R8)
         
         # Camambugan coordinates ->
         if i == 'CAMAMBUGANP1': 
