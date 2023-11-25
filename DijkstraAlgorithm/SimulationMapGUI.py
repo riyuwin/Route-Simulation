@@ -345,15 +345,22 @@ def GetCoordinates(routes):
             raw_routes.append(COBANGBANGR9)
 
         if i == 'COBANGBANGP4':
-            COBANGBANGR12 = map_widget.set_marker(14.1041027, 122.9636565, text="COBANGBANGP4")
-            raw_coordinates.append([14.1041027, 122.9636565])
-            raw_routes.append(COBANGBANGR12)
- 
+            COBANGBANGR1 = map_widget.set_marker(14.1048467, 122.9616517, text="")
+            raw_coordinates.append([14.1048467, 122.9616517])
+            raw_routes.append(COBANGBANGR1)
+
+            COBANGBANGR2 = map_widget.set_marker(14.1039683, 122.9634498, text="COBANGBANGP4")
+            raw_coordinates.append([14.1039683, 122.9634498])
+            raw_routes.append(COBANGBANGR2)
 
         if i == 'COBANGBANGP5':
-            COBANGBANGR12 = map_widget.set_marker(14.1035439, 122.9634229, text="COBANGBANGP5")
+            COBANGBANGR1 = map_widget.set_marker(14.1039417, 122.9635213, text="")
+            raw_coordinates.append([14.1039417, 122.9635213])
+            raw_routes.append(COBANGBANGR1)
+
+            COBANGBANGR2 = map_widget.set_marker(14.1035439, 122.9634229, text="COBANGBANGP5")
             raw_coordinates.append([14.1035439, 122.9634229])
-            raw_routes.append(COBANGBANGR12)
+            raw_routes.append(COBANGBANGR2)
 
         if i == 'COBANGBANGP1':
             BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
