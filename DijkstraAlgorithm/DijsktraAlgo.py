@@ -296,6 +296,14 @@ def CreateGraph():
     customGraph.addEdge("MAMBALITEP4", "MAMBALITEP5", 649, 1, 2)
     customGraph.addEdge("MAMBALITEP5", "MAMBALITEP7", 449, 1, 2)
 
+    customGraph.addEdge("CAMAMBUGANP5", "SANISIDROP1", 1246, 1, 2)
+    customGraph.addEdge("SANISIDROP1", "SANISIDROP2", 268, 1, 2)
+    customGraph.addEdge("SANISIDROP2", "SANISIDROP3", 899, 1, 2)
+    customGraph.addEdge("SANISIDROP2", "SANISIDROP4", 730, 1, 2)
+    customGraph.addEdge("SANISIDROP3", "SANISIDROP5", 560, 1, 2)
+    customGraph.addEdge("SANISIDROP5", "SANISIDROP6", 523, 1, 2)
+
+
     '''customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
     customGraph.addEdge("BRGY8P1", "BRGY8P3", 200, 1, 2)
     customGraph.addEdge("BRGY8P3", "BRGY8P5", 100, 1, 2)
@@ -315,9 +323,9 @@ def CreateGraph():
     customGraph.addNode("COBANGBANGP5") 
     customGraph.addNode("COBANGBANGP6")
 
-    customGraph.addEdge("BFP", "COBANGBANGP1", 2600, 2, 2)
+    customGraph.addEdge("BARANGAY1P5", "COBANGBANGP1", 2600, 2, 2)
     customGraph.addEdge("COBANGBANGP3", "COBANGBANGP2", 2700, 1, 2)
-    customGraph.addEdge("BFP", "COBANGBANGP3", 2600, 1, 2)
+    customGraph.addEdge("BARANGAY1P6", "COBANGBANGP3", 2600, 1, 2)
     customGraph.addEdge("COBANGBANGP2", "COBANGBANGP4", 3100, 1, 2)  
     customGraph.addEdge("COBANGBANGP4", "COBANGBANGP5", 3100, 1, 2)
     customGraph.addEdge("COBANGBANGP4", "COBANGBANGP6", 3400, 1, 2)
@@ -362,6 +370,25 @@ def CreateGraph():
     customGraph.addEdge("BFP", "BORABODP3", 2600, 2, 2)
 
 
+    #BARANGAY 1
+    customGraph.addNode("BARANGAY1P1")
+    customGraph.addNode("BARANGAY1P2")
+    customGraph.addNode("BARANGAY1P3")
+    customGraph.addNode("BARANGAY1P4")
+    customGraph.addNode("BARANGAY1P5")
+    customGraph.addNode("BARANGAY1P6")
+    customGraph.addNode("BARANGAY1P7")
+    customGraph.addNode("BARANGAY1P8")
+    
+    customGraph.addEdge("BFP", "BARANGAY1P1", 16000, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P2", 1700, 2, 2)
+    customGraph.addEdge("BARANGAY1P2", "BARANGAY1P3", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P3", "BARANGAY1P6", 2000, 2, 2)
+    customGraph.addEdge("BARANGAY1P6", "BARANGAY1P7", 2000, 2, 2)
+    customGraph.addEdge("BARANGAY1P7", "BARANGAY1P8", 2100, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P4", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P4", "BARANGAY1P5", 1900, 2, 2)
+    
 
     return customGraph
 
