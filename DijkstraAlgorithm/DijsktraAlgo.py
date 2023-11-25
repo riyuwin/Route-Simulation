@@ -302,10 +302,40 @@ def CreateGraph():
     customGraph.addNode("AWITANP3")
     customGraph.addNode("AWITANP1")
     customGraph.addNode("AWITANP2")
+
     customGraph.addEdge("LAGONP3", "AWITANP3", 3500, 2, 2)
     customGraph.addEdge("AWITANP3", "AWITANP1", 3800, 2, 2)
     customGraph.addEdge("AWITANP1", "AWITANP2", 4100, 2, 2)
 
+    # BAGASBAS
+    customGraph.addNode("BAGASBASP1")
+    customGraph.addNode("BAGASBASP2")
+    customGraph.addNode("BAGASBASP3")
+    customGraph.addNode("BAGASBASP4")
+    customGraph.addNode("BAGASBASP5")
+    customGraph.addNode("BAGASBASP6")
+    
+    customGraph.addEdge("BORABODP5", "BAGASBASP1", 4400, 2, 2)
+    customGraph.addEdge("BAGASBASP1", "BAGASBASP2", 4600, 2, 2)
+    customGraph.addEdge("BAGASBASP2", "BAGASBASP3", 4800, 2, 2)
+    customGraph.addEdge("BAGASBASP3", "BAGASBASP4", 5000, 2, 2)
+    customGraph.addEdge("BAGASBASP4", "BAGASBASP5", 5300, 2, 2)
+    customGraph.addEdge("BAGASBASP5", "BAGASBASP6", 5600, 2, 2)
+
+    #BORABOD
+    customGraph.addNode("BORABODP1")
+    customGraph.addNode("BORABODP2")
+    customGraph.addNode("BORABODP3")
+    customGraph.addNode("BORABODP4")
+    customGraph.addNode("BORABODP5")
+    customGraph.addNode("BORABODP6")
+    
+    customGraph.addEdge("BFP", "BORABODP1", 2000, 2, 2)
+    customGraph.addEdge("BORABODP1", "BORABODP2", 2400, 2, 2)
+    customGraph.addEdge("BORABODP2", "BORABODP4", 2700, 2, 2)
+    customGraph.addEdge("BORABODP4", "BORABODP5", 3400, 2, 2)
+    customGraph.addEdge("BORABODP5", "BORABODP6", 3800, 2, 2)
+    customGraph.addEdge("BFP", "BORABODP3", 2600, 2, 2)
     return customGraph
 
 # Algorithm for getting the shortest path
