@@ -148,6 +148,7 @@ def CreateGraph():
     customGraph.addNode("MAGANGP5")
     customGraph.addNode("MAGANGP6")
 
+
     # PAMORANGON
     customGraph.addNode("PAMORANGONP1")
     customGraph.addNode("PAMORANGONP2")
@@ -155,6 +156,34 @@ def CreateGraph():
     customGraph.addNode("PAMORANGONP4")
     customGraph.addNode("PAMORANGONP5")
     customGraph.addNode("PAMORANGONP6")
+
+    # ALAWIHAO
+    customGraph.addNode("ALAWIHAOP1") 
+    customGraph.addNode("ALAWIHAOP2")  
+    customGraph.addNode("ALAWIHAOP3")
+    customGraph.addNode("ALAWIHAOP4")
+    customGraph.addNode("ALAWIHAOP5")
+    customGraph.addNode("ALAWIHAOP6") 
+    customGraph.addNode("ALAWIHAOP7")  
+    customGraph.addNode("ALAWIHAOP8")
+    customGraph.addNode("ALAWIHAOP9")
+    customGraph.addNode("ALAWIHAOP10") 
+
+    # DOGONGAN
+    customGraph.addNode("DOGONGANP1") 
+    customGraph.addNode("DOGONGANP2")  
+    customGraph.addNode("DOGONGANP3")
+    customGraph.addNode("DOGONGANP4")
+    customGraph.addNode("DOGONGANP5")
+    customGraph.addNode("DOGONGANP6")  
+
+    customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 2573, 1, 2)
+    customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 1057, 1, 2)
+    customGraph.addEdge("DOGONGANP3", "DOGONGANP6", 340, 2, 2)
+    customGraph.addEdge("DOGONGANP3", "DOGONGANP2", 269, 2, 2)
+    customGraph.addEdge("DOGONGANP2", "DOGONGANP4", 500, 2, 2)
+    customGraph.addEdge("DOGONGANP4", "DOGONGANP5", 300, 2, 2)  
+
 
     customGraph.addEdge("LAGONP4R1", "BRGY6P4", 600, 3, 4)
     customGraph.addEdge("BRGY6P4", "BRGY4P4R1", 200, 3, 4)
@@ -174,6 +203,19 @@ def CreateGraph():
     customGraph.addEdge("LAGON", "LAGONP5", 400, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP7", 550, 1, 2)
     customGraph.addEdge("LAGON", "LAGONP6", 130, 1, 2)
+
+    
+    customGraph.addEdge("LAGONP7", "ALAWIHAOP1", 650, 1, 2)
+    customGraph.addEdge("ALAWIHAOP1", "ALAWIHAOP2", 290, 1, 2)
+    customGraph.addEdge("ALAWIHAOP2", "ALAWIHAOP3", 700, 1, 2)
+    customGraph.addEdge("ALAWIHAOP3", "ALAWIHAOP4", 700, 1, 2)
+    customGraph.addEdge("ALAWIHAOP4", "ALAWIHAOP5", 884, 1, 2)
+    customGraph.addEdge("ALAWIHAOP5", "ALAWIHAOP6", 330, 1, 2)
+    customGraph.addEdge("ALAWIHAOP6", "ALAWIHAOP7", 311, 1, 2)
+    customGraph.addEdge("ALAWIHAOP5", "ALAWIHAOP8", 341, 1, 2)
+    customGraph.addEdge("ALAWIHAOP8", "ALAWIHAOP10", 359, 1, 2)
+    customGraph.addEdge("ALAWIHAOP8", "ALAWIHAOP9", 249, 1, 2)
+
 
     
     customGraph.addEdge("LAGONP6", "CAMAMBUGANP7", 130, 1, 4)
