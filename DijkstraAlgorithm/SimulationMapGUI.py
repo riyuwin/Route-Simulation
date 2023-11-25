@@ -27,7 +27,9 @@ all_location = {
     'Barangay Gubat:': ['BRGYGUBATP1GUYABANO', 'BRGYGUBATP2UBAS', 'BRGYGUBATP3BAYABAS', 'BRGYGUBATP4ATIS', 'BRGYGUBATP5TSIKO'],
     'Barangay Pasig': [ 'BRGY2PASIGP6', 'BRGY2PASIGP5', 'BRGY2PASIGP7', 'BRGY2PASIGP4', 'BRGY2PASIGP3', 'BRGY2PASIGP2', 'BRGY2PASIGP1', 'BRGY2PASIGP8', ],
     'Magang': ['MAGANGP1', 'MAGANGP2', 'MAGANGP3', 'MAGANGP4', 'MAGANGP5', 'MAGANGP6'],
-    'Pamorangon': ['PAMORANGONP1', 'PAMORANGONP2', 'PAMORANGONP3', 'PAMORANGONP4', 'PAMORANGONP5', 'PAMORANGONP6']
+    'Pamorangon': ['PAMORANGONP1', 'PAMORANGONP2', 'PAMORANGONP3', 'PAMORANGONP4', 'PAMORANGONP5', 'PAMORANGONP6'],
+    'Mancruz': ['MANCRUZP1', 'MANCRUZP2', 'MANCRUZP3', 'MANCRUZP4']
+
 }
 
 
@@ -1639,6 +1641,51 @@ def GetCoordinates(routes):
             raw_routes.append(PAMORANGONP6R1)
             raw_routes.append(PAMORANGONP6R2)
             raw_routes.append(PAMORANGONP6)
+
+        if i == 'MANCRUZP4':
+
+            MANRCRUZP4R1 = map_widget.set_marker(14.0992103, 122.9563215)
+            MANRCRUZP4R2 = map_widget.set_marker(14.0986662, 122.9565453)
+
+            MANCRUZP4 = map_widget.set_marker(14.0981440, 122.9565617, text="Mancruz P-4")
+
+            raw_coordinates.append([14.0992103, 122.9563215])
+            raw_coordinates.append([14.0986662, 122.9565453])
+            raw_coordinates.append([14.0981440, 122.9565617])
+
+            raw_routes.append(MANRCRUZP4R1)
+            raw_routes.append(MANRCRUZP4R2)
+            raw_routes.append(MANCRUZP4)
+
+        if i == 'MANCRUZP2':
+
+            MANCRUZP2 = map_widget.set_marker(14.0969867, 122.9566183, text="Mancruz P-2") #
+            raw_coordinates.append([14.0969867, 122.9566183])
+            raw_routes.append(MANCRUZP2)
+
+        if i == 'MANCRUZP1':
+
+            MANCRUZP1 = map_widget.set_marker(14.091255423325915, 122.95688903288227, text="Mancruz P-1")
+            raw_coordinates.append([14.091255423325915, 122.95688903288227])
+            raw_routes.append(MANCRUZP1)
+
+        if i == 'MANCRUZP3':
+
+            MANRCRUZP3R1 = map_widget.set_marker(14.0912982, 122.9564243)
+            MANRCRUZP3R2 = map_widget.set_marker(14.0915791, 122.9563653)
+            MANRCRUZP3R3 = map_widget.set_marker(14.0920940, 122.9551532)
+            MANCRUZP3 = map_widget.set_marker(14.091702085263828, 122.95445844588974, text="Mancruz P-3")
+
+            raw_coordinates.append([14.0912982, 122.9564243])
+            raw_coordinates.append([14.0915791, 122.9563653])
+            raw_coordinates.append([14.0920940, 122.9551532])
+            raw_coordinates.append([14.091702085263828, 122.95445844588974])
+
+            raw_routes.append(MANRCRUZP3R1)
+            raw_routes.append(MANRCRUZP3R2)
+            raw_routes.append(MANRCRUZP3R3)
+            raw_routes.append(MANCRUZP3)
+
 
 
 
