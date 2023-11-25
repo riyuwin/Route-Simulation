@@ -23,7 +23,8 @@ all_location = {
     'Barangay 8': ['BRGY8P1', 'BRGY8P2', 'BRGY8P3', 'BRGY8P4', 'BRGY8P5', 'BRGY8P6', 'BRGY8P7', 'BRGY8P8', 'BRGY8P9', 'BRGY8P10'],
     'Barangay 7': ['BRGY7P1', 'BRGY7P2', 'BRGY7P3', 'BRGY7P4', 'BRGY7P5', 'BRGY7P6', 'BRGY7P7'],
     'Barangay Gubat:': ['BRGYGUBATP1GUYABANO', 'BRGYGUBATP2UBAS', 'BRGYGUBATP3BAYABAS', 'BRGYGUBATP4ATIS', 'BRGYGUBATP5TSIKO'],
-    'Barangay Pasig': [ 'BRGY2PASIGP6', 'BRGY2PASIGP5', 'BRGY2PASIGP7', 'BRGY2PASIGP4', 'BRGY2PASIGP3', 'BRGY2PASIGP2', 'BRGY2PASIGP1', 'BRGY2PASIGP8', ]
+    'Barangay Pasig': [ 'BRGY2PASIGP6', 'BRGY2PASIGP5', 'BRGY2PASIGP7', 'BRGY2PASIGP4', 'BRGY2PASIGP3', 'BRGY2PASIGP2', 'BRGY2PASIGP1', 'BRGY2PASIGP8', ],
+    'Magang': ['MAGANGP1', 'MAGANGP2', 'MAGANGP3', 'MAGANGP4', 'MAGANGP5', 'MAGANGP6']
 }
 
 
@@ -1458,7 +1459,61 @@ def GetCoordinates(routes):
                 raw_routes.append(BIBIRAOP2R7)    
                 raw_routes.append(BIBIRAOP2R8)    
                 raw_routes.append(BIBIRAOP2R9)    
-                raw_routes.append(BIBIRAOP2R10)    
+                raw_routes.append(BIBIRAOP2R10)
+
+        if i == 'MAGANGP1':
+            MAGANGP1 = map_widget.set_marker(14.1014661, 122.9543592, text="Magang P-1")
+            raw_coordinates.append([14.1014661, 122.9543592])
+
+            raw_routes.append(MAGANGP1)
+
+        if i == 'MAGANGP2':
+            MAGANGP2R1 = map_widget.set_marker(14.1008177, 122.9548042)
+            MAGANGP2 = map_widget.set_marker(14.0991605, 122.9523294, text="Magang P-2")
+
+            raw_coordinates.append([14.1008177, 122.9548042])
+            raw_coordinates.append([14.0991605, 122.9523294])
+
+            raw_routes.append(MAGANGP2R1)
+            raw_routes.append(MAGANGP2)
+
+        if i == 'MAGANGP3':
+            MAGANGP3R1 = map_widget.set_marker(14.0974189, 122.9492852)
+            MAGANGP3 = map_widget.set_marker(14.099893691324574, 122.94837909876821, text="Magang P-3")
+
+            raw_coordinates.append([14.0974189, 122.9492852])
+            raw_coordinates.append([14.099893691324574, 122.94837909876821])
+
+            raw_routes.append(MAGANGP3R1)
+            raw_routes.append(MAGANGP3)
+
+        if i == 'MAGANGP4':
+            MAGANGP4R1 = map_widget.set_marker(14.099893691324574, 122.94837909876821)
+            MAGANGP4 = map_widget.set_marker(14.1013062, 122.9506929, text="Magang P-4")
+
+            raw_coordinates.append([14.1013062, 122.9506929])
+            raw_coordinates.append([14.099893691324574, 122.94837909876821])
+
+
+            raw_routes.append(MAGANGP4R1)
+            raw_routes.append(MAGANGP4)
+
+        if i == 'MAGANGP5':
+
+            MAGANGP5 = map_widget.set_marker(14.0952499, 122.9466356, text="Magang P-5")
+
+            raw_coordinates.append([14.1013062, 122.9506929])
+
+            raw_routes.append(MAGANGP5)
+
+        if i == 'MAGANGP6':
+            MAGANGP6 = map_widget.set_marker(14.093771429391841, 122.94453425116983, text="Magang P-6")
+
+            raw_coordinates.append([14.093771429391841, 122.94453425116983])
+
+            raw_routes.append(MAGANGP6)
+
+
 
     return raw_routes, raw_coordinates
 
