@@ -93,6 +93,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1168800, 122.9432159]) 
 
             raw_routes.append(LAGONP1)
+            
 
 
         if i == 'LAGON':
@@ -156,8 +157,8 @@ def GetCoordinates(routes):
             raw_routes.append(LAGONP5R4)
 
         if i == 'LAGONP4':
-            LAGONP4 = map_widget.set_marker(14.1185202, 122.9472156, text="LAGONP4")
-            LAGONP4R1 = map_widget.set_marker(14.1191716, 122.9469856, text="LAGONP4")
+            LAGONP4 = map_widget.set_marker(14.1185202, 122.9472156, text="")
+            LAGONP4R1 = map_widget.set_marker(14.1191716, 122.9469856, text="")
             LAGONP4R2 = map_widget.set_marker(14.1197948, 122.9467542, text="LAGONP4")
 
 
@@ -173,7 +174,7 @@ def GetCoordinates(routes):
 
 
         if i == 'LAGONP3':
-            LAGON3 = map_widget.set_marker(14.1209278, 122.9475108, text="LAGON3")
+            LAGON3 = map_widget.set_marker(14.1209278, 122.9475108, text="")
             LAGONP3R1 = map_widget.set_marker(14.1229959, 122.9440899, text="LAGONP3")
             
             raw_coordinates.append([14.1209278, 122.9475108]) 
@@ -1641,7 +1642,7 @@ def update_purok_combobox(*args):
 
 
 def MainMenu():
-    global root, canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box, purok_combo_var, view_btn
+    global my_label, root, canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box, purok_combo_var, view_btn
     root = Tk()
     root.title('Daet Map')
     root.geometry('1200x650+70+20')
