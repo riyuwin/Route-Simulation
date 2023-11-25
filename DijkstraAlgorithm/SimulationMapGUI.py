@@ -11,18 +11,20 @@ routes_label_list = []
 # get location
 all_location = {
     'Awitan': ["AWITANP1","AWITANP2","AWITANP3"], 
+    'Alawihao': ['ALAWIHAOP1', 'ALAWIHAOP2', 'ALAWIHAOP3', 'ALAWIHAOP4', 'ALAWIHAOP5', 'ALAWIHAOP6', 'ALAWIHAOP7', 'ALAWIHAOP8', 'ALAWIHAOP9'],
     'Bibirao': ['BIBIRAOP1', 'BIBIRAOP2', 'BIBIRAOP3', 'BIBIRAOP4', 'BIBIRAOP5'],
-    'Lagon': ["LAGON", "LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
+    'Dogongan': ['DOGONGANP1', 'DOGONGANP2','DOGONGANP3','DOGONGANP4','DOGONGANP5','DOGONGANP6'],
     'Barangay 6': ["BRGY6P1", "BRGY6P2", "BRGY6P3","BRGY6P4", "BRGY6P5"],
     'Bagasbas': ["BAGASBASP1","BAGASBASP2","BAGASBASP3", "BAGASBASP4","BAGASBASP5","BAGASBASP6"],
     'Barangay1': ["BARANGAY1P1","BARANGAY1P2","BARANGAY1P3","BARANGAY1P4","BARANGAY1P5","BARANGAY1P6","BARANGAY1P7","BARANGAY1P8"],
     'Borabod': ["BORABODP1","BORABODP2","BORABODP3","BORABODP4","BORABODP5","BORABODP6"],
     'Camambugan': ["CAMAMBUGANP1", "CAMAMBUGANP2", "CAMAMBUGANP3","CAMAMBUGANP4", "CAMAMBUGANP5", "CAMAMBUGANP6","CAMAMBUGANP7"],
     'Cobangbang': ["COBANGBANGP1","COBANGBANGP2","COBANGBANGP3","COBANGBANGP4","COBANGBANGP5","COBANGBANGP6"],
+    'Lagon': ["LAGON", "LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
     'Mantagbac': ['MANTAGBACP1', 'MANTAGBACP2', 'MANTAGBACP3', 'MANTAGBACP4', 'MANTAGBACP5', 'MANTAGBACP6', 'MANTAGBACP7', 'MANTAGBACP8', 'MANTAGBACP9'],
     'Barangay 8': ['BRGY8P1', 'BRGY8P2', 'BRGY8P3', 'BRGY8P4', 'BRGY8P5', 'BRGY8P6', 'BRGY8P7', 'BRGY8P8', 'BRGY8P9', 'BRGY8P10'],
     'Barangay 7': ['BRGY7P1', 'BRGY7P2', 'BRGY7P3', 'BRGY7P4', 'BRGY7P5', 'BRGY7P6', 'BRGY7P7'],
-    'Barangay Gubat:': ['BRGYGUBATP1GUYABANO', 'BRGYGUBATP2UBAS', 'BRGYGUBATP3BAYABAS', 'BRGYGUBATP4ATIS', 'BRGYGUBATP5TSIKO'],
+    'Barangay Gubat': ['BRGYGUBATP1GUYABANO', 'BRGYGUBATP2UBAS', 'BRGYGUBATP3BAYABAS', 'BRGYGUBATP4ATIS', 'BRGYGUBATP5TSIKO'],
     'Barangay Pasig': [ 'BRGY2PASIGP6', 'BRGY2PASIGP5', 'BRGY2PASIGP7', 'BRGY2PASIGP4', 'BRGY2PASIGP3', 'BRGY2PASIGP2', 'BRGY2PASIGP1', 'BRGY2PASIGP8', ]
 }
 
@@ -222,32 +224,86 @@ def GetCoordinates(routes):
             raw_routes.append(ALAWIHAOPR43)
         
         if i == 'ALAWIHAOP6':
-            ALAWIHAOPR6 = map_widget.set_marker(14.1067139, 122.9174642, text="ALAWIHAOP6")
+            ALAWIHAOPR6 = map_widget.set_marker(14.1071629, 122.9175127, text="")
+            ALAWIHAOPR2 = map_widget.set_marker(14.1082933, 122.9178748, text="")
+            ALAWIHAOPR3 = map_widget.set_marker(14.1082942, 122.9178809, text="")
+            ALAWIHAOPR4 = map_widget.set_marker(14.1095697, 122.9182075, text="ALAWIHAOP6")
             
-            raw_coordinates.append([14.1067139, 122.9174642])
+            raw_coordinates.append([14.1071629, 122.9175127])
+            raw_coordinates.append([14.1082933, 122.9178748])
+            raw_coordinates.append([14.1082942, 122.9178809])
+            raw_coordinates.append([14.1095697, 122.9182075])
             
             raw_routes.append(ALAWIHAOPR6)
+            raw_routes.append(ALAWIHAOPR2)
+            raw_routes.append(ALAWIHAOPR3)
+            raw_routes.append(ALAWIHAOPR4)
 
         if i == 'ALAWIHAOP8':
-            ALAWIHAOPR8 = map_widget.set_marker(14.1066948, 122.9174276, text="ALAWIHAOP8")
+            ALAWIHAOPR1 = map_widget.set_marker(14.1066948, 122.9174276, text="")
             
             raw_coordinates.append([14.1066948, 122.9174276])
             
-            raw_routes.append(ALAWIHAOPR8)
+            raw_routes.append(ALAWIHAOPR1)
            
         if i == 'ALAWIHAOP5':
-            ALAWIHAOPR5 = map_widget.set_marker(14.1055357, 122.9174664, text="ALAWIHAOP5")
+            ALAWIHAOPR5 = map_widget.set_marker(14.1066927, 122.9174750, text="ALAWIHAOP5")
             
-            raw_coordinates.append([14.1055357, 122.9174664])
-            
+            raw_coordinates.append([14.1066927, 122.9174750])
             raw_routes.append(ALAWIHAOPR5)
+ 
+        if i == 'ALAWIHAOP5':
+            ALAWIHAOPR5 = map_widget.set_marker(14.1066927, 122.9174750, text="ALAWIHAOP5")
+            
+            raw_coordinates.append([14.1066927, 122.9174750])
+            raw_routes.append(ALAWIHAOPR5)
+ 
+        if i == 'ALAWIHAOP7':
+            ALAWIHAOPR1 = map_widget.set_marker(14.1103463, 122.9184194, text="")
+            ALAWIHAOPR2 = map_widget.set_marker(14.1104035, 122.9189075, text="")   
+            ALAWIHAOPR3 = map_widget.set_marker(14.1103619, 122.9191650, text="")      
+            ALAWIHAOPR4 = map_widget.set_marker(14.1106221, 122.9192380, text="")
+            ALAWIHAOPR5 = map_widget.set_marker(14.1110695, 122.9186747, text="")
+            ALAWIHAOPR6 = map_widget.set_marker(14.1115402, 122.9192719, text="ALAWIHAOP7")          
+            
+            raw_coordinates.append([14.1103463, 122.9184194])
+            raw_coordinates.append([14.1104035, 122.9189075])
+            raw_coordinates.append([14.1103619, 122.9191650])
+            raw_coordinates.append([14.1106221, 122.9192380])
+            raw_coordinates.append([14.1110695, 122.9186747])
+            raw_coordinates.append([14.1115402, 122.9192719])
 
+
+            raw_routes.append(ALAWIHAOPR1)
+            raw_routes.append(ALAWIHAOPR2)
+            raw_routes.append(ALAWIHAOPR3)
+            raw_routes.append(ALAWIHAOPR4)
+            raw_routes.append(ALAWIHAOPR5)
+            raw_routes.append(ALAWIHAOPR6)
+ 
         if i == 'ALAWIHAOP8':
-            ALAWIHAOPR8 = map_widget.set_marker(14.1060501, 122.9142542, text="ALAWIHAOP8")
+            ALAWIHAOPR1 = map_widget.set_marker(14.1066268, 122.9161801, text="")
+            ALAWIHAOPR2 = map_widget.set_marker(14.1058325, 122.9134284, text="ALAWIHAOP8")          
             
-            raw_coordinates.append([14.1060501, 122.9142542])
+            raw_coordinates.append([14.1066268, 122.9161801])
+            raw_coordinates.append([14.1058325, 122.9134284]) 
+
+
+            raw_routes.append(ALAWIHAOPR1)
+            raw_routes.append(ALAWIHAOPR2) 
+
+        
+        if i == 'ALAWIHAOP9':
+            ALAWIHAOPR1 = map_widget.set_marker(14.1049793, 122.9110073, text="")
+            ALAWIHAOPR2 = map_widget.set_marker(14.1032312, 122.9074883, text="ALAWIHAOP9")          
             
-            raw_routes.append(ALAWIHAOPR8)
+            raw_coordinates.append([14.1049793, 122.9110073])
+            raw_coordinates.append([14.1032312, 122.9074883]) 
+
+
+            raw_routes.append(ALAWIHAOPR1)
+            raw_routes.append(ALAWIHAOPR2) 
+  
             
         if i == 'COBANGBANGP3':
             BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
@@ -1458,7 +1514,120 @@ def GetCoordinates(routes):
                 raw_routes.append(BIBIRAOP2R7)    
                 raw_routes.append(BIBIRAOP2R8)    
                 raw_routes.append(BIBIRAOP2R9)    
-                raw_routes.append(BIBIRAOP2R10)    
+                raw_routes.append(BIBIRAOP2R10)   
+
+
+        
+        if i == 'DOGONGANP1':
+                print(routes)
+                DOGONGANP1R1 = map_widget.set_marker(14.1027857, 122.9048996, text="")    
+                DOGONGANP1R2 = map_widget.set_marker(14.1027492, 122.9041067, text="")    
+                DOGONGANP1R3 = map_widget.set_marker(14.1029209, 122.9034921, text="")    
+            
+                raw_coordinates.append([14.1027857, 122.9048996])  
+                raw_coordinates.append([14.1029209, 122.9034921])  
+                raw_coordinates.append([14.1029209, 122.9034921])  
+
+                raw_routes.append(DOGONGANP1R1)  
+                raw_routes.append(DOGONGANP1R2)  
+                raw_routes.append(DOGONGANP1R3) 
+
+
+        if i == 'DOGONGANP2':
+                print(routes)
+                DOGONGANP1R1 = map_widget.set_marker(14.1114487, 122.8830747, text="")   
+                DOGONGANP1R2 = map_widget.set_marker(14.1118649, 122.8835897, text="")       
+                DOGONGANP1R3 = map_widget.set_marker(14.1119367, 122.8843538 , text="")    
+            
+                raw_coordinates.append([14.1114487, 122.8830747])  
+                raw_coordinates.append([14.1118649, 122.8835897])  
+                raw_coordinates.append([14.1119367, 122.8843538])   
+
+                raw_routes.append(DOGONGANP1R1)  
+                raw_routes.append(DOGONGANP1R2)  
+                raw_routes.append(DOGONGANP1R3) 
+
+            
+
+        if i == 'DOGONGANP4':
+                print(routes)    
+                DOGONGANP1R4 = map_widget.set_marker(14.1123852, 122.8850702, text="")      
+                DOGONGANP1R5 = map_widget.set_marker(14.1138752, 122.8849868, text="")      
+                DOGONGANP1R6 = map_widget.set_marker(14.1149389, 122.8844181, text="")    
+            
+                raw_coordinates.append([14.1123852, 122.8850702])  
+                raw_coordinates.append([14.1138752, 122.8849868])  
+                raw_coordinates.append([14.1149389, 122.8844181])  
+  
+                raw_routes.append(DOGONGANP1R4)    
+                raw_routes.append(DOGONGANP1R5)
+                raw_routes.append(DOGONGANP1R6) 
+        
+        if i == 'DOGONGANP5': 
+                DOGONGANP1R1 = map_widget.set_marker(14.1159321, 122.8849505, text="") 
+                DOGONGANP1R2 = map_widget.set_marker(14.1163274, 122.8847789, text="")        
+                DOGONGANP1R3 = map_widget.set_marker(14.1167853, 122.8848647, text="")            
+                DOGONGANP1R4 = map_widget.set_marker(14.1171390, 122.8846072, text="")                  
+                DOGONGANP1R5 = map_widget.set_marker(14.1178204, 122.8846522, text="DOGONGANP5")        
+            
+                raw_coordinates.append([14.1159321, 122.8849505])    
+                raw_coordinates.append([14.1163274, 122.8847789])    
+                raw_coordinates.append([14.1167853, 122.8848647])   
+                raw_coordinates.append([14.1171390, 122.8846072])   
+                raw_coordinates.append([14.1178204, 122.8846522])     
+
+                raw_routes.append(DOGONGANP1R1)  
+                raw_routes.append(DOGONGANP1R2)  
+                raw_routes.append(DOGONGANP1R3)  
+                raw_routes.append(DOGONGANP1R4)  
+                raw_routes.append(DOGONGANP1R5)  
+
+        if i == 'DOGONGANP3': 
+                DOGONGANP1R1 = map_widget.set_marker(14.1039803, 122.9011440, text="")    
+                DOGONGANP1R2 = map_widget.set_marker(14.1048856, 122.8991645, text="")    
+                DOGONGANP1R3 = map_widget.set_marker(14.1052926, 122.8983652, text="")     
+                DOGONGANP1R4 = map_widget.set_marker(14.1063436, 122.8969077, text="")       
+                DOGONGANP1R5 = map_widget.set_marker(14.1078959, 122.8936251, text="")          
+                DOGONGANP1R6 = map_widget.set_marker(14.1082705, 122.8914709, text="")          
+                DOGONGANP1R7 = map_widget.set_marker(14.1083277, 122.8891643, text="")        
+                DOGONGANP1R8 = map_widget.set_marker(14.1082237, 122.8870782, text="")         
+                DOGONGANP1R9 = map_widget.set_marker(14.1082663, 122.8828964, text="")      
+            
+                raw_coordinates.append([14.1039803, 122.9011440])  
+                raw_coordinates.append([14.1048856, 122.8991645])  
+                raw_coordinates.append([14.1052926, 122.8983652])  
+                raw_coordinates.append([14.1063436, 122.8969077])  
+                raw_coordinates.append([14.1078959, 122.8936251])  
+                raw_coordinates.append([14.1082705, 122.8914709])  
+                raw_coordinates.append([14.1083277, 122.8891643])  
+                raw_coordinates.append([14.1082237, 122.8870782])  
+                raw_coordinates.append([14.1082663, 122.8828964])   
+
+                raw_routes.append(DOGONGANP1R1)  
+                raw_routes.append(DOGONGANP1R2)  
+                raw_routes.append(DOGONGANP1R3)  
+                raw_routes.append(DOGONGANP1R4)  
+                raw_routes.append(DOGONGANP1R5)  
+                raw_routes.append(DOGONGANP1R6)  
+                raw_routes.append(DOGONGANP1R7)  
+                raw_routes.append(DOGONGANP1R8)  
+                raw_routes.append(DOGONGANP1R9)   
+
+        # purok 5 
+        
+        if i == 'DOGONGANP6': 
+                DOGONGANP1R1 = map_widget.set_marker(14.1079478, 122.8800305, text="")   
+                DOGONGANP1R2 = map_widget.set_marker(14.1074484, 122.8764685, text="")            
+                DOGONGANP1R3 = map_widget.set_marker(14.1084539, 122.8760036, text="")            
+            
+                raw_coordinates.append([14.1079478, 122.8800305])    
+                raw_coordinates.append([14.1074484, 122.8764685])     
+                raw_coordinates.append([14.1084539, 122.8760036])       
+
+                raw_routes.append(DOGONGANP1R1)   
+                raw_routes.append(DOGONGANP1R2)   
+                raw_routes.append(DOGONGANP1R3)       
+ 
 
     return raw_routes, raw_coordinates
 
