@@ -183,6 +183,24 @@ def CreateGraph():
     customGraph.addNode("MANCRUZP3")
     customGraph.addNode("MANCRUZP4")
 
+    # SAN ISIDRO
+    customGraph.addNode("SANISIDROP1")
+    customGraph.addNode("SANISIDROP2")
+    customGraph.addNode("SANISIDROP3")
+    customGraph.addNode("SANISIDROP4")
+    customGraph.addNode("SANISIDROP5")
+    customGraph.addNode("SANISIDROP6")
+
+    # MAMBALITE
+    customGraph.addNode("MAMBALITEP1")
+    customGraph.addNode("MAMBALITEP2")
+    customGraph.addNode("MAMBALITEP3")
+    customGraph.addNode("MAMBALITEP4")
+    customGraph.addNode("MAMBALITEP5")
+    customGraph.addNode("MAMBALITEP6")
+    customGraph.addNode("MAMBALITEP7")
+
+
     customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 2573, 1, 2)
     customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 1057, 1, 2)
     customGraph.addEdge("DOGONGANP3", "DOGONGANP6", 340, 2, 2)
@@ -270,7 +288,13 @@ def CreateGraph():
     customGraph.addEdge("MANCRUZP2", "MANCRUZP1", 641, 1, 2)
     customGraph.addEdge("MANCRUZP1", "MANCRUZP3", 265, 1, 2)
 
-
+    customGraph.addEdge("COBANGBANGP6", "MAMBALITEP1", 1258, 1, 2)
+    customGraph.addEdge("MAMBALITEP1", "MAMBALITEP2", 480, 1, 2)
+    customGraph.addEdge("MAMBALITEP1", "MAMBALITEP6", 628, 1, 2)
+    customGraph.addEdge("MAMBALITEP2", "MAMBALITEP3", 270, 1, 2)
+    customGraph.addEdge("MAMBALITEP3", "MAMBALITEP4", 337, 1, 2)
+    customGraph.addEdge("MAMBALITEP4", "MAMBALITEP5", 649, 1, 2)
+    customGraph.addEdge("MAMBALITEP5", "MAMBALITEP7", 449, 1, 2)
 
     '''customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
     customGraph.addEdge("BRGY8P1", "BRGY8P3", 200, 1, 2)
@@ -336,6 +360,9 @@ def CreateGraph():
     customGraph.addEdge("BORABODP4", "BORABODP5", 3400, 2, 2)
     customGraph.addEdge("BORABODP5", "BORABODP6", 3800, 2, 2)
     customGraph.addEdge("BFP", "BORABODP3", 2600, 2, 2)
+
+
+
     return customGraph
 
 # Algorithm for getting the shortest path

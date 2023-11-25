@@ -28,7 +28,9 @@ all_location = {
     'Barangay Pasig': [ 'BRGY2PASIGP6', 'BRGY2PASIGP5', 'BRGY2PASIGP7', 'BRGY2PASIGP4', 'BRGY2PASIGP3', 'BRGY2PASIGP2', 'BRGY2PASIGP1', 'BRGY2PASIGP8', ],
     'Magang': ['MAGANGP1', 'MAGANGP2', 'MAGANGP3', 'MAGANGP4', 'MAGANGP5', 'MAGANGP6'],
     'Pamorangon': ['PAMORANGONP1', 'PAMORANGONP2', 'PAMORANGONP3', 'PAMORANGONP4', 'PAMORANGONP5', 'PAMORANGONP6'],
-    'Mancruz': ['MANCRUZP1', 'MANCRUZP2', 'MANCRUZP3', 'MANCRUZP4']
+    'Mancruz': ['MANCRUZP1', 'MANCRUZP2', 'MANCRUZP3', 'MANCRUZP4'],
+    'San Isidro': ['SANISIDROP1', 'SANISIDROP2', 'SANISIDROP3', 'SANISIDROP4', 'SANISIDROP5', 'SANISIDROP6'],
+    'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7']
 
 }
 
@@ -1737,7 +1739,142 @@ def GetCoordinates(routes):
             raw_routes.append(MANRCRUZP3R3)
             raw_routes.append(MANCRUZP3)
 
+        if i == 'SANISIDROP1':
 
+            SANISIDROP1 = map_widget.set_marker(14.1119195, 122.9652880, text="San Isidro P-1")
+            raw_coordinates.append([14.1119195, 122.9652880])
+            raw_routes.append(SANISIDROP1)
+
+        if i == 'SANISIDROP2':
+
+            SANISIDROP2R1 = map_widget.set_marker(14.1117426, 122.9655275)
+            SANISIDROP2 = map_widget.set_marker(14.1113692, 122.9663126, text="San Isidro P-2")
+
+            raw_coordinates.append([14.1117426, 122.9655275])
+            raw_coordinates.append([14.1113692, 122.9663126])
+
+            raw_routes.append(SANISIDROP2R1)
+            raw_routes.append(SANISIDROP2)
+
+        if i == 'SANISIDROP3':
+
+            SANISIDROP3R1 = map_widget.set_marker(14.1107597, 122.9682556)
+            SANISIDROP3 = map_widget.set_marker(14.1096182, 122.9717979, text="San Isidro P-3")
+
+            raw_coordinates.append([14.1107597, 122.9682556])
+            raw_coordinates.append([14.1096182, 122.9717979])
+
+            raw_routes.append(SANISIDROP3R1)
+            raw_routes.append(SANISIDROP3)
+
+        if i == 'SANISIDROP4':
+
+            SANISIDROP4R1 = map_widget.set_marker(14.1108660, 122.9671934)
+            SANISIDROP4R2 = map_widget.set_marker(14.1105119, 122.9673732)
+            SANISIDROP4 = map_widget.set_marker(14.1083121, 122.9674512, text="San Isidro P-4")
+
+            raw_coordinates.append([14.1108660, 122.9671934])
+            raw_coordinates.append([14.1105119, 122.9673732])
+            raw_coordinates.append([14.1083121, 122.9674512])
+
+            raw_routes.append(SANISIDROP4R1)
+            raw_routes.append(SANISIDROP4R2)
+            raw_routes.append(SANISIDROP4)
+
+        if i == 'SANISIDROP5':
+
+            SANISIDROP5 = map_widget.set_marker(14.1076827, 122.9769609, text="San Isidro P-5")
+            raw_coordinates.append([14.1076827, 122.9769609])
+            raw_routes.append(SANISIDROP5)
+
+        if i == 'SANISIDROP6':
+
+            SANISIDROP6 = map_widget.set_marker(14.1064963, 122.9812528, text="San Isidro P-6")
+            raw_coordinates.append([14.1064963, 122.9812528])
+            raw_routes.append(SANISIDROP6)
+
+        if i == 'MAMBALITEP1':
+
+            MAMBALITEP1R1 = map_widget.set_marker(14.1016763, 122.9670235)
+            MAMBALITEP1R2 = map_widget.set_marker(14.1015197, 122.9674307)
+            MAMBALITEP1R3 = map_widget.set_marker(14.1005298, 122.9685157)
+            MAMBALITEP1R4 = map_widget.set_marker(14.0975802, 122.9698995)
+            MAMBALITEP1R5 = map_widget.set_marker(14.0948315, 122.9724051)
+            MAMBALITEP1 = map_widget.set_marker(14.0940781, 122.9731535, text="Mambalite P-1")
+
+            raw_coordinates.append([14.1016763, 122.9670235])
+            raw_coordinates.append([14.1015197, 122.9674307])
+            raw_coordinates.append([14.1005298, 122.9685157])
+            raw_coordinates.append([14.0975802, 122.9698995])
+            raw_coordinates.append([14.0948315, 122.9724051])
+            raw_coordinates.append([14.0940781, 122.9731535])
+
+            raw_routes.append(MAMBALITEP1R1)
+            raw_routes.append(MAMBALITEP1R2)
+            raw_routes.append(MAMBALITEP1R3)
+            raw_routes.append(MAMBALITEP1R4)
+            raw_routes.append(MAMBALITEP1R5)
+            raw_routes.append(MAMBALITEP1)
+
+        if i == 'MAMBALITEP2':
+
+            MAMBALITEP2 = map_widget.set_marker(14.091017167536688, 122.97633666556318, text="Mambalite P-2")
+            raw_coordinates.append([14.091017167536688, 122.97633666556318])
+            raw_routes.append(MAMBALITEP2)
+
+        if i == 'MAMBALITEP3':
+
+            MAMBALITEP3 = map_widget.set_marker(14.091032540606854, 122.97907382189071, text="Mambalite P-3")
+            raw_coordinates.append([14.091032540606854, 122.97907382189071])
+            raw_routes.append(MAMBALITEP3)
+
+        if i == 'MAMBALITEP4':
+
+            MAMBALITEP4R1 = map_widget.set_marker(14.0911089, 122.9812879)
+            MAMBALITEP4 = map_widget.set_marker(14.0908998, 122.9818873, text="Mambalite P-4")
+            raw_coordinates.append([14.0911089, 122.9812879])
+            raw_coordinates.append([14.0908998, 122.9818873])
+            raw_routes.append(MAMBALITEP4R1)
+            raw_routes.append(MAMBALITEP4)
+
+        if i == 'MAMBALITEP5':
+
+            MAMBALITEP5R1 = map_widget.set_marker(14.0898965, 122.9837384)
+            MAMBALITEP5 = map_widget.set_marker(14.0908037, 122.9875669, text="Mambalite P-5")
+            raw_coordinates.append([14.0898965, 122.9837384])
+            raw_coordinates.append([14.0908037, 122.9875669])
+            raw_routes.append(MAMBALITEP5R1)
+            raw_routes.append(MAMBALITEP5)
+
+        if i == 'MAMBALITEP6':
+            MAMBALITEP6R1 = map_widget.set_marker(14.0943865, 122.9734913)
+            MAMBALITEP6R2 = map_widget.set_marker(14.0942565, 122.9743711)
+            MAMBALITEP6R3 = map_widget.set_marker(14.0947545, 122.9759155)
+            MAMBALITEP6R4 = map_widget.set_marker(14.0954758, 122.9763176)
+            MAMBALITEP6R5 = map_widget.set_marker(14.0949561, 122.9773978)
+            MAMBALITEP6 = map_widget.set_marker(14.0965138, 122.9784053, text="Mambalite P-6")
+
+            raw_coordinates.append([14.0943865, 122.9734913])
+            raw_coordinates.append([14.0942565, 122.9743711])
+            raw_coordinates.append([14.0947545, 122.9759155])
+            raw_coordinates.append([14.0954758, 122.9763176])
+            raw_coordinates.append([14.0949561, 122.9773978])
+            raw_coordinates.append([14.0965138, 122.9784053])
+
+            raw_routes.append(MAMBALITEP6R1)
+            raw_routes.append(MAMBALITEP6R2)
+            raw_routes.append(MAMBALITEP6R3)
+            raw_routes.append(MAMBALITEP6R4)
+            raw_routes.append(MAMBALITEP6R5)
+            raw_routes.append(MAMBALITEP6)
+
+        if i == 'MAMBALITEP7':
+
+            MAMBALITEP7 = map_widget.set_marker(14.0890201, 122.9892342, text="Mambalite P-7")
+
+            raw_coordinates.append([14.0890201, 122.9892342])
+
+            raw_routes.append(MAMBALITEP7)
 
 
 
