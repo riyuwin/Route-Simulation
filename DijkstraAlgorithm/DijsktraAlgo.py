@@ -175,7 +175,13 @@ def CreateGraph():
     customGraph.addNode("DOGONGANP3")
     customGraph.addNode("DOGONGANP4")
     customGraph.addNode("DOGONGANP5")
-    customGraph.addNode("DOGONGANP6")  
+    customGraph.addNode("DOGONGANP6")
+
+    # MANCURZ
+    customGraph.addNode("MANCRUZP1")
+    customGraph.addNode("MANCRUZP2")
+    customGraph.addNode("MANCRUZP3")
+    customGraph.addNode("MANCRUZP4")
 
     customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 2573, 1, 2)
     customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 1057, 1, 2)
@@ -258,6 +264,12 @@ def CreateGraph():
     customGraph.addEdge("PAMORANGONP3", "PAMORANGONP4", 413, 1, 2)
     customGraph.addEdge("PAMORANGONP3", "PAMORANGONP5", 67, 1, 2)
     customGraph.addEdge("PAMORANGONP5", "PAMORANGONP6", 891, 1, 2)
+
+    customGraph.addEdge("MAGANGP1", "MANCRUZP4", 464, 1, 2)
+    customGraph.addEdge("MANCRUZP4", "MANCRUZP2", 130, 1, 2)
+    customGraph.addEdge("MANCRUZP2", "MANCRUZP1", 641, 1, 2)
+    customGraph.addEdge("MANCRUZP1", "MANCRUZP3", 265, 1, 2)
+
 
 
     '''customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
