@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="119a1c8f-50a2-448f-af6b-d1228be98313" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DijkstraAlgorithm/DijsktraAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/DijkstraAlgorithm/DijsktraAlgo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DijkstraAlgorithm/SimulationMapGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/DijkstraAlgorithm/SimulationMapGUI.py" afterDir="false" />
     </list>

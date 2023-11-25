@@ -148,6 +148,14 @@ def CreateGraph():
     customGraph.addNode("MAGANGP5")
     customGraph.addNode("MAGANGP6")
 
+    # PAMORANGON
+    customGraph.addNode("PAMORANGONP1")
+    customGraph.addNode("PAMORANGONP2")
+    customGraph.addNode("PAMORANGONP3")
+    customGraph.addNode("PAMORANGONP4")
+    customGraph.addNode("PAMORANGONP5")
+    customGraph.addNode("PAMORANGONP6")
+
     customGraph.addEdge("LAGONP4R1", "BRGY6P4", 600, 3, 4)
     customGraph.addEdge("BRGY6P4", "BRGY4P4R1", 200, 3, 4)
     customGraph.addEdge("LAGONP4R1", "BRGY6P4", 600, 3, 4)
@@ -200,6 +208,14 @@ def CreateGraph():
     customGraph.addEdge("MAGANGP3", "MAGANGP4", 353, 1, 2)
     customGraph.addEdge("MAGANGP2", "MAGANGP5", 971, 1, 2)
     customGraph.addEdge("MAGANGP2", "MAGANGP6", 288, 1, 2)
+
+
+    customGraph.addEdge("MAGANGP1", "PAMORANGONP1", 338, 1, 2)
+    customGraph.addEdge("PAMORANGONP1", "PAMORANGONP2", 334, 1, 2)
+    customGraph.addEdge("PAMORANGONP2", "PAMORANGONP3", 724, 1, 2)
+    customGraph.addEdge("PAMORANGONP3", "PAMORANGONP4", 413, 1, 2)
+    customGraph.addEdge("PAMORANGONP3", "PAMORANGONP5", 67, 1, 2)
+    customGraph.addEdge("PAMORANGONP5", "PAMORANGONP6", 891, 1, 2)
 
 
     '''customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
