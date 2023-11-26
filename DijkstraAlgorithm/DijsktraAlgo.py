@@ -207,6 +207,24 @@ def CreateGraph():
     customGraph.addNode("MANCRUZP3")
     customGraph.addNode("MANCRUZP4")
 
+    # SAN ISIDRO
+    customGraph.addNode("SANISIDROP1")
+    customGraph.addNode("SANISIDROP2")
+    customGraph.addNode("SANISIDROP3")
+    customGraph.addNode("SANISIDROP4")
+    customGraph.addNode("SANISIDROP5")
+    customGraph.addNode("SANISIDROP6")
+
+    # MAMBALITE
+    customGraph.addNode("MAMBALITEP1")
+    customGraph.addNode("MAMBALITEP2")
+    customGraph.addNode("MAMBALITEP3")
+    customGraph.addNode("MAMBALITEP4")
+    customGraph.addNode("MAMBALITEP5")
+    customGraph.addNode("MAMBALITEP6")
+    customGraph.addNode("MAMBALITEP7")
+
+
     customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 2573, 1, 2)
     customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 1057, 1, 2)
     customGraph.addEdge("DOGONGANP3", "DOGONGANP6", 340, 2, 2)
@@ -301,6 +319,20 @@ def CreateGraph():
     customGraph.addEdge("MANCRUZP2", "MANCRUZP1", 641, 1, 2)
     customGraph.addEdge("MANCRUZP1", "MANCRUZP3", 265, 1, 2)
 
+    customGraph.addEdge("COBANGBANGP6", "MAMBALITEP1", 1258, 1, 2)
+    customGraph.addEdge("MAMBALITEP1", "MAMBALITEP2", 480, 1, 2)
+    customGraph.addEdge("MAMBALITEP1", "MAMBALITEP6", 628, 1, 2)
+    customGraph.addEdge("MAMBALITEP2", "MAMBALITEP3", 270, 1, 2)
+    customGraph.addEdge("MAMBALITEP3", "MAMBALITEP4", 337, 1, 2)
+    customGraph.addEdge("MAMBALITEP4", "MAMBALITEP5", 649, 1, 2)
+    customGraph.addEdge("MAMBALITEP5", "MAMBALITEP7", 449, 1, 2)
+
+    customGraph.addEdge("CAMAMBUGANP5", "SANISIDROP1", 1246, 1, 2)
+    customGraph.addEdge("SANISIDROP1", "SANISIDROP2", 268, 1, 2)
+    customGraph.addEdge("SANISIDROP2", "SANISIDROP3", 899, 1, 2)
+    customGraph.addEdge("SANISIDROP2", "SANISIDROP4", 730, 1, 2)
+    customGraph.addEdge("SANISIDROP3", "SANISIDROP5", 560, 1, 2)
+    customGraph.addEdge("SANISIDROP5", "SANISIDROP6", 523, 1, 2)
 
 
     customGraph.addEdge("BFP", "BRGY8P1", 1400, 1, 2)
@@ -367,6 +399,80 @@ def CreateGraph():
     customGraph.addEdge("LAGONP1", "LAGON", 290, 2, 2)
     customGraph.addEdge("LAGON", "BRGY2PASIGP6", 290, 2, 2)
 
+    # Cobangbang
+    customGraph.addNode("COBANGBANGP1")
+    customGraph.addNode("COBANGBANGP2") 
+    customGraph.addNode("COBANGBANGP3") 
+    customGraph.addNode("COBANGBANGP4") 
+    customGraph.addNode("COBANGBANGP5") 
+    customGraph.addNode("COBANGBANGP6")
+
+    customGraph.addEdge("BARANGAY1P5", "COBANGBANGP1", 2600, 2, 2)
+    customGraph.addEdge("COBANGBANGP3", "COBANGBANGP2", 2700, 1, 2)
+    customGraph.addEdge("BARANGAY1P6", "COBANGBANGP3", 2600, 1, 2)
+    customGraph.addEdge("COBANGBANGP2", "COBANGBANGP4", 3100, 1, 2)  
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP5", 3100, 1, 2)
+    customGraph.addEdge("COBANGBANGP4", "COBANGBANGP6", 3400, 1, 2)
+
+    # AWITAN
+    customGraph.addNode("AWITANP3")
+    customGraph.addNode("AWITANP1")
+    customGraph.addNode("AWITANP2")
+
+    customGraph.addEdge("LAGONP3", "AWITANP3", 3500, 2, 2)
+    customGraph.addEdge("AWITANP3", "AWITANP1", 3800, 2, 2)
+    customGraph.addEdge("AWITANP1", "AWITANP2", 4100, 2, 2)
+
+    # BAGASBAS
+    customGraph.addNode("BAGASBASP1")
+    customGraph.addNode("BAGASBASP2")
+    customGraph.addNode("BAGASBASP3")
+    customGraph.addNode("BAGASBASP4")
+    customGraph.addNode("BAGASBASP5")
+    customGraph.addNode("BAGASBASP6")
+    
+    customGraph.addEdge("BORABODP5", "BAGASBASP1", 4400, 2, 2)
+    customGraph.addEdge("BAGASBASP1", "BAGASBASP2", 4600, 2, 2)
+    customGraph.addEdge("BAGASBASP2", "BAGASBASP3", 4800, 2, 2)
+    customGraph.addEdge("BAGASBASP3", "BAGASBASP4", 5000, 2, 2)
+    customGraph.addEdge("BAGASBASP4", "BAGASBASP5", 5300, 2, 2)
+    customGraph.addEdge("BAGASBASP5", "BAGASBASP6", 5600, 2, 2)
+
+    #BORABOD
+    customGraph.addNode("BORABODP1")
+    customGraph.addNode("BORABODP2")
+    customGraph.addNode("BORABODP3")
+    customGraph.addNode("BORABODP4")
+    customGraph.addNode("BORABODP5")
+    customGraph.addNode("BORABODP6")
+    
+    customGraph.addEdge("BFP", "BORABODP1", 2000, 2, 2)
+    customGraph.addEdge("BORABODP1", "BORABODP2", 2400, 2, 2)
+    customGraph.addEdge("BORABODP2", "BORABODP4", 2700, 2, 2)
+    customGraph.addEdge("BORABODP4", "BORABODP5", 3400, 2, 2)
+    customGraph.addEdge("BORABODP5", "BORABODP6", 3800, 2, 2)
+    customGraph.addEdge("BFP", "BORABODP3", 2600, 2, 2)
+
+
+    #BARANGAY 1
+    customGraph.addNode("BARANGAY1P1")
+    customGraph.addNode("BARANGAY1P2")
+    customGraph.addNode("BARANGAY1P3")
+    customGraph.addNode("BARANGAY1P4")
+    customGraph.addNode("BARANGAY1P5")
+    customGraph.addNode("BARANGAY1P6")
+    customGraph.addNode("BARANGAY1P7")
+    customGraph.addNode("BARANGAY1P8")
+    
+    customGraph.addEdge("BFP", "BARANGAY1P1", 16000, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P2", 1700, 2, 2)
+    customGraph.addEdge("BARANGAY1P2", "BARANGAY1P3", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P3", "BARANGAY1P6", 2000, 2, 2)
+    customGraph.addEdge("BARANGAY1P6", "BARANGAY1P7", 2000, 2, 2)
+    customGraph.addEdge("BARANGAY1P7", "BARANGAY1P8", 2100, 2, 2)
+    customGraph.addEdge("BARANGAY1P1", "BARANGAY1P4", 1900, 2, 2)
+    customGraph.addEdge("BARANGAY1P4", "BARANGAY1P5", 1900, 2, 2)
+    
 
     return customGraph
 
