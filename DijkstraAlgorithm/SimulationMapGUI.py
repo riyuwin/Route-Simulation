@@ -1134,14 +1134,7 @@ def GetCoordinates(routes):
 
             raw_routes.append(CAMAMBUGANP1)  
 
-            raw_routes.append(BRGY2PASIGP8R1)
-            raw_routes.append(BRGY2PASIGP8R2)
-            raw_routes.append(BRGY2PASIGP8R3)
-            raw_routes.append(BRGY2PASIGP8R4)
-            raw_routes.append(BRGY2PASIGP8R5)
-            raw_routes.append(BRGY2PASIGP8R6)
-            raw_routes.append(BRGY2PASIGP8R7)
-            raw_routes.append(BRGY2PASIGP8R8)
+
 
 
         # Camambugan coordinates ->
