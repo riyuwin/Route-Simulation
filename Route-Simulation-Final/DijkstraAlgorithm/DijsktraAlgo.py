@@ -472,7 +472,23 @@ def CreateGraph():
     customGraph.addEdge("BARANGAY1P7", "BARANGAY1P8", 2100, 2, 2)
     customGraph.addEdge("BARANGAY1P1", "BARANGAY1P4", 1900, 2, 2)
     customGraph.addEdge("BARANGAY1P4", "BARANGAY1P5", 1900, 2, 2)
-    
+
+    # CALASGASAN
+    customGraph.addNode("CALASGASANP1")
+    customGraph.addNode("CALASGASANP2")
+    customGraph.addNode("CALASGASANP3")
+    customGraph.addNode("CALASGASANP4")
+    customGraph.addNode("CALASGASANP5")
+    customGraph.addNode("CALASGASANP6")
+
+    customGraph.addEdge("MAGANGP6", "CALASGASANP1", 492, 2, 2)
+    customGraph.addEdge("CALASGASANP1", "CALASGASANP2", 170, 2, 2)
+    customGraph.addEdge("CALASGASANP2", "CALASGASANP3", 157, 2, 2)
+    customGraph.addEdge("CALASGASANP3", "CALASGASANP4", 118, 2, 2)
+    customGraph.addEdge("CALASGASANP4", "CALASGASANP5", 194, 2, 2)
+    customGraph.addEdge("CALASGASANP5", "CALASGASANP6", 386, 2, 2)
+
+
 
     return customGraph
 

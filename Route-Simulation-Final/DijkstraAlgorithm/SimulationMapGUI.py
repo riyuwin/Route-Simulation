@@ -30,8 +30,10 @@ all_location = {
     'Pamorangon': ['PAMORANGONP1', 'PAMORANGONP2', 'PAMORANGONP3', 'PAMORANGONP4', 'PAMORANGONP5', 'PAMORANGONP6'],
     'Mancruz': ['MANCRUZP1', 'MANCRUZP2', 'MANCRUZP3', 'MANCRUZP4'],
     'San Isidro': ['SANISIDROP1', 'SANISIDROP2', 'SANISIDROP3', 'SANISIDROP4', 'SANISIDROP5', 'SANISIDROP6'],
-    'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7']
-    
+    'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7'],
+    'Calasgasan': ['CALASGASANP1', 'CALASGASANP2', 'CALASGASANP3', 'CALASGASANP4', 'CALASGASANP5', 'CALASGASANP6'],
+
+
 
 }
 
@@ -1675,6 +1677,54 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.0890201, 122.9892342])
 
             raw_routes.append(MAMBALITEP7)
+
+        if i == 'CALASGASANP1':
+
+            CALASGASANP1 = map_widget.set_marker(14.0902767, 122.9412942, text="Calasgasan P-1")
+
+            raw_coordinates.append([14.0902767, 122.9412942])
+
+            raw_routes.append(CALASGASANP1)
+
+        if i == 'CALASGASANP2':
+
+            CALASGASANP2 = map_widget.set_marker(14.0892409, 122.9399964, text="Calasgasan P-2")
+
+            raw_coordinates.append([14.0892409, 122.9399964])
+
+            raw_routes.append(CALASGASANP2)
+
+        if i == 'CALASGASANP3':
+
+            CALASGASANP3 = map_widget.set_marker(14.0882012, 122.9389828, text="Calasgasan P-3")
+
+            raw_coordinates.append([14.0882012, 122.9389828])
+
+            raw_routes.append(CALASGASANP3)
+
+        if i == 'CALASGASANP4':
+
+            CALASGASANP4 = map_widget.set_marker(14.0874113, 122.9382121, text="Calasgasan P-4")
+
+            raw_coordinates.append([14.0874113, 122.9382121])
+
+            raw_routes.append(CALASGASANP4)
+
+        if i == 'CALASGASANP5':
+
+            CALASGASANP5 = map_widget.set_marker(14.0864745, 122.9367648, text="Calasgasan P-5")
+
+            raw_coordinates.append([14.0864745, 122.9367648])
+
+            raw_routes.append(CALASGASANP5)
+
+        if i == 'CALASGASANP6':
+
+            CALASGASANP6 = map_widget.set_marker(14.0839567, 122.9342079, text="Calasgasan P-6")
+
+            raw_coordinates.append([14.0839567, 122.9342079])
+
+            raw_routes.append(CALASGASANP6)
 
 
 
