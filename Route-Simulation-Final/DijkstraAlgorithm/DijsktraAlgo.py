@@ -488,6 +488,21 @@ def CreateGraph():
     customGraph.addEdge("CALASGASANP4", "CALASGASANP5", 194, 2, 2)
     customGraph.addEdge("CALASGASANP5", "CALASGASANP6", 386, 2, 2)
 
+    # GAHONON
+    customGraph.addNode("GAHONONP1")
+    customGraph.addNode("GAHONONP2")
+    customGraph.addNode("GAHONONP3")
+    customGraph.addNode("GAHONONP4")
+    customGraph.addNode("GAHONONP5")
+    customGraph.addNode("GAHONONP6")
+
+    customGraph.addEdge("BFP(MAIN)", "GAHONONP3", 496, 2, 2)
+    customGraph.addEdge("GAHONONP3", "GAHONONP6", 1982, 2, 2)
+    customGraph.addEdge("GAHONONP3", "GAHONONP1", 1520, 2, 2)
+    customGraph.addEdge("GAHONONP3", "GAHONONP2", 781, 2, 2)
+    customGraph.addEdge("GAHONONP2", "GAHONONP4", 953, 2, 2)
+    customGraph.addEdge("GAHONONP4", "GAHONONP5", 1042, 2, 2)
+
 
 
     return customGraph
