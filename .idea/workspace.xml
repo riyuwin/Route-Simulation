@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="119a1c8f-50a2-448f-af6b-d1228be98313" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DijkstraAlgorithm/DijsktraAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/DijkstraAlgorithm/DijsktraAlgo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DijkstraAlgorithm/SimulationMapGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/DijkstraAlgorithm/SimulationMapGUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +30,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/Pokong Andoy/PycharmProjects/pythonProject2/Pyfirmata_try.py",
+    "last_opened_file_path": "C:/Users/Pokong Andoy/PycharmProjects/Route-Simulation",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pokong Andoy\PycharmProjects\Route-Simulation\DijkstraAlgorithm\img" />
+      <recent name="C:\Users\Pokong Andoy\PycharmProjects\Route-Simulation\DijkstraAlgorithm" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.SimulationMapGUI">
     <configuration name="Pyfirmata_try" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DijkstraAlgorithm" />
