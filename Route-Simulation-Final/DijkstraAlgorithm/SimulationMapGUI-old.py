@@ -2,8 +2,8 @@ from tkinter import *
 from tkinter import ttk  # Import the ttk module for themed widgets
 import tkintermapview
 from DijsktraAlgo import GetShortestPath
-from tkinter import PhotoImage
-from PIL import Image, ImageTk
+import tkinter as tk
+
 
 paths_list = []
 
@@ -12,7 +12,7 @@ routes_label_list = []
 
 # get location
 all_location = {
-    'Awitan': ["AWITANP1","AWITANP2","AWITANP3"],
+    'Awitan': ["AWITANP1","AWITANP2","AWITANP3"], 
     'Alawihao': ['ALAWIHAOP1', 'ALAWIHAOP2', 'ALAWIHAOP3', 'ALAWIHAOP4', 'ALAWIHAOP5', 'ALAWIHAOP6', 'ALAWIHAOP7', 'ALAWIHAOP8', 'ALAWIHAOP9'],
     'Bibirao': ['BIBIRAOP1', 'BIBIRAOP2', 'BIBIRAOP3', 'BIBIRAOP4', 'BIBIRAOP5'],
     'Dogongan': ['DOGONGANP1', 'DOGONGANP2','DOGONGANP3','DOGONGANP4','DOGONGANP5','DOGONGANP6'],
@@ -32,27 +32,14 @@ all_location = {
     'Pamorangon': ['PAMORANGONP1', 'PAMORANGONP2', 'PAMORANGONP3', 'PAMORANGONP4', 'PAMORANGONP5', 'PAMORANGONP6'],
     'Mancruz': ['MANCRUZP1', 'MANCRUZP2', 'MANCRUZP3', 'MANCRUZP4'],
     'San Isidro': ['SANISIDROP1', 'SANISIDROP2', 'SANISIDROP3', 'SANISIDROP4', 'SANISIDROP5', 'SANISIDROP6'],
-    'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7']
+    'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7'],
+    'Calasgasan': ['CALASGASANP1', 'CALASGASANP2', 'CALASGASANP3', 'CALASGASANP4', 'CALASGASANP5', 'CALASGASANP6'],
+    'Gahonon': ['GAHONONP1', 'GAHONONP2', 'GAHONONP3', 'GAHONONP4', 'GAHONONP5', 'GAHONONP6'],
+
+
 
 }
-firetruck_marker = None
-def update_firetruck_position(coordinate, icon_image):
-    global firetruck_marker
 
-    if firetruck_marker:
-        firetruck_marker.delete()  # Delete the existing marker
-        firetruck_marker = None
-
-    firetruck_marker = map_widget.set_marker(coordinate[0], coordinate[1], text="Firetruck", icon=icon_image, text_color="blue")
-
-def create_firetruck_icon():
-    global firetruck_icon
-
-    original_image = Image.open("firetruck.png")
-    resized_image = original_image.resize((50, 50))
-    firetruck_icon = ImageTk.PhotoImage(resized_image)
-    label = Label(root, image=firetruck_icon)
-    label.pack()
 
 def show_notifier(message):
     notifier_window = Toplevel(root)
@@ -116,6 +103,8 @@ def GetCoordinates(routes):
 
             raw_routes.append(LAGONP1)
 
+
+
         if i == 'LAGON':
             LAGON = map_widget.set_marker(14.1156366, 122.9409842, text="LAGON")
 
@@ -124,14 +113,14 @@ def GetCoordinates(routes):
             raw_routes.append(LAGON)
 
         if i == 'LAGONP2':
-            LAGONP2R1 = map_widget.set_marker(14.1161958, 122.9407131, text="")
-            LAGONP2R2 = map_widget.set_marker(14.1169251, 122.9413635, text="")
-            LAGONP2R3 = map_widget.set_marker(14.1178483, 122.9406330, text="")
-            LAGONP2R4 = map_widget.set_marker(14.1179370, 122.9402085, text="")
-            LAGONP2R5 = map_widget.set_marker(14.1184001, 122.9398437, text="")
-            LAGONP2R6 = map_widget.set_marker(14.1207033, 122.9392599, text="")
-            LAGONP2R7 = map_widget.set_marker(14.1224618, 122.9390640, text="")
-            LAGONP2R8 = map_widget.set_marker(14.1232970, 122.9386402, text="LAGONP2")
+            LAGONP2R1 = map_widget.set_marker(14.1161958, 122.9407131, text="LAGONP2R1")
+            LAGONP2R2 = map_widget.set_marker(14.1169251, 122.9413635, text="LAGONP2R2")
+            LAGONP2R3 = map_widget.set_marker(14.1178483, 122.9406330, text="LAGONP3R3")
+            LAGONP2R4 = map_widget.set_marker(14.1179370, 122.9402085, text="LAGONP4R4")
+            LAGONP2R5 = map_widget.set_marker(14.1184001, 122.9398437, text="LAGONP5R5")
+            LAGONP2R6 = map_widget.set_marker(14.1207033, 122.9392599, text="LAGONP5R6")
+            LAGONP2R7 = map_widget.set_marker(14.1224618, 122.9390640, text="LAGONP5R7")
+            LAGONP2R8 = map_widget.set_marker(14.1232970, 122.9386402, text="LAGONP5R8")
 
             raw_coordinates.append([14.1161958, 122.9407131])
             raw_coordinates.append([14.1169251, 122.9413635])
@@ -161,10 +150,10 @@ def GetCoordinates(routes):
 
         if i == 'LAGONP5':
 
-            LAGONP5R1 = map_widget.set_marker(14.1161958, 122.9407131, text="")
-            LAGONP5R2 = map_widget.set_marker(14.1150188, 122.9389632, text="")
-            LAGONP5R3 = map_widget.set_marker(14.1147849, 122.9381085, text="")
-            LAGONP5R4 = map_widget.set_marker(14.1144514, 122.9350615, text="LAGONP5")
+            LAGONP5R1 = map_widget.set_marker(14.1161958, 122.9407131, text="LAGONP5R1")
+            LAGONP5R2 = map_widget.set_marker(14.1150188, 122.9389632, text="LAGONP5R2")
+            LAGONP5R3 = map_widget.set_marker(14.1147849, 122.9381085, text="LAGONP5R3")
+            LAGONP5R4 = map_widget.set_marker(14.1144514, 122.9350615, text="LAGONP5R4")
 
             raw_coordinates.append([14.1161958, 122.9407131])
             raw_coordinates.append([14.1150188, 122.9389632])
@@ -210,6 +199,7 @@ def GetCoordinates(routes):
 
             raw_routes.append(LAGON6)
 
+
         if i == 'ALAWIHAOP1':
             ALAWIHAOPR1 = map_widget.set_marker(14.1116075, 122.9333130, text="ALAWIHAOP1")
 
@@ -220,23 +210,23 @@ def GetCoordinates(routes):
         if i == 'ALAWIHAOP2':
             ALAWIHAOPR2 = map_widget.set_marker(14.110115305360178, 122.9301106387936, text="ALAWIHAOP2")
 
-            raw_coordinates.append([14.110115305360178, 122.9301106387936])  #
+            raw_coordinates.append([14.110115305360178, 122.9301106387936]) #
 
             raw_routes.append(ALAWIHAOPR2)
 
         if i == 'ALAWIHAOP3':
             ALAWIHAOPR3 = map_widget.set_marker(14.1071302, 122.9266863, text="ALAWIHAOP3")
 
-            raw_coordinates.append([14.1071302, 122.9266863])  # 14.1072151 122.9266099
+            raw_coordinates.append([14.1071302, 122.9266863]) #14.1072151 122.9266099
 
             raw_routes.append(ALAWIHAOPR3)
 
         if i == 'ALAWIHAOP4':
             ALAWIHAOPR41 = map_widget.set_marker(14.1063920, 122.9255939, text="ALAWIHAOP4")
-            ALAWIHAOPR42 = map_widget.set_marker(14.1060704, 122.9241374, text="ALAWIHAOP4")  # 14.1063095 122.9223818
+            ALAWIHAOPR42 = map_widget.set_marker(14.1060704, 122.9241374, text="ALAWIHAOP4") #14.1063095 122.9223818
             ALAWIHAOPR43 = map_widget.set_marker(14.1063095, 122.9223818, text="ALAWIHAOP4")
 
-            raw_coordinates.append([14.1063920, 122.9255939])  # 14.1067043, 122.9184628
+            raw_coordinates.append([14.1063920, 122.9255939]) #14.1067043, 122.9184628
             raw_coordinates.append([14.1060704, 122.9241374])
             raw_coordinates.append([14.1063095, 122.9223818])
 
@@ -294,6 +284,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1110695, 122.9186747])
             raw_coordinates.append([14.1115402, 122.9192719])
 
+
             raw_routes.append(ALAWIHAOPR1)
             raw_routes.append(ALAWIHAOPR2)
             raw_routes.append(ALAWIHAOPR3)
@@ -308,8 +299,10 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1066268, 122.9161801])
             raw_coordinates.append([14.1058325, 122.9134284])
 
+
             raw_routes.append(ALAWIHAOPR1)
             raw_routes.append(ALAWIHAOPR2)
+
 
         if i == 'ALAWIHAOP9':
             ALAWIHAOPR1 = map_widget.set_marker(14.1049793, 122.9110073, text="")
@@ -318,8 +311,10 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1049793, 122.9110073])
             raw_coordinates.append([14.1032312, 122.9074883])
 
+
             raw_routes.append(ALAWIHAOPR1)
             raw_routes.append(ALAWIHAOPR2)
+
 
         if i == 'COBANGBANGP3':
             COBANGBANGR7 = map_widget.set_marker(14.1092531, 122.9591187, text="")
@@ -386,6 +381,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1396597, 122.9587151])
             raw_coordinates.append([14.1387407, 122.9592159])
 
+
             raw_routes.append(AWITANPR1)
             raw_routes.append(AWITANPR2)
             raw_routes.append(AWITANPR3)
@@ -411,6 +407,7 @@ def GetCoordinates(routes):
             AWITANPR4 = map_widget.set_marker(14.1393551, 122.9606063, text="")
             raw_coordinates.append([14.1393551, 122.9606063])
             raw_routes.append(AWITANPR4)
+
 
         if i == 'AWITANP2':
             AWITANPR0 = map_widget.set_marker(14.1407872, 122.9637454, text="")
@@ -635,8 +632,9 @@ def GetCoordinates(routes):
             raw_routes.append(BAGASBASP5R2)
             raw_routes.append(BAGASBASP5R3)
 
+
         # MANTABAC
-        # MANTAGABAC
+               # MANTAGABAC
         if i == 'MANTAGBACP9':
             MANTAGBACP9 = map_widget.set_marker(14.1177123, 122.9460971, text="")
             MANTAGBACP9R1 = map_widget.set_marker(14.1169254, 122.9463036, text="")
@@ -750,59 +748,66 @@ def GetCoordinates(routes):
 
         # BARANGAY VI
         if i == 'BRGY6P3':
-            BRGY6P3 = map_widget.set_marker(14.1175173, 122.9556059, text="")
 
-            raw_coordinates.append([14.1175173, 122.9556059])
+                BRGY6P3 = map_widget.set_marker(14.1175173, 122.9556059, text="")
 
-            raw_routes.append(BRGY6P3)
+                raw_coordinates.append([14.1175173, 122.9556059])
+
+                raw_routes.append(BRGY6P3)
+
 
         if i == 'BRGY6P4':
-            BRGY6P4 = map_widget.set_marker(14.1163238, 122.9549512, text="")
 
-            raw_coordinates.append([14.1163238, 122.9549512])
+                BRGY6P4 = map_widget.set_marker(14.1163238, 122.9549512, text="")
 
-            raw_routes.append(BRGY6P4)
+                raw_coordinates.append([14.1163238, 122.9549512])
+
+                raw_routes.append(BRGY6P4)
 
         if i == 'BRGY6P2':
-            BRGY6P2 = map_widget.set_marker(14.1188769, 122.9561232, text="")
-            BRGY6P3 = map_widget.set_marker(14.1194950, 122.9566621, text="")
+                BRGY6P2 = map_widget.set_marker(14.1188769, 122.9561232, text="")
+                BRGY6P3 = map_widget.set_marker(14.1194950, 122.9566621, text="")
 
-            raw_coordinates.append([14.1188769, 122.9561232])
-            raw_coordinates.append([14.1194950, 122.9566621])
+                raw_coordinates.append([14.1188769, 122.9561232])
+                raw_coordinates.append([14.1194950, 122.9566621])
 
-            raw_routes.append(BRGY6P2)
-            raw_routes.append(BRGY6P3)
+
+                raw_routes.append(BRGY6P2)
+                raw_routes.append(BRGY6P3)
         if i == 'BRGY6P5':
-            BRGY6P5R1 = map_widget.set_marker(14.1205877, 122.9572032, text="")
+                BRGY6P5R1 = map_widget.set_marker(14.1205877, 122.9572032, text="")
 
-            raw_coordinates.append([14.1205877, 122.9572032])
+                raw_coordinates.append([14.1205877, 122.9572032])
 
-            raw_routes.append(BRGY6P5R1)
+                raw_routes.append(BRGY6P5R1)
 
         if i == 'BRGY6P1':
-            BRGY6P5R1 = map_widget.set_marker(14.1214089, 122.9576172, text="")
+                BRGY6P5R1 = map_widget.set_marker(14.1214089, 122.9576172, text="")
 
-            raw_coordinates.append([14.1214089, 122.9576172])
+                raw_coordinates.append([14.1214089, 122.9576172])
 
-            raw_routes.append(BRGY6P5R1)
+                raw_routes.append(BRGY6P5R1)
+
 
         if i == 'BRGY6P4R1':
-            BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
-            BRGY6P4R2 = map_widget.set_marker(14.1155325, 122.9565719, text="")
+                BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
+                BRGY6P4R2 = map_widget.set_marker(14.1155325, 122.9565719, text="")
 
-            raw_coordinates.append([14.1156730, 122.9559872])
-            raw_coordinates.append([14.1155325, 122.9565719])
+                raw_coordinates.append([14.1156730, 122.9559872])
+                raw_coordinates.append([14.1155325, 122.9565719])
 
-            raw_routes.append(BRGY6P4R1)
-            raw_routes.append(BRGY6P4R2)
+                raw_routes.append(BRGY6P4R1)
+                raw_routes.append(BRGY6P4R2)
 
-            # BARANGAY VIII
+        # BARANGAY VIII
         if i == 'BRGY8P1':
             BRGY6P4R2 = map_widget.set_marker(14.1148785, 122.9564332, text="")
             BRGY8P1 = map_widget.set_marker(14.1148224, 122.9568969, text="BRGY8P1")
 
             raw_coordinates.append([14.1148785, 122.9564332])
             raw_coordinates.append([14.1148224, 122.9568969])
+
+
 
             raw_routes.append(BRGY6P4R2)
             raw_routes.append(BRGY8P1)
@@ -880,6 +885,9 @@ def GetCoordinates(routes):
             raw_routes.append(BRGY8R1P3)
             raw_routes.append(BRGY8P3)
 
+
+
+
         if i == 'BRGY8P4':
             BRGY8P4 = map_widget.set_marker(14.1138253, 122.9580020, text="BRGY8P4")
 
@@ -932,7 +940,8 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGY8P10)
 
-        # BARANGAY 7
+
+# BARANGAY 7
         if i == 'BRGY7P1':
             BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
             BRGY7P1 = map_widget.set_marker(14.1160692, 122.9553302, text="BRGY7P1")
@@ -940,8 +949,11 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1156730, 122.9559872])
             raw_coordinates.append([14.1160692, 122.9553302])
 
+
             raw_routes.append(BRGY6P4R1)
             raw_routes.append(BRGY7P1)
+
+
 
         if i == 'BRGY7P2':
             BRGY6P4R1 = map_widget.set_marker(14.1156730, 122.9559872, text="")
@@ -952,6 +964,8 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGY6P4R1)
             raw_routes.append(BRGY7P2)
+
+
 
         if i == 'BRGY7P3':
             BRGY7P3 = map_widget.set_marker(14.1152903, 122.9601384, text="BRGY7P3")
@@ -975,14 +989,15 @@ def GetCoordinates(routes):
             raw_routes.append(BRGY7P5)
 
         if i == 'BRGY7P6':
-            BRGY7P6 = map_widget.set_marker(14.1188769, 122.9561232, text="BRGY7P6")
-            BRGY6P3 = map_widget.set_marker(14.1194950, 122.9566621, text="BRGY6P3")
+                BRGY7P6 = map_widget.set_marker(14.1188769, 122.9561232, text="BRGY7P6")
+                BRGY6P3 = map_widget.set_marker(14.1194950, 122.9566621, text="BRGY6P3")
 
-            raw_coordinates.append([14.1188769, 122.9561232])
-            raw_coordinates.append([14.1194950, 122.9566621])
+                raw_coordinates.append([14.1188769, 122.9561232])
+                raw_coordinates.append([14.1194950, 122.9566621])
 
-            raw_routes.append(BRGY7P6)
-            raw_routes.append(BRGY6P3)
+
+                raw_routes.append(BRGY7P6)
+                raw_routes.append(BRGY6P3)
 
         if i == 'BRGY7P7':
             BRGY7P7 = map_widget.set_marker(14.1152903, 122.9601384, text="BRGY7P7")
@@ -991,7 +1006,9 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGY7P7)
 
-        # GUBAT
+
+
+# GUBAT
         if i == 'BRGYGUBATP1GUYABANO':
             BRGYGUBATP1GUYABANO = map_widget.set_marker(14.1148391, 122.9666635, text="BRGYGUBATP1GUYABANO")
 
@@ -1027,14 +1044,16 @@ def GetCoordinates(routes):
 
             raw_routes.append(BRGYGUBATP5TSIKO)
 
-        # BRGY 2 PASIG
+
+
+# BRGY 2 PASIG
         if i == 'BRGY2PASIGP6':
             BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
             LAGONP1 = map_widget.set_marker(14.1168800, 122.9432159, text="LAGONP1")
             LAGON = map_widget.set_marker(14.1156366, 122.9409842, text="LAGON")
             BRGY2PASIGP6 = map_widget.set_marker(14.1031818, 122.9525520, text="BRGY2PASIGP6")
 
-            raw_coordinates.append([14.1181492, 122.9458283])
+            raw_coordinates.append([14.1181492, 122.9458283]) 
             raw_coordinates.append([14.1168800, 122.9432159])
             raw_coordinates.append([14.1156366, 122.9409842])
             raw_coordinates.append([14.1031818, 122.9525520])
@@ -1050,6 +1069,7 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1056096, 122.9562315])
 
             raw_routes.append(BRGY2PASIGP5)
+
 
         if i == 'BRGY2PASIGP7':
             BRGY2PASIGP7R8 = map_widget.set_marker(14.1056096, 122.9562315, text="BRGY2PASIGP7")
@@ -1084,12 +1104,12 @@ def GetCoordinates(routes):
             BRGY6P4R3 = map_widget.set_marker(14.1141362, 122.9563149, text="")
             BRGY2P8R1 = map_widget.set_marker(14.1129875, 122.9560712, text="")
             BRGY2PASIGP1 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP1")
-
+            
             raw_coordinates.append([14.1148785, 122.9564332])
             raw_coordinates.append([14.1141362, 122.9563149])
             raw_coordinates.append([14.1129875, 122.9560712])
             raw_coordinates.append([14.1081609, 122.9560615])
-
+            
             raw_routes.append(BRGY6P4R2)
             raw_routes.append(BRGY6P4R3)
             raw_routes.append(BRGY2P8R1)
@@ -1100,262 +1120,271 @@ def GetCoordinates(routes):
             BRGY6P4R3 = map_widget.set_marker(14.1141362, 122.9563149, text="")
             BRGY2P8R1 = map_widget.set_marker(14.1129875, 122.9560712, text="")
             BRGY2PASIGP8 = map_widget.set_marker(14.1081609, 122.9560615, text="BRGY2PASIGP8")
-
+            
             raw_coordinates.append([14.1148785, 122.9564332])
             raw_coordinates.append([14.1141362, 122.9563149])
             raw_coordinates.append([14.1129875, 122.9560712])
             raw_coordinates.append([14.1081609, 122.9560615])
-
+            
             raw_routes.append(BRGY6P4R2)
             raw_routes.append(BRGY6P4R3)
             raw_routes.append(BRGY2P8R1)
             raw_routes.append(BRGY2PASIGP8)
 
+        
         # Camambugan coordinates ->
-        if i == 'CAMAMBUGANP1':
+        if i == 'CAMAMBUGANP1': 
             CAMAMBUGANP1 = map_widget.set_marker(14.1061920, 122.9497664, text="Camambugan P-1")
+        
+            raw_coordinates.append([14.1088772, 122.9475911])   
 
-            raw_coordinates.append([14.1088772, 122.9475911])
+            raw_routes.append(CAMAMBUGANP1)  
 
-            raw_routes.append(CAMAMBUGANP1)
 
-            # Camambugan coordinates ->
+
+
+        # Camambugan coordinates ->
         if i == 'CAMAMBUGANP7':
-            CAMAMBUGANP7R1 = map_widget.set_marker(14.1139334, 122.9419680, text="")
-            CAMAMBUGANP7R2 = map_widget.set_marker(14.1111761, 122.9450376, text="Camambugan P-7")
+            CAMAMBUGANP7R1 = map_widget.set_marker(14.1139334, 122.9419680, text="") 
+            CAMAMBUGANP7R2 = map_widget.set_marker(14.1111761, 122.9450376, text="Camambugan P-7") 
+        
+            raw_coordinates.append([14.1111761, 122.9450376])  
+            raw_coordinates.append([14.1111761, 122.9450376])   
 
-            raw_coordinates.append([14.1111761, 122.9450376])
-            raw_coordinates.append([14.1111761, 122.9450376])
-
-            raw_routes.append(CAMAMBUGANP7R1)
-            raw_routes.append(CAMAMBUGANP7R2)
+            raw_routes.append(CAMAMBUGANP7R1)  
+            raw_routes.append(CAMAMBUGANP7R2)  
 
         if i == 'CAMAMBUGANP2':
-            CAMAMBUGANP2R1 = map_widget.set_marker(14.1083947, 122.9480392, text="")
-            CAMAMBUGANP2R2 = map_widget.set_marker(14.1078806, 122.9484225, text="")
+                CAMAMBUGANP2R1 = map_widget.set_marker(14.1083947, 122.9480392, text="")   
+                CAMAMBUGANP2R2 = map_widget.set_marker(14.1078806, 122.9484225, text="")   
+            
+                raw_coordinates.append([14.1083947, 122.9480392]) 
+                raw_coordinates.append([14.1078806, 122.9484225])# 000 
 
-            raw_coordinates.append([14.1083947, 122.9480392])
-            raw_coordinates.append([14.1078806, 122.9484225])  # 000
+                raw_routes.append(CAMAMBUGANP2R1) 
+                raw_routes.append(CAMAMBUGANP2R2) 
 
-            raw_routes.append(CAMAMBUGANP2R1)
-            raw_routes.append(CAMAMBUGANP2R2)
-
-            print("HELlo")
+                print("HELlo")
 
         if i == 'CAMAMBUGANP3':
-            print(routes)
-            CAMAMBUGANP3R1 = map_widget.set_marker(14.1064892, 122.9495115, text="")
+                print(routes)
+                CAMAMBUGANP3R1 = map_widget.set_marker(14.1064892, 122.9495115, text="")    
+            
+                raw_coordinates.append([14.1064892, 122.9495115])  
 
-            raw_coordinates.append([14.1064892, 122.9495115])
-
-            raw_routes.append(CAMAMBUGANP3R1)
+                raw_routes.append(CAMAMBUGANP3R1)  
 
         if i == 'CAMAMBUGANP6':
-            CAMAMBUGANP6R1 = map_widget.set_marker(14.1122305, 122.9460843, text="")
-            CAMAMBUGANP6R2 = map_widget.set_marker(14.1119103, 122.9473046, text="")
-            CAMAMBUGANP6R3 = map_widget.set_marker(14.1135712, 122.9475964, text="CAMAMBUGANP6")
-
-            raw_coordinates.append([14.1122305, 122.9460843])
-            raw_coordinates.append([14.1119103, 122.9473046])
+            CAMAMBUGANP6R1 = map_widget.set_marker(14.1122305, 122.9460843, text="")  
+            CAMAMBUGANP6R2 = map_widget.set_marker(14.1119103, 122.9473046, text="")  
+            CAMAMBUGANP6R3 = map_widget.set_marker(14.1135712, 122.9475964, text="CAMAMBUGANP6")  
+        
+            raw_coordinates.append([14.1122305, 122.9460843])  
+            raw_coordinates.append([14.1119103, 122.9473046])  
             raw_coordinates.append([14.1135712, 122.9475964])
 
             raw_routes.append(CAMAMBUGANP6R1)
-            raw_routes.append(CAMAMBUGANP6R2)
-            raw_routes.append(CAMAMBUGANP6R3)
+            raw_routes.append(CAMAMBUGANP6R2)  
+            raw_routes.append(CAMAMBUGANP6R3)  
 
         if i == 'CAMAMBUGANP5':
-            CAMAMBUGANP6R1 = map_widget.set_marker(14.1132455, 122.9518581, text="")
+                CAMAMBUGANP6R1 = map_widget.set_marker(14.1132455, 122.9518581, text="")   
+            
+                raw_coordinates.append([14.1132455, 122.9518581]) 
 
-            raw_coordinates.append([14.1132455, 122.9518581])
+                raw_routes.append(CAMAMBUGANP6R1) 
 
-            raw_routes.append(CAMAMBUGANP6R1)
-
+                
         if i == 'CAMAMBUGANP4':
-            CAMAMBUGANP6R1 = map_widget.set_marker(14.1083327, 122.9493454, text="")
-            CAMAMBUGANP6R2 = map_widget.set_marker(14.1095474, 122.9505229, text="")
-            CAMAMBUGANP6R3 = map_widget.set_marker(14.1100439, 122.9518772, text="CAMAMBUGANP4")
+                
+                CAMAMBUGANP6R1 = map_widget.set_marker(14.1083327, 122.9493454, text="")    
+                CAMAMBUGANP6R2 = map_widget.set_marker(14.1095474, 122.9505229, text="")    
+                CAMAMBUGANP6R3 = map_widget.set_marker(14.1100439, 122.9518772, text="CAMAMBUGANP4")    
+            
+                raw_coordinates.append([14.1083327, 122.9493454])  
+                raw_coordinates.append([14.1095474, 122.9505229])  
+                raw_coordinates.append([14.1100439, 122.9518772])  
 
-            raw_coordinates.append([14.1083327, 122.9493454])
-            raw_coordinates.append([14.1095474, 122.9505229])
-            raw_coordinates.append([14.1100439, 122.9518772])
+                raw_routes.append(CAMAMBUGANP6R1)  
+                raw_routes.append(CAMAMBUGANP6R2)   
+                raw_routes.append(CAMAMBUGANP6R3)  
 
-            raw_routes.append(CAMAMBUGANP6R1)
-            raw_routes.append(CAMAMBUGANP6R2)
-            raw_routes.append(CAMAMBUGANP6R3)
 
-            # Camambugan coordinates ->
-        if i == 'CAMAMBUGANP1':
-            CAMAMBUGANP1 = map_widget.set_marker(14.1061920, 122.9497664, text="Camambugan P-1")
+        # Camambugan coordinates ->
+        if i == 'CAMAMBUGANP1': 
+                CAMAMBUGANP1 = map_widget.set_marker(14.1061920, 122.9497664, text="Camambugan P-1")
+            
+                raw_coordinates.append([14.1061920, 122.9497664])   
 
-            raw_coordinates.append([14.1061920, 122.9497664])
+                raw_routes.append(CAMAMBUGANP1)  
 
-            raw_routes.append(CAMAMBUGANP1)
+        
+        # Bibirao
+        if i == 'BIBIRAOP1': 
+                BIBIRAOR1 = map_widget.set_marker(14.1045602, 122.9481039, text="") 
+                BIBIRAOR2 = map_widget.set_marker(14.1043600, 122.9477651, text="") 
+                BIBIRAOR3 = map_widget.set_marker(14.1042956, 122.9472044, text="CNNHS") 
+                BIBIRAOR4 = map_widget.set_marker(14.1043014, 122.9460733, text="") 
+                BIBIRAOR5 = map_widget.set_marker(14.1042442, 122.9451103, text="") 
+                BIBIRAOR6 = map_widget.set_marker(14.1042026, 122.9426933, text="") 
+                BIBIRAOR7 = map_widget.set_marker(14.1042182, 122.9422642, text="") 
+                BIBIRAOR8 = map_widget.set_marker(14.1039527, 122.9407885, text="") 
+                BIBIRAOR9 = map_widget.set_marker(14.1035799, 122.9397107, text="") 
+                BIBIRAOR10 = map_widget.set_marker(14.1025920, 122.9390187, text="") 
+                BIBIRAOR11 = map_widget.set_marker(14.1015790, 122.9372753, text="") 
+                BIBIRAOR12 = map_widget.set_marker(14.1007049, 122.9360867, text="") 
+                BIBIRAOR13 = map_widget.set_marker(14.1000777, 122.9354673, text="") 
+                BIBIRAOR14 = map_widget.set_marker(14.0999059, 122.9354112, text="BIBIRAOP1") 
+                
 
+                raw_coordinates.append([14.1045602, 122.9481039])
+                raw_coordinates.append([14.1043600, 122.9477651])
+                raw_coordinates.append([14.1042956, 122.9472044])
+                raw_coordinates.append([14.1043014, 122.9460733])
+                raw_coordinates.append([14.1042442, 122.9451103])
+                raw_coordinates.append([14.1042026, 122.9426933])
+                raw_coordinates.append([14.1042182, 122.9422642])
+                raw_coordinates.append([14.1039527, 122.9407885])
+                raw_coordinates.append([14.1035799, 122.9397107])
+                raw_coordinates.append([14.1025920, 122.9390187])
+                raw_coordinates.append([14.1015790, 122.9372753])
+                raw_coordinates.append([14.1007049, 122.9360867])
+                raw_coordinates.append([14.1000777, 122.9354673])
+                raw_coordinates.append([14.0999059, 122.9354112])
+                
+                raw_routes.append(BIBIRAOR1) 
+                raw_routes.append(BIBIRAOR2)  
+                raw_routes.append(BIBIRAOR3)  
+                raw_routes.append(BIBIRAOR4)  
+                raw_routes.append(BIBIRAOR5)  
+                raw_routes.append(BIBIRAOR6)  
+                raw_routes.append(BIBIRAOR7)  
+                raw_routes.append(BIBIRAOR8)  
+                raw_routes.append(BIBIRAOR9)  
+                raw_routes.append(BIBIRAOR10) 
+                raw_routes.append(BIBIRAOR11)  
+                raw_routes.append(BIBIRAOR12)  
+                raw_routes.append(BIBIRAOR13)  
+                raw_routes.append(BIBIRAOR14)  
+            
             # Bibirao
-        if i == 'BIBIRAOP1':
-            BIBIRAOR1 = map_widget.set_marker(14.1045602, 122.9481039, text="")
-            BIBIRAOR2 = map_widget.set_marker(14.1043600, 122.9477651, text="")
-            BIBIRAOR3 = map_widget.set_marker(14.1042956, 122.9472044, text="CNNHS")
-            BIBIRAOR4 = map_widget.set_marker(14.1043014, 122.9460733, text="")
-            BIBIRAOR5 = map_widget.set_marker(14.1042442, 122.9451103, text="")
-            BIBIRAOR6 = map_widget.set_marker(14.1042026, 122.9426933, text="")
-            BIBIRAOR7 = map_widget.set_marker(14.1042182, 122.9422642, text="")
-            BIBIRAOR8 = map_widget.set_marker(14.1039527, 122.9407885, text="")
-            BIBIRAOR9 = map_widget.set_marker(14.1035799, 122.9397107, text="")
-            BIBIRAOR10 = map_widget.set_marker(14.1025920, 122.9390187, text="")
-            BIBIRAOR11 = map_widget.set_marker(14.1015790, 122.9372753, text="")
-            BIBIRAOR12 = map_widget.set_marker(14.1007049, 122.9360867, text="")
-            BIBIRAOR13 = map_widget.set_marker(14.1000777, 122.9354673, text="")
-            BIBIRAOR14 = map_widget.set_marker(14.0999059, 122.9354112, text="BIBIRAOP1")
-
-            raw_coordinates.append([14.1045602, 122.9481039])
-            raw_coordinates.append([14.1043600, 122.9477651])
-            raw_coordinates.append([14.1042956, 122.9472044])
-            raw_coordinates.append([14.1043014, 122.9460733])
-            raw_coordinates.append([14.1042442, 122.9451103])
-            raw_coordinates.append([14.1042026, 122.9426933])
-            raw_coordinates.append([14.1042182, 122.9422642])
-            raw_coordinates.append([14.1039527, 122.9407885])
-            raw_coordinates.append([14.1035799, 122.9397107])
-            raw_coordinates.append([14.1025920, 122.9390187])
-            raw_coordinates.append([14.1015790, 122.9372753])
-            raw_coordinates.append([14.1007049, 122.9360867])
-            raw_coordinates.append([14.1000777, 122.9354673])
-            raw_coordinates.append([14.0999059, 122.9354112])
-
-            raw_routes.append(BIBIRAOR1)
-            raw_routes.append(BIBIRAOR2)
-            raw_routes.append(BIBIRAOR3)
-            raw_routes.append(BIBIRAOR4)
-            raw_routes.append(BIBIRAOR5)
-            raw_routes.append(BIBIRAOR6)
-            raw_routes.append(BIBIRAOR7)
-            raw_routes.append(BIBIRAOR8)
-            raw_routes.append(BIBIRAOR9)
-            raw_routes.append(BIBIRAOR10)
-            raw_routes.append(BIBIRAOR11)
-            raw_routes.append(BIBIRAOR12)
-            raw_routes.append(BIBIRAOR13)
-            raw_routes.append(BIBIRAOR14)
-
+        if i == 'BIBIRAOP2': 
+                BIBIRAOP2R1 = map_widget.set_marker(14.0999456, 122.9335326, text="")
+                BIBIRAOP2R2 = map_widget.set_marker(14.1000652, 122.9331035, text="") 
+                BIBIRAOP2R3 = map_widget.set_marker(14.1003722, 122.9329479, text="") 
+                BIBIRAOP2R4 = map_widget.set_marker(14.1006323, 122.9318601, text="BIBIRAOP2") 
+                
+                raw_coordinates.append([14.0999456, 122.9335326])
+                raw_coordinates.append([14.1000652, 122.9331035])
+                raw_coordinates.append([14.1003722, 122.9329479])
+                raw_coordinates.append([14.1006323, 122.9318601])
+                
+                raw_routes.append(BIBIRAOP2R1)  
+                raw_routes.append(BIBIRAOP2R2)  
+                raw_routes.append(BIBIRAOP2R3)  
+                raw_routes.append(BIBIRAOP2R4)  
+        
             # Bibirao
-        if i == 'BIBIRAOP2':
-            BIBIRAOP2R1 = map_widget.set_marker(14.0999456, 122.9335326, text="")
-            BIBIRAOP2R2 = map_widget.set_marker(14.1000652, 122.9331035, text="")
-            BIBIRAOP2R3 = map_widget.set_marker(14.1003722, 122.9329479, text="")
-            BIBIRAOP2R4 = map_widget.set_marker(14.1006323, 122.9318601, text="BIBIRAOP2")
-
-            raw_coordinates.append([14.0999456, 122.9335326])
-            raw_coordinates.append([14.1000652, 122.9331035])
-            raw_coordinates.append([14.1003722, 122.9329479])
-            raw_coordinates.append([14.1006323, 122.9318601])
-
-            raw_routes.append(BIBIRAOP2R1)
-            raw_routes.append(BIBIRAOP2R2)
-            raw_routes.append(BIBIRAOP2R3)
-            raw_routes.append(BIBIRAOP2R4)
-
+        if i == 'BIBIRAOP3': 
+                BIBIRAOP2R1 = map_widget.set_marker(14.1004397, 122.9308557, text="")
+                BIBIRAOP2R2 = map_widget.set_marker(14.1001276, 122.9300188, text="") 
+                BIBIRAOP2R3 = map_widget.set_marker(14.0997139, 122.9302227, text="") 
+                BIBIRAOP2R4 = map_widget.set_marker(14.0993809, 122.9300438, text="") 
+                BIBIRAOP2R5 = map_widget.set_marker(14.0973925, 122.9290504, text="") 
+                BIBIRAOP2R6 = map_widget.set_marker(14.0972988, 122.9286266, text="") 
+                BIBIRAOP2R7 = map_widget.set_marker(14.0968555, 122.9280557, text="") 
+                BIBIRAOP2R8 = map_widget.set_marker(14.0964562, 122.9271413, text="") 
+                BIBIRAOP2R9 = map_widget.set_marker(14.0963870, 122.9268806, text="") 
+                BIBIRAOP2R10 = map_widget.set_marker(14.0952111, 122.9263066, text="") 
+                BIBIRAOP2R11 = map_widget.set_marker(14.0950966, 122.9261296, text="BIBIRAOP3") 
+                
+                raw_coordinates.append([14.1004397, 122.9308557])
+                raw_coordinates.append([14.1001276, 122.9300188])
+                raw_coordinates.append([14.0997139, 122.9302227])
+                raw_coordinates.append([14.0993809, 122.9300438])
+                raw_coordinates.append([14.0973925, 122.9290504])
+                raw_coordinates.append([14.0972988, 122.9286266])  
+                raw_coordinates.append([14.0968555, 122.9280557])   
+                raw_coordinates.append([14.0964562, 122.9271413])   
+                raw_coordinates.append([14.0963870, 122.9268806])   
+                raw_coordinates.append([14.0952111, 122.9263066])   
+                raw_coordinates.append([14.0950966, 122.9261296])   
+                
+                raw_routes.append(BIBIRAOP2R1)  
+                raw_routes.append(BIBIRAOP2R2)  
+                raw_routes.append(BIBIRAOP2R3)  
+                raw_routes.append(BIBIRAOP2R4)  
+                raw_routes.append(BIBIRAOP2R5)  
+                raw_routes.append(BIBIRAOP2R6)  
+                raw_routes.append(BIBIRAOP2R7)  
+                raw_routes.append(BIBIRAOP2R8)  
+                raw_routes.append(BIBIRAOP2R9)  
+                raw_routes.append(BIBIRAOP2R10)  
+                raw_routes.append(BIBIRAOP2R11)  
+        
             # Bibirao
-        if i == 'BIBIRAOP3':
-            BIBIRAOP2R1 = map_widget.set_marker(14.1004397, 122.9308557, text="")
-            BIBIRAOP2R2 = map_widget.set_marker(14.1001276, 122.9300188, text="")
-            BIBIRAOP2R3 = map_widget.set_marker(14.0997139, 122.9302227, text="")
-            BIBIRAOP2R4 = map_widget.set_marker(14.0993809, 122.9300438, text="")
-            BIBIRAOP2R5 = map_widget.set_marker(14.0973925, 122.9290504, text="")
-            BIBIRAOP2R6 = map_widget.set_marker(14.0972988, 122.9286266, text="")
-            BIBIRAOP2R7 = map_widget.set_marker(14.0968555, 122.9280557, text="")
-            BIBIRAOP2R8 = map_widget.set_marker(14.0964562, 122.9271413, text="")
-            BIBIRAOP2R9 = map_widget.set_marker(14.0963870, 122.9268806, text="")
-            BIBIRAOP2R10 = map_widget.set_marker(14.0952111, 122.9263066, text="")
-            BIBIRAOP2R11 = map_widget.set_marker(14.0950966, 122.9261296, text="BIBIRAOP3")
+        if i == 'BIBIRAOP4': 
+                BIBIRAOP2R1 = map_widget.set_marker(14.0945343, 122.9258461, text="")
+                BIBIRAOP2R2 = map_widget.set_marker(14.0944413, 122.9258374, text="")  
+                BIBIRAOP2R3 = map_widget.set_marker(14.0940610, 122.9251777, text="")  
+                BIBIRAOP2R4 = map_widget.set_marker(14.0933217, 122.9245107, text="")  
+                BIBIRAOP2R5 = map_widget.set_marker(14.0932472, 122.9242961, text="")  
+                BIBIRAOP2R6 = map_widget.set_marker(14.0933278, 122.9233063, text="")  
+                BIBIRAOP2R7 = map_widget.set_marker(14.0932321, 122.9225700, text="")  
+                BIBIRAOP2R8 = map_widget.set_marker(14.0926555, 122.9215785, text="BIBIRAOP4")  
+                
+                raw_coordinates.append([14.0945343, 122.9258461])
+                raw_coordinates.append([14.0944413, 122.9258374])  
+                raw_coordinates.append([14.0940610, 122.9251777])  
+                raw_coordinates.append([14.0933217, 122.9245107])  
+                raw_coordinates.append([14.0932472, 122.9242961])  
+                raw_coordinates.append([14.0933278, 122.9233063])  
+                raw_coordinates.append([14.0932321, 122.9225700])  
+                raw_coordinates.append([14.0926555, 122.9215785])  
+                
+                raw_routes.append(BIBIRAOP2R1)  
+                raw_routes.append(BIBIRAOP2R2)  
+                raw_routes.append(BIBIRAOP2R3)   
+                raw_routes.append(BIBIRAOP2R4)   
+                raw_routes.append(BIBIRAOP2R5)  
+                raw_routes.append(BIBIRAOP2R6)    
+                raw_routes.append(BIBIRAOP2R7)    
+                raw_routes.append(BIBIRAOP2R8)    
 
-            raw_coordinates.append([14.1004397, 122.9308557])
-            raw_coordinates.append([14.1001276, 122.9300188])
-            raw_coordinates.append([14.0997139, 122.9302227])
-            raw_coordinates.append([14.0993809, 122.9300438])
-            raw_coordinates.append([14.0973925, 122.9290504])
-            raw_coordinates.append([14.0972988, 122.9286266])
-            raw_coordinates.append([14.0968555, 122.9280557])
-            raw_coordinates.append([14.0964562, 122.9271413])
-            raw_coordinates.append([14.0963870, 122.9268806])
-            raw_coordinates.append([14.0952111, 122.9263066])
-            raw_coordinates.append([14.0950966, 122.9261296])
-
-            raw_routes.append(BIBIRAOP2R1)
-            raw_routes.append(BIBIRAOP2R2)
-            raw_routes.append(BIBIRAOP2R3)
-            raw_routes.append(BIBIRAOP2R4)
-            raw_routes.append(BIBIRAOP2R5)
-            raw_routes.append(BIBIRAOP2R6)
-            raw_routes.append(BIBIRAOP2R7)
-            raw_routes.append(BIBIRAOP2R8)
-            raw_routes.append(BIBIRAOP2R9)
-            raw_routes.append(BIBIRAOP2R10)
-            raw_routes.append(BIBIRAOP2R11)
-
-            # Bibirao
-        if i == 'BIBIRAOP4':
-            BIBIRAOP2R1 = map_widget.set_marker(14.0945343, 122.9258461, text="")
-            BIBIRAOP2R2 = map_widget.set_marker(14.0944413, 122.9258374, text="")
-            BIBIRAOP2R3 = map_widget.set_marker(14.0940610, 122.9251777, text="")
-            BIBIRAOP2R4 = map_widget.set_marker(14.0933217, 122.9245107, text="")
-            BIBIRAOP2R5 = map_widget.set_marker(14.0932472, 122.9242961, text="")
-            BIBIRAOP2R6 = map_widget.set_marker(14.0933278, 122.9233063, text="")
-            BIBIRAOP2R7 = map_widget.set_marker(14.0932321, 122.9225700, text="")
-            BIBIRAOP2R8 = map_widget.set_marker(14.0926555, 122.9215785, text="BIBIRAOP4")
-
-            raw_coordinates.append([14.0945343, 122.9258461])
-            raw_coordinates.append([14.0944413, 122.9258374])
-            raw_coordinates.append([14.0940610, 122.9251777])
-            raw_coordinates.append([14.0933217, 122.9245107])
-            raw_coordinates.append([14.0932472, 122.9242961])
-            raw_coordinates.append([14.0933278, 122.9233063])
-            raw_coordinates.append([14.0932321, 122.9225700])
-            raw_coordinates.append([14.0926555, 122.9215785])
-
-            raw_routes.append(BIBIRAOP2R1)
-            raw_routes.append(BIBIRAOP2R2)
-            raw_routes.append(BIBIRAOP2R3)
-            raw_routes.append(BIBIRAOP2R4)
-            raw_routes.append(BIBIRAOP2R5)
-            raw_routes.append(BIBIRAOP2R6)
-            raw_routes.append(BIBIRAOP2R7)
-            raw_routes.append(BIBIRAOP2R8)
-
-            # Bibirao
-        if i == 'BIBIRAOP5':
-            BIBIRAOP2R1 = map_widget.set_marker(14.0925572, 122.9207990)
-            BIBIRAOP2R2 = map_widget.set_marker(14.0927915, 122.9201804)
-            BIBIRAOP2R3 = map_widget.set_marker(14.0928435, 122.9198854)
-            BIBIRAOP2R4 = map_widget.set_marker(14.0928071, 122.9197248)
-            BIBIRAOP2R5 = map_widget.set_marker(14.0920527, 122.9181581)
-            BIBIRAOP2R6 = map_widget.set_marker(14.0917302, 122.9172525)
-            BIBIRAOP2R7 = map_widget.set_marker(14.0920059, 122.9160105)
-            BIBIRAOP2R8 = map_widget.set_marker(14.0915272, 122.9150953)
-            BIBIRAOP2R9 = map_widget.set_marker(14.0914676, 122.9142880)
-            BIBIRAOP2R10 = map_widget.set_marker(14.0901224, 122.9126567, text="BIBIRAOP5")
-
-            raw_coordinates.append([14.0925572, 122.9207990])
-            raw_coordinates.append([14.0927915, 122.9201804])
-            raw_coordinates.append([14.0928435, 122.9198854])
-            raw_coordinates.append([14.0928071, 122.9197248])
-            raw_coordinates.append([14.0920527, 122.9181581])
-            raw_coordinates.append([14.0917302, 122.9172525])
-            raw_coordinates.append([14.0920059, 122.9160105])
-            raw_coordinates.append([14.0915272, 122.9150953])
-            raw_coordinates.append([14.0914676, 122.9142880])
-            raw_coordinates.append([14.0901224, 122.9126567])
-
-            raw_routes.append(BIBIRAOP2R1)
-            raw_routes.append(BIBIRAOP2R2)
-            raw_routes.append(BIBIRAOP2R3)
-            raw_routes.append(BIBIRAOP2R4)
-            raw_routes.append(BIBIRAOP2R5)
-            raw_routes.append(BIBIRAOP2R6)
-            raw_routes.append(BIBIRAOP2R7)
-            raw_routes.append(BIBIRAOP2R8)
-            raw_routes.append(BIBIRAOP2R9)
-            raw_routes.append(BIBIRAOP2R10)
+                        # Bibirao
+        if i == 'BIBIRAOP5': 
+                BIBIRAOP2R1 = map_widget.set_marker(14.0925572, 122.9207990)
+                BIBIRAOP2R2 = map_widget.set_marker(14.0927915, 122.9201804)     
+                BIBIRAOP2R3 = map_widget.set_marker(14.0928435, 122.9198854)       
+                BIBIRAOP2R4 = map_widget.set_marker(14.0928071, 122.9197248)           
+                BIBIRAOP2R5 = map_widget.set_marker(14.0920527, 122.9181581)         
+                BIBIRAOP2R6 = map_widget.set_marker(14.0917302, 122.9172525)       
+                BIBIRAOP2R7 = map_widget.set_marker(14.0920059, 122.9160105)           
+                BIBIRAOP2R8 = map_widget.set_marker(14.0915272, 122.9150953)                       
+                BIBIRAOP2R9 = map_widget.set_marker(14.0914676, 122.9142880)              
+                BIBIRAOP2R10 = map_widget.set_marker(14.0901224, 122.9126567, text="BIBIRAOP5")     
+                
+                raw_coordinates.append([14.0925572, 122.9207990])
+                raw_coordinates.append([14.0927915, 122.9201804]) 
+                raw_coordinates.append([14.0928435, 122.9198854]) 
+                raw_coordinates.append([14.0928071, 122.9197248])   
+                raw_coordinates.append([14.0920527, 122.9181581])   
+                raw_coordinates.append([14.0917302, 122.9172525])  
+                raw_coordinates.append([14.0920059, 122.9160105])  
+                raw_coordinates.append([14.0915272, 122.9150953])  
+                raw_coordinates.append([14.0914676, 122.9142880])  
+                raw_coordinates.append([14.0901224, 122.9126567])  
+                
+                raw_routes.append(BIBIRAOP2R1)  
+                raw_routes.append(BIBIRAOP2R2)  
+                raw_routes.append(BIBIRAOP2R3)    
+                raw_routes.append(BIBIRAOP2R4)    
+                raw_routes.append(BIBIRAOP2R5)    
+                raw_routes.append(BIBIRAOP2R6)    
+                raw_routes.append(BIBIRAOP2R7)    
+                raw_routes.append(BIBIRAOP2R8)    
+                raw_routes.append(BIBIRAOP2R9)    
+                raw_routes.append(BIBIRAOP2R10)
 
         if i == 'MAGANGP1':
             MAGANGP1 = map_widget.set_marker(14.1014259, 122.9541984, text="Magang P-1")
@@ -1390,10 +1419,12 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.1013062, 122.9506929])
             raw_coordinates.append([14.099893691324574, 122.94837909876821])
 
+
             raw_routes.append(MAGANGP4R1)
             raw_routes.append(MAGANGP4)
 
         if i == 'MAGANGP5':
+
             MAGANGP5 = map_widget.set_marker(14.0952499, 122.9466356, text="Magang P-5")
 
             raw_coordinates.append([14.1013062, 122.9506929])
@@ -1408,8 +1439,10 @@ def GetCoordinates(routes):
             raw_routes.append(MAGANGP6)
 
         if i == 'PAMORANGONP1':
+
             PAMORANGONP1R2 = map_widget.set_marker(14.09918256873587, 122.95653512316036)
             PAMORANGONP1R3 = map_widget.set_marker(14.0998925, 122.9565228, text="Pamorangon P-1")
+
 
             raw_coordinates.append([14.09918256873587, 122.95653512316036])
 
@@ -1433,6 +1466,7 @@ def GetCoordinates(routes):
             raw_routes.append(PAMORANGONP3)
 
         if i == 'PAMORANGONP4':
+
             PAMORANGONPR1 = map_widget.set_marker(14.0904744, 122.9579470)
             PAMORANGONPR2 = map_widget.set_marker(14.0909216, 122.9579904)
             PAMORANGONP4 = map_widget.set_marker(14.09300998788361, 122.95902296720664, text="Pamorangon P-4")
@@ -1453,6 +1487,7 @@ def GetCoordinates(routes):
             raw_routes.append(PAMORANGONP5)
 
         if i == 'PAMORANGONP6':
+
             PAMORANGONP6R1 = map_widget.set_marker(14.0903762, 122.9580091)
             PAMORANGONP6R2 = map_widget.set_marker(14.0903363, 122.9583052)
             PAMORANGONP6 = map_widget.set_marker(14.086770677594686, 122.96323398578951, text="Pamorangon P-6")
@@ -1466,6 +1501,7 @@ def GetCoordinates(routes):
             raw_routes.append(PAMORANGONP6)
 
         if i == 'MANCRUZP4':
+
             MANRCRUZP4R1 = map_widget.set_marker(14.0992103, 122.9563215)
             MANRCRUZP4R2 = map_widget.set_marker(14.0986662, 122.9565453)
 
@@ -1480,16 +1516,19 @@ def GetCoordinates(routes):
             raw_routes.append(MANCRUZP4)
 
         if i == 'MANCRUZP2':
-            MANCRUZP2 = map_widget.set_marker(14.0969867, 122.9566183, text="Mancruz P-2")  #
+
+            MANCRUZP2 = map_widget.set_marker(14.0969867, 122.9566183, text="Mancruz P-2") #
             raw_coordinates.append([14.0969867, 122.9566183])
             raw_routes.append(MANCRUZP2)
 
         if i == 'MANCRUZP1':
+
             MANCRUZP1 = map_widget.set_marker(14.091255423325915, 122.95688903288227, text="Mancruz P-1")
             raw_coordinates.append([14.091255423325915, 122.95688903288227])
             raw_routes.append(MANCRUZP1)
 
         if i == 'MANCRUZP3':
+
             MANRCRUZP3R1 = map_widget.set_marker(14.0912982, 122.9564243)
             MANRCRUZP3R2 = map_widget.set_marker(14.0915791, 122.9563653)
             MANRCRUZP3R3 = map_widget.set_marker(14.0920940, 122.9551532)
@@ -1506,11 +1545,13 @@ def GetCoordinates(routes):
             raw_routes.append(MANCRUZP3)
 
         if i == 'SANISIDROP1':
+
             SANISIDROP1 = map_widget.set_marker(14.1119195, 122.9652880, text="San Isidro P-1")
             raw_coordinates.append([14.1119195, 122.9652880])
             raw_routes.append(SANISIDROP1)
 
         if i == 'SANISIDROP2':
+
             SANISIDROP2R1 = map_widget.set_marker(14.1117426, 122.9655275)
             SANISIDROP2 = map_widget.set_marker(14.1113692, 122.9663126, text="San Isidro P-2")
 
@@ -1521,6 +1562,7 @@ def GetCoordinates(routes):
             raw_routes.append(SANISIDROP2)
 
         if i == 'SANISIDROP3':
+
             SANISIDROP3R1 = map_widget.set_marker(14.1107597, 122.9682556)
             SANISIDROP3 = map_widget.set_marker(14.1096182, 122.9717979, text="San Isidro P-3")
 
@@ -1531,6 +1573,7 @@ def GetCoordinates(routes):
             raw_routes.append(SANISIDROP3)
 
         if i == 'SANISIDROP4':
+
             SANISIDROP4R1 = map_widget.set_marker(14.1108660, 122.9671934)
             SANISIDROP4R2 = map_widget.set_marker(14.1105119, 122.9673732)
             SANISIDROP4 = map_widget.set_marker(14.1083121, 122.9674512, text="San Isidro P-4")
@@ -1544,16 +1587,19 @@ def GetCoordinates(routes):
             raw_routes.append(SANISIDROP4)
 
         if i == 'SANISIDROP5':
+
             SANISIDROP5 = map_widget.set_marker(14.1076827, 122.9769609, text="San Isidro P-5")
             raw_coordinates.append([14.1076827, 122.9769609])
             raw_routes.append(SANISIDROP5)
 
         if i == 'SANISIDROP6':
+
             SANISIDROP6 = map_widget.set_marker(14.1064963, 122.9812528, text="San Isidro P-6")
             raw_coordinates.append([14.1064963, 122.9812528])
             raw_routes.append(SANISIDROP6)
 
         if i == 'MAMBALITEP1':
+
             MAMBALITEP1R1 = map_widget.set_marker(14.1016763, 122.9670235)
             MAMBALITEP1R2 = map_widget.set_marker(14.1015197, 122.9674307)
             MAMBALITEP1R3 = map_widget.set_marker(14.1005298, 122.9685157)
@@ -1576,16 +1622,19 @@ def GetCoordinates(routes):
             raw_routes.append(MAMBALITEP1)
 
         if i == 'MAMBALITEP2':
+
             MAMBALITEP2 = map_widget.set_marker(14.091017167536688, 122.97633666556318, text="Mambalite P-2")
             raw_coordinates.append([14.091017167536688, 122.97633666556318])
             raw_routes.append(MAMBALITEP2)
 
         if i == 'MAMBALITEP3':
+
             MAMBALITEP3 = map_widget.set_marker(14.091032540606854, 122.97907382189071, text="Mambalite P-3")
             raw_coordinates.append([14.091032540606854, 122.97907382189071])
             raw_routes.append(MAMBALITEP3)
 
         if i == 'MAMBALITEP4':
+
             MAMBALITEP4R1 = map_widget.set_marker(14.0911089, 122.9812879)
             MAMBALITEP4 = map_widget.set_marker(14.0908998, 122.9818873, text="Mambalite P-4")
             raw_coordinates.append([14.0911089, 122.9812879])
@@ -1594,6 +1643,7 @@ def GetCoordinates(routes):
             raw_routes.append(MAMBALITEP4)
 
         if i == 'MAMBALITEP5':
+
             MAMBALITEP5R1 = map_widget.set_marker(14.0898965, 122.9837384)
             MAMBALITEP5 = map_widget.set_marker(14.0908037, 122.9875669, text="Mambalite P-5")
             raw_coordinates.append([14.0898965, 122.9837384])
@@ -1624,24 +1674,122 @@ def GetCoordinates(routes):
             raw_routes.append(MAMBALITEP6)
 
         if i == 'MAMBALITEP7':
+
             MAMBALITEP7 = map_widget.set_marker(14.0890201, 122.9892342, text="Mambalite P-7")
 
             raw_coordinates.append([14.0890201, 122.9892342])
 
             raw_routes.append(MAMBALITEP7)
 
+        if i == 'CALASGASANP1':
+
+            CALASGASANP1 = map_widget.set_marker(14.0902767, 122.9412942, text="Calasgasan P-1")
+
+            raw_coordinates.append([14.0902767, 122.9412942])
+
+            raw_routes.append(CALASGASANP1)
+
+        if i == 'CALASGASANP2':
+
+            CALASGASANP2 = map_widget.set_marker(14.0892409, 122.9399964, text="Calasgasan P-2")
+
+            raw_coordinates.append([14.0892409, 122.9399964])
+
+            raw_routes.append(CALASGASANP2)
+
+        if i == 'CALASGASANP3':
+
+            CALASGASANP3 = map_widget.set_marker(14.0882012, 122.9389828, text="Calasgasan P-3")
+
+            raw_coordinates.append([14.0882012, 122.9389828])
+
+            raw_routes.append(CALASGASANP3)
+
+        if i == 'CALASGASANP4':
+
+            CALASGASANP4 = map_widget.set_marker(14.0874113, 122.9382121, text="Calasgasan P-4")
+
+            raw_coordinates.append([14.0874113, 122.9382121])
+
+            raw_routes.append(CALASGASANP4)
+
+        if i == 'CALASGASANP5':
+
+            CALASGASANP5 = map_widget.set_marker(14.0864745, 122.9367648, text="Calasgasan P-5")
+
+            raw_coordinates.append([14.0864745, 122.9367648])
+
+            raw_routes.append(CALASGASANP5)
+
+        if i == 'CALASGASANP6':
+
+            CALASGASANP6 = map_widget.set_marker(14.0839567, 122.9342079, text="Calasgasan P-6")
+
+            raw_coordinates.append([14.0839567, 122.9342079])
+
+            raw_routes.append(CALASGASANP6)
+
+        if i == 'GAHONONP1':
+
+            GAHONONP1 = map_widget.set_marker(14.1270539, 122.9374078, text="Gahonon P-1")
+
+            raw_coordinates.append([14.1270539, 122.9374078])
+
+            raw_routes.append(GAHONONP1)
+
+        if i == 'GAHONONP2':
+
+            GAHONONP2 = map_widget.set_marker(14.1230131, 122.9536979, text="Gahonon P-2")
+
+            raw_coordinates.append([14.1230131, 122.9536979])
+
+            raw_routes.append(GAHONONP2)
+
+        if i == 'GAHONONP3':
+
+            GAHONONP3 = map_widget.set_marker(14.1191182, 122.9504007, text="Gahonon P-3")
+
+            raw_coordinates.append([14.1191182, 122.9504007])
+
+            raw_routes.append(GAHONONP3)
+
+        if i == 'GAHONONP4':
+
+            GAHONONP4 = map_widget.set_marker(14.1261811, 122.9601951, text="Gahonon P-4")
+
+            raw_coordinates.append([14.1261811, 122.9601951])
+
+            raw_routes.append(GAHONONP4)
+
+        if i == 'GAHONONP5':
+
+            GAHONONP5 = map_widget.set_marker(14.1300438, 122.9689899, text="Gahonon P-5")
+
+            raw_coordinates.append([14.1300438, 122.9689899])
+
+            raw_routes.append(GAHONONP5)
+
+        if i == 'GAHONONP6':
+
+            GAHONONP6 = map_widget.set_marker(14.1322409, 122.9509966, text="Gahonon P-6")
+
+            raw_coordinates.append([14.1322409, 122.9509966])
+
+            raw_routes.append(GAHONONP6)
+
+
+
+
     return raw_routes, raw_coordinates
 
 # ----> Algorithm Pang determine ng destination <-------------------
 
 def Set(destination):
-    global specific_routes_label, specific_routes_label, firetruck_icon
+    global specific_routes_label, specific_routes_label
 
     destination_routes, shortest_distance_path = GetShortestPath("BFP", destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
-
-    firetruck_icon = PhotoImage(file="firetruck.png")
 
 
     view_btn['command'] = lambda:show_notifier(destination_routes)
@@ -1660,9 +1808,6 @@ def Set(destination):
     for i in range(len(coordinates) - 1):
         path_1 = map_widget.set_path([routes[i].position, routes[i+1].position, coordinates[i]])
 
-    for i, coordinate in enumerate(coordinates):
-        root.after(1000 * i, lambda i=i, coordinate=tuple(coordinate): update_firetruck_position(coordinate, firetruck_icon))
-
 
     view_btn['state'] = 'normal'
 
@@ -1675,16 +1820,16 @@ def RemoveCoordinates():
     purok_combo_var.set("")
     barangay_combo_var.set("")
 
-    canvas.itemconfig(routes_label, text="")
-    canvas.itemconfig(total_distance_label, text="")
-    canvas.itemconfig(barangay_combo_var, text="")
-    canvas.itemconfig(purok_combo_box, text="")
+    canvas.itemconfig(routes_label, text=f"")
+    canvas.itemconfig(total_distance_label, text=f"")
+    canvas.itemconfig(barangay_combo_var, text=f"")
+    canvas.itemconfig(purok_combo_box, text=f"")
 
     for i in routes_label_list:
-        canvas.itemconfig(i, text="")
+        canvas.itemconfig(i, text=f"")
 
 # ----> Algorithm Pang determine kung nagfill up na sa barangay <-------------------
-# ----> Dito rin maconditionals kung anong mga purok ng barangay <------------------
+# ----> Dito rin maconditionals kung anong mga purok ng barangay <-------------------
 
 def update_purok_combobox(*args):
     # Enable the purok_combobox if a barangay is selected
@@ -1710,22 +1855,24 @@ def MainMenu():
     root.title('Daet Map')
     root.geometry('1200x650+70+20')
 
-    canvas = Canvas(root, width=1200, height=700, bg='red')
+    canvas = Canvas(root, width=1200, height=700, bg='orange')
     canvas.pack()
 
     my_label = LabelFrame(root)
-    my_label.pack(pady=20)
+    my_label.pack(pady=20, side=tk.BOTTOM)
 
-    # details
+#Text
     text = "Details:"
     canvas.create_text(100, 380, text=text, anchor='center', fill='white', font=('courier new', 12))
     routes_label = canvas.create_text(160, 390, text="", anchor='center', fill='white', font=('courier new', 10))
     total_distance_label = canvas.create_text(160, 420, text="", anchor='center', fill='white', font=('courier new', 10))
 
-    map_widget = tkintermapview.TkinterMapView(my_label, width=1700, height=650, corner_radius=0)
+    map_widget = tkintermapview.TkinterMapView(my_label, width=1200, height=600, corner_radius=0)
     #map_widget.set_position(14.0996, 122.9550)
 
-    canvas.create_window(850, 400, window=my_label)
+
+    canvas.create_window(900, 300, window=my_label)
+
 
     map_widget.set_address("Daet, Camarines Norte, Philippines")
     map_widget.set_zoom(14)
@@ -1735,28 +1882,28 @@ def MainMenu():
     all_barangay_names = list(all_location.keys())
 
     # Add a ComboBox to the canvas
-    canvas.create_text(120, 25, text="Select barangay:", anchor='center', fill='white', font=('century gothic', 10))
+    canvas.create_text(120, 120, text="Select barangay:", anchor='center', fill='white', font=('century gothic', 10))
     barangay_combo_var = StringVar()
     combo_box = ttk.Combobox(canvas, textvariable=barangay_combo_var, values=all_barangay_names, width=30, font=('century gothic', 10))
-    canvas.create_window(160, 50, window=combo_box)
+    canvas.create_window(190, 150, window=combo_box)
 
-    canvas.create_text(420, 25, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
+    canvas.create_text(105, 180, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
     purok_combo_var = StringVar()
     purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10), state='disabled')
-    canvas.create_window(420, 50, window=purok_combo_box)
+    canvas.create_window(190, 210, window=purok_combo_box)
 
     # Bind the function to the <<ComboboxSelected>> event
     combo_box.bind("<<ComboboxSelected>>", update_purok_combobox)
 
-    search_btn = Button(canvas, text="Search", command=lambda:Set(purok_combo_var.get()), width=15)
-    canvas.create_window(625, 50, window=search_btn)
+    search_btn = Button(canvas, text="Search", command=lambda:Set(purok_combo_var.get()), width=30, height=1)
+    canvas.create_window(190, 280, window=search_btn)
 
-    view_btn = Button(canvas, text="View", command=lambda:show_notifier("Hey"), width=10, height=1, state="disabled")
-    canvas.create_window(1115, 50, window=view_btn)
+    view_btn = Button(canvas, text="View", command=lambda:show_notifier("Hey"), width=30, height=1, state="disabled")
+    canvas.create_window(190, 340, window=view_btn)
 
-    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg="orange", command=RemoveCoordinates)
-    canvas.create_window(1110, 600, window=remove_coordinates_button)
-    create_firetruck_icon()
+    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg='orange', command=RemoveCoordinates)
+    canvas.create_window(1110, 550, window=remove_coordinates_button)
+
     root.mainloop()
 
 MainMenu()

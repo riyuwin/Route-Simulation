@@ -453,7 +453,6 @@ def CreateGraph():
     customGraph.addEdge("BORABODP5", "BORABODP6", 3800, 2, 2)
     customGraph.addEdge("BFP", "BORABODP3", 2600, 2, 2)
 
-
     #BARANGAY 1
     customGraph.addNode("BARANGAY1P1")
     customGraph.addNode("BARANGAY1P2")
@@ -501,8 +500,7 @@ def CreateGraph():
     customGraph.addEdge("GAHONONP3", "GAHONONP1", 1520, 2, 2)
     customGraph.addEdge("GAHONONP3", "GAHONONP2", 781, 2, 2)
     customGraph.addEdge("GAHONONP2", "GAHONONP4", 953, 2, 2)
-    customGraph.addEdge("GAHONONP4", "GAHONONP5", 1042, 2, 2)
-
+    customGraph.addEdge("GAHONONP4", "GAHONONP5", 1041, 2, 2)
 
 
     return customGraph

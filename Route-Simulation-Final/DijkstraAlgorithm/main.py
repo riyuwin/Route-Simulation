@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk, ImageSequence
 import pygame
-
+import subprocess
 
 # Initialize Pygame display first
 pygame.init()
@@ -33,7 +33,6 @@ def main_menu():
     menu = True
     selected = "start"
 
-
     while menu:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -46,13 +45,15 @@ def main_menu():
                     selected = "quit"
                 if event.key == pygame.K_RETURN:
                     if selected == "start":
-                        print("Start")
+                        # Run another script using subprocess
+                        subprocess.run(["python", "SimulationMapGUI.py"])
+                        menu = False  # Exit the menu loop
                     if selected == "quit":
                         pygame.quit()
                         quit()
 
         # Main Menu UI
-        screen.fill((255, 165, 0))
+        screen.fill((255, 0, 0))
         title = text_format("Response Time", font, 90, (255, 255, 0))
         text_start = text_format("START", font, 75, (255, 255, 255) if selected == "start" else (0, 0, 0))
         text_quit = text_format("QUIT", font, 75, (255, 255, 255) if selected == "quit" else (0, 0, 0))
@@ -115,7 +116,6 @@ pygame.mixer.music.load(sound_effect_path)
 # Function to play sound effect
 def play_sound_effect():
     pygame.mixer.music.play()
-
 
 # Calculate center coordinates for the GIF label
 gif_width = 800
