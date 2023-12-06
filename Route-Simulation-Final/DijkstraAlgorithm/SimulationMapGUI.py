@@ -1880,6 +1880,7 @@ def RemoveCoordinates():
     barangay_combo_var.set("")
 
     view_btn['state'] = "disabled"
+    purok_combo_box['state'] = "disabled"
 
     canvas.itemconfig(routes_label, text="")
     canvas.itemconfig(total_distance_label, text="")
