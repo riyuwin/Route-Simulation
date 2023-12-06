@@ -1862,8 +1862,6 @@ def RemoveCoordinates():
     purok_combo_var.set("")
     barangay_combo_var.set("")
 
-    view_btn['state'] = "disabled"
-
     canvas.itemconfig(routes_label, text="")
     canvas.itemconfig(total_distance_label, text="")
     canvas.itemconfig(barangay_combo_var, text="")
@@ -1906,7 +1904,7 @@ def MainMenu():
     my_label.pack(pady=20)
 
     # details
-    text = "Details:"   
+    text = "Details:"
     canvas.create_text(100, 380, text=text, anchor='center', fill='white', font=('courier new', 12))
     routes_label = canvas.create_text(160, 390, text="", anchor='center', fill='white', font=('courier new', 10))
     total_distance_label = canvas.create_text(160, 420, text="", anchor='center', fill='white', font=('courier new', 10))

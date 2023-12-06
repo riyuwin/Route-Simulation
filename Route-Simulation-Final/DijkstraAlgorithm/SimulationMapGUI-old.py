@@ -1734,7 +1734,7 @@ def GetCoordinates(routes):
 def Set(destination):
     global specific_routes_label, specific_routes_label
 
-    destination_routes, shortest_distance_path = GetShortestPath("BFP", destination)
+    destination_routes, shortest_distance_path, roadLane = GetShortestPath("BFP", destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
 
