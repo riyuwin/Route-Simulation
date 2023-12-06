@@ -4,6 +4,7 @@ import tkintermapview
 from DijsktraAlgo import GetShortestPath
 from tkinter import PhotoImage
 from PIL import Image, ImageTk
+from customtkinter import*
 
 paths_list = []
 
@@ -54,18 +55,33 @@ def create_firetruck_icon():
     label = Label(root, image=firetruck_icon)
     label.pack()
 
-def show_notifier(message):
+def show_notifier(message,shortest_distance_path, result_string):
     notifier_window = Toplevel(root)
-    notifier_window.title("Notifier")
-    notifier_window.geometry("300x500+400+300")  # Adjust the size and position as needed
+    notifier_window.title("Details")
+    notifier_window.geometry("500x500+400+300")  # Adjust the size and position as needed
 
-    full_message = '\n'.join(message)
+    full_message = ' -> '.join(message)
 
-    label1 = ttk.Label(notifier_window, text='Route details:', font=('century gothic', 12))
-    label1.pack(pady=20)
+    label1 = Label(notifier_window, text='Route details:', font=('century gothic', 12, 'bold'))
+    label1.pack(pady=20, padx=10)
 
-    label = ttk.Label(notifier_window, text=full_message, font=('century gothic', 12))
+    label = Label(notifier_window, text=full_message, font=('century gothic', 12))
     label.pack(pady=20)
+
+    distance_label = Label(notifier_window, text=f'Total Distance:',
+                              font=('century gothic', 12, 'bold'))
+    distance_label.pack(pady=20)
+
+    distance_details = Label (notifier_window, text= f'{shortest_distance_path} meters', font=('century gothic', 12))
+    distance_details.pack(pady=20)
+
+    shortest_traffic_label = Label(notifier_window, text=f'Expected Traffic:',
+                                      font=('century gothic', 12, 'bold'))
+    shortest_traffic_label.pack(pady=20)
+
+    shortest_traffic_details = Label(notifier_window, text= result_string,
+                                      font=('century gothic', 12))
+    shortest_traffic_details.pack(pady=20)
 
     ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
     ok_button.pack()
@@ -1637,14 +1653,14 @@ def GetCoordinates(routes):
 def Set(destination):
     global specific_routes_label, specific_routes_label, firetruck_icon
 
-    destination_routes, shortest_distance_path = GetShortestPath("BFP", destination)
+    destination_routes, shortest_distance_path, result_string = GetShortestPath("BFP", destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
 
     firetruck_icon = PhotoImage(file="firetruck.png")
 
 
-    view_btn['command'] = lambda:show_notifier(destination_routes)
+    view_btn['command'] = lambda:show_notifier(destination_routes,shortest_distance_path, result_string)
 
     y_axis = 450
     for i in destination_routes:
@@ -1655,13 +1671,14 @@ def Set(destination):
     canvas.itemconfig(routes_label, text=f"Routes: ")
     canvas.itemconfig(total_distance_label, text=f"Total Distance: {(shortest_distance_path)} meters")
 
+
     print(coordinates)
 
     for i in range(len(coordinates) - 1):
         path_1 = map_widget.set_path([routes[i].position, routes[i+1].position, coordinates[i]])
 
     for i, coordinate in enumerate(coordinates):
-        root.after(1000 * i, lambda i=i, coordinate=tuple(coordinate): update_firetruck_position(coordinate, firetruck_icon))
+        root.after(500 * i, lambda i=i, coordinate=tuple(coordinate): update_firetruck_position(coordinate, firetruck_icon))
 
 
     view_btn['state'] = 'normal'
@@ -1706,9 +1723,11 @@ def update_purok_combobox(*args):
 
 def MainMenu():
     global my_label, root, canvas, map_widget, routes_label, total_distance_label, barangay_combo_var, purok_combo_box, purok_combo_var, view_btn
-    root = Tk()
+    root = CTk()
     root.title('Daet Map')
     root.geometry('1200x650+70+20')
+
+    set_appearance_mode("System")
 
     canvas = Canvas(root, width=1200, height=700, bg='red')
     canvas.pack()
@@ -1742,7 +1761,7 @@ def MainMenu():
 
     canvas.create_text(420, 25, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
     purok_combo_var = StringVar()
-    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10), state='disabled')
+    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10))
     canvas.create_window(420, 50, window=purok_combo_box)
 
     # Bind the function to the <<ComboboxSelected>> event
@@ -1751,10 +1770,13 @@ def MainMenu():
     search_btn = Button(canvas, text="Search", command=lambda:Set(purok_combo_var.get()), width=15)
     canvas.create_window(625, 50, window=search_btn)
 
-    view_btn = Button(canvas, text="View", command=lambda:show_notifier("Hey"), width=10, height=1, state="disabled")
+    view_btn = Button(canvas, text="View", command=lambda:show_notifier(" "), width=10, height=1)
     canvas.create_window(1115, 50, window=view_btn)
 
-    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg="orange", command=RemoveCoordinates)
+    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg="orange",
+                                       command=RemoveCoordinates)
+    canvas.create_window(1110, 600, window=remove_coordinates_button)
+
     canvas.create_window(1110, 600, window=remove_coordinates_button)
     create_firetruck_icon()
     root.mainloop()
