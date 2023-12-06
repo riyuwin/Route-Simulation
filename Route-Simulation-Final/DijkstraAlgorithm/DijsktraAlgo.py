@@ -225,12 +225,12 @@ def CreateGraph():
     customGraph.addNode("MAMBALITEP7")
 
 
-    customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 2573, 1, 2)
-    customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 1057, 1, 2)
-    customGraph.addEdge("DOGONGANP3", "DOGONGANP6", 340, 2, 2)
-    customGraph.addEdge("DOGONGANP3", "DOGONGANP2", 269, 2, 2)
-    customGraph.addEdge("DOGONGANP2", "DOGONGANP4", 500, 2, 2)
-    customGraph.addEdge("DOGONGANP4", "DOGONGANP5", 300, 2, 2)  
+    customGraph.addEdge("ALAWIHAOP9", "DOGONGANP1", 530, 1, 2)
+    customGraph.addEdge("DOGONGANP1", "DOGONGANP2", 1057, 1, 2)
+    customGraph.addEdge("DOGONGANP2", "DOGONGANP4", 340, 2, 2)
+    customGraph.addEdge("DOGONGANP2", "DOGONGANP5", 269, 2, 2) 
+    customGraph.addEdge("DOGONGANP1", "DOGONGANP3", 300, 2, 2)  
+    customGraph.addEdge("DOGONGANP3", "DOGONGANP6", 500, 2, 2)  
 
 
 
@@ -592,6 +592,12 @@ def GetShortestPath(Initial, Destination):
     for i, (path, lane) in enumerate(zip(shortest_path, roadLane)):  
         trafficLevel = ""
         pathLabel = "" 
+
+        
+        if lane == 0:
+            print(f"{path} ~> {pathLabel}: [You're Here]"  )
+        else:
+            print(f"{path} ~> {pathLabel}: {lane} - lane  road")
 
         '''if path == "A":
             pathLabel = "Fire Station"
