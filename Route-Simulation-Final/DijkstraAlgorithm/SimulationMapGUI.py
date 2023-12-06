@@ -4,7 +4,7 @@ import tkintermapview
 from DijsktraAlgo import GetShortestPath
 from tkinter import PhotoImage
 from PIL import Image, ImageTk
-from customtkinter import*
+
 
 paths_list = []
 
