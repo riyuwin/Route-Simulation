@@ -35,9 +35,6 @@ all_location = {
     'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7'],
     'Calasgasan': ['CALASGASANP1', 'CALASGASANP2', 'CALASGASANP3', 'CALASGASANP4', 'CALASGASANP5', 'CALASGASANP6'],
     'Gahonon': ['GAHONONP1', 'GAHONONP2', 'GAHONONP3', 'GAHONONP4', 'GAHONONP5', 'GAHONONP6'],
-
-
-
 }
 
 
@@ -1728,56 +1725,6 @@ def GetCoordinates(routes):
             raw_coordinates.append([14.0839567, 122.9342079])
 
             raw_routes.append(CALASGASANP6)
-
-        if i == 'GAHONONP1':
-
-            GAHONONP1 = map_widget.set_marker(14.1270539, 122.9374078, text="Gahonon P-1")
-
-            raw_coordinates.append([14.1270539, 122.9374078])
-
-            raw_routes.append(GAHONONP1)
-
-        if i == 'GAHONONP2':
-
-            GAHONONP2 = map_widget.set_marker(14.1230131, 122.9536979, text="Gahonon P-2")
-
-            raw_coordinates.append([14.1230131, 122.9536979])
-
-            raw_routes.append(GAHONONP2)
-
-        if i == 'GAHONONP3':
-
-            GAHONONP3 = map_widget.set_marker(14.1191182, 122.9504007, text="Gahonon P-3")
-
-            raw_coordinates.append([14.1191182, 122.9504007])
-
-            raw_routes.append(GAHONONP3)
-
-        if i == 'GAHONONP4':
-
-            GAHONONP4 = map_widget.set_marker(14.1261811, 122.9601951, text="Gahonon P-4")
-
-            raw_coordinates.append([14.1261811, 122.9601951])
-
-            raw_routes.append(GAHONONP4)
-
-        if i == 'GAHONONP5':
-
-            GAHONONP5 = map_widget.set_marker(14.1300438, 122.9689899, text="Gahonon P-5")
-
-            raw_coordinates.append([14.1300438, 122.9689899])
-
-            raw_routes.append(GAHONONP5)
-
-        if i == 'GAHONONP6':
-
-            GAHONONP6 = map_widget.set_marker(14.1322409, 122.9509966, text="Gahonon P-6")
-
-            raw_coordinates.append([14.1322409, 122.9509966])
-
-            raw_routes.append(GAHONONP6)
-
-
 
 
     return raw_routes, raw_coordinates
