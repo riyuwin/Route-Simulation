@@ -534,6 +534,7 @@ def SearchShortestPath(startNode, targetNode, paths, distances):
 # Initialize all the data and get the shortest possible route
 def GetShortestPath(Initial, Destination):
     global result_string
+
     start_node = Initial
     target_node = Destination
 
@@ -555,6 +556,7 @@ def GetShortestPath(Initial, Destination):
     print("-"*40)
     print("Expected Traffic:") 
 
+    decriptive_traffic = []
     for i, (path, traffic) in enumerate(zip(shortest_path, shortest_traffic)):  
         trafficLevel = ""
         pathLabel = "" 
@@ -576,12 +578,16 @@ def GetShortestPath(Initial, Destination):
 
         if traffic == 0:
             trafficLevel = "[You're Here]"
+            decriptive_traffic.append(f"[You're Here]")
         elif traffic == 1:
             trafficLevel = "Minimal traffic"
+            decriptive_traffic.append(f'Minimal traffic')
         elif traffic == 2:
             trafficLevel = "Moderate traffic"
+            decriptive_traffic.append(f'Moderate traffic')
         elif traffic == 3:
             trafficLevel = "Heavy traffic"
+            decriptive_traffic.append(f'Heavy traffic')
             
         print(f'~> {path}: {trafficLevel} '  )
         result_string = f'{trafficLevel} '
@@ -589,6 +595,8 @@ def GetShortestPath(Initial, Destination):
     print("-"*40)
 
     print("Road Condition")
+    decriptive_roadlane = []
+
     for i, (path, lane) in enumerate(zip(shortest_path, roadLane)):  
         trafficLevel = ""
         pathLabel = "" 
@@ -596,8 +604,10 @@ def GetShortestPath(Initial, Destination):
         
         if lane == 0:
             print(f"{path} ~> {pathLabel}: [You're Here]"  )
+            decriptive_roadlane.append("[You're Here]")
         else:
             print(f"{path} ~> {pathLabel}: {lane} - lane  road")
+            decriptive_roadlane.append(f'{lane} - lane  road')
 
         '''if path == "A":
             pathLabel = "Fire Station"
@@ -621,6 +631,6 @@ def GetShortestPath(Initial, Destination):
                 
     print("-"*40)
 
-    return shortest_path, shortest_distance, result_string
+    return shortest_path, shortest_distance, result_string, decriptive_traffic, decriptive_roadlane
 
 GetShortestPath("BFP", "DOGONGANP2")

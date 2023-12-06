@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 from tkinter import ttk  # Import the ttk module for themed widgets
 import tkintermapview
 from DijsktraAlgo import GetShortestPath
@@ -91,36 +92,74 @@ def create_firetruck_icon():
     label = Label(root, image=firetruck_icon)
     label.pack()
 
-def show_notifier(message,shortest_distance_path, result_string):
+'''
+def on_select(event):
+    # Makakuha ng index ng item na pinili ng user
+    selected_index = listbox.curselection()
+
+    # Makakuha ng teksto na kaugnay sa index na pinili
+    selected_item = listbox.get(selected_index)
+
+    # I-display ang teksto sa label
+    listbox_label.config(text=f"You selected: {selected_item}")
+'''
+def on_select(event):
+    selected_item = tree.selection()[0]
+    values = tree.item(selected_item, 'values')
+    print(f'You selected: {values}') 
+
+def show_notifier(suggested_path, shortest_distance_path, result_string, shortest_traffic, roadLane, destination):
+    global tree, listbox_label
+
+    # Create a Toplevel window
     notifier_window = Toplevel(root)
     notifier_window.title("Details")
-    notifier_window.geometry("500x500+400+300")  # Adjust the size and position as needed
+    notifier_window.geometry("800x400+400+100")  # Adjust the size and position as needed
 
-    full_message = ' -> '.join(message)
+    # Create a Canvas widget inside the Toplevel window
+    notifier_canvas = Canvas(notifier_window, width=800, height=500)
+    notifier_canvas.pack()
 
-    label1 = Label(notifier_window, text='Route details:', font=('century gothic', 12, 'bold'))
-    label1.pack(pady=20, padx=10)
+    distance_label = Label(notifier_window, text=f'Total Distance:', font=('century gothic', 12, 'bold'))
+    notifier_canvas.create_window(400, 30, window=distance_label)
 
-    label = Label(notifier_window, text=full_message, font=('century gothic', 12))
-    label.pack(pady=20)
+    distance_details = Label(notifier_window, text=f'{shortest_distance_path} meters', font=('century gothic', 10))
+    notifier_canvas.create_window(400, 60, window=distance_details)
+    
+    destination_details = Label(notifier_window, text=f'Route: From BFP to {destination}', font=('century gothic', 10))
+    notifier_canvas.create_window(200, 100, window=destination_details)
 
-    distance_label = Label(notifier_window, text=f'Total Distance:',
-                              font=('century gothic', 12, 'bold'))
-    distance_label.pack(pady=20)
+    # Create a Treeview widget with three columns
+    tree = ttk.Treeview(notifier_window, columns=('Routes', 'Traffic Congestions', 'Road Conditions'), show='headings')
 
-    distance_details = Label (notifier_window, text= f'{shortest_distance_path} meters', font=('century gothic', 12))
-    distance_details.pack(pady=20)
+    # Define column headings
+    tree.heading('Routes', text='Routes')
+    tree.heading('Traffic Congestions', text='Traffic Congestions')
+    tree.heading('Road Conditions', text='Road Conditions')
 
-    shortest_traffic_label = Label(notifier_window, text=f'Expected Traffic:',
-                                      font=('century gothic', 12, 'bold'))
-    shortest_traffic_label.pack(pady=20)
+    routes_details = []
 
-    shortest_traffic_details = Label(notifier_window, text= result_string,
-                                      font=('century gothic', 12))
-    shortest_traffic_details.pack(pady=20)
+    for num, (i, j, k) in enumerate(zip(suggested_path, shortest_traffic, roadLane)):
+        routes_details.append((f'{num+1}. {i}', f'{j}', f'{k}'))
+
+    for row in routes_details:
+        tree.insert('', tk.END, values=row)
+
+    # Pack the Treeview
+    #tree.pack(pady=10)
+    notifier_canvas.create_window(400, 250, window=tree)
+
+    # Create a label for output
+    listbox_label = tk.Label(root, text="")
+    listbox_label.pack(pady=10)
+
+    # Bind the event handler for item selection
+    tree.bind("<ButtonRelease-1>", on_select)
 
     ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
     ok_button.pack()
+
+    
 
 def GetCoordinates(routes):
 
@@ -1841,13 +1880,13 @@ def Set(barangay, destination):
     fetch_location = all_location[barangay]
     final_destination = fetch_location[index]
 
-    destination_routes, shortest_distance_path, result_string = GetShortestPath("BFP", final_destination)
+    destination_routes, shortest_distance_path, result_string, shortest_traffic, roadLane = GetShortestPath("BFP", final_destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
 
     firetruck_icon = PhotoImage(file="firetruck.png")
 
-    view_btn['command'] = lambda:show_notifier(destination_routes,shortest_distance_path, result_string)
+    view_btn['command'] = lambda:show_notifier(destination_routes, shortest_distance_path, result_string, shortest_traffic, roadLane, final_destination)
 
     y_axis = 450
     for i in destination_routes:
