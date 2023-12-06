@@ -533,6 +533,7 @@ def SearchShortestPath(startNode, targetNode, paths, distances):
 
 # Initialize all the data and get the shortest possible route
 def GetShortestPath(Initial, Destination):
+    global result_string
     start_node = Initial
     target_node = Destination
 
@@ -583,6 +584,7 @@ def GetShortestPath(Initial, Destination):
             trafficLevel = "Heavy traffic"
             
         print(f'~> {path}: {trafficLevel} '  )
+        result_string = f'{trafficLevel} '
         
     print("-"*40)
 
@@ -619,6 +621,6 @@ def GetShortestPath(Initial, Destination):
                 
     print("-"*40)
 
-    return shortest_path, shortest_distance, roadLane
+    return shortest_path, shortest_distance, result_string
 
 GetShortestPath("BFP", "DOGONGANP2")

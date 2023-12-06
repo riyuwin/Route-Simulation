@@ -5,6 +5,7 @@ from DijsktraAlgo import GetShortestPath
 from tkinter import PhotoImage
 from PIL import Image, ImageTk
 
+
 paths_list = []
 
 routes_label_list = []
@@ -21,25 +22,25 @@ all_purok = {
     'Alawihao': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9', 'Purok 10'],
     'Bibirao': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5'],
     'Dogongan': ['Purok 1', 'Purok 2','Purok 3','Purok 4','Purok 5','Purok 6'],
-    'Barangay 6': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5"],
     'Bagasbas': ["Purok 1","Purok 2","Purok 3", "Purok 4","Purok 5","Purok 6"],
     'Barangay1': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7","Purok 8"],
-    'Borabod': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
-    'Camambugan': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5", "Purok 6","Purok 7"],
-    'Cobangbang': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
-    'Lagon': ["LAGON", "Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7"],
-    'Mantagbac': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9'],
-    'Barangay 8': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9', 'Purok 10'],
+    'Barangay 6': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5"],
     'Barangay 7': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
+    'Barangay 8': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9', 'Purok 10'],
     'Barangay Gubat:': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5'],
     'Barangay Pasig': [ 'Purok 6', 'Purok 5', 'Purok 7', 'Purok 4', 'Purok 3', 'Purok 2', 'Purok 1', 'Purok 8', ],
-    'Magang': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
-    'Pamorangon': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
-    'Mancruz': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4'],
-    'San Isidro': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
-    'Mambalite': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
+    'Borabod': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
     'Calasgasan': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
+    'Camambugan': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5", "Purok 6","Purok 7"],
+    'Cobangbang': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
     'Gahonon': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
+    'Lagon': ["LAGON", "Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7"],
+    'Mantagbac': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9'],
+    'Magang': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
+    'Mambalite': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
+    'Mancruz': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4'],
+    'Pamorangon': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
+    'San Isidro': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
 }
 
 
@@ -90,18 +91,33 @@ def create_firetruck_icon():
     label = Label(root, image=firetruck_icon)
     label.pack()
 
-def show_notifier(message):
+def show_notifier(message,shortest_distance_path, result_string):
     notifier_window = Toplevel(root)
-    notifier_window.title("Notifier")
-    notifier_window.geometry("300x500+400+300")  # Adjust the size and position as needed
+    notifier_window.title("Details")
+    notifier_window.geometry("500x500+400+300")  # Adjust the size and position as needed
 
-    full_message = '\n'.join(message)
+    full_message = ' -> '.join(message)
 
-    label1 = ttk.Label(notifier_window, text='Route details:', font=('century gothic', 12))
-    label1.pack(pady=20)
+    label1 = Label(notifier_window, text='Route details:', font=('century gothic', 12, 'bold'))
+    label1.pack(pady=20, padx=10)
 
-    label = ttk.Label(notifier_window, text=full_message, font=('century gothic', 12))
+    label = Label(notifier_window, text=full_message, font=('century gothic', 12))
     label.pack(pady=20)
+
+    distance_label = Label(notifier_window, text=f'Total Distance:',
+                              font=('century gothic', 12, 'bold'))
+    distance_label.pack(pady=20)
+
+    distance_details = Label (notifier_window, text= f'{shortest_distance_path} meters', font=('century gothic', 12))
+    distance_details.pack(pady=20)
+
+    shortest_traffic_label = Label(notifier_window, text=f'Expected Traffic:',
+                                      font=('century gothic', 12, 'bold'))
+    shortest_traffic_label.pack(pady=20)
+
+    shortest_traffic_details = Label(notifier_window, text= result_string,
+                                      font=('century gothic', 12))
+    shortest_traffic_details.pack(pady=20)
 
     ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
     ok_button.pack()
@@ -1264,7 +1280,7 @@ def GetCoordinates(routes):
 
         if i == 'CAMAMBUGANP2':
             CAMAMBUGANP2R1 = map_widget.set_marker(14.1083947, 122.9480392, text="")
-            CAMAMBUGANP2R2 = map_widget.set_marker(14.1078806, 122.9484225, text="")
+            CAMAMBUGANP2R2 = map_widget.set_marker(14.1078806, 122.9484225, text="Camambugan P-2")
 
             raw_coordinates.append([14.1083947, 122.9480392])
             raw_coordinates.append([14.1078806, 122.9484225])  # 000
@@ -1825,13 +1841,13 @@ def Set(barangay, destination):
     fetch_location = all_location[barangay]
     final_destination = fetch_location[index]
 
-    destination_routes, shortest_distance_path, roadLane = GetShortestPath("BFP", final_destination)
+    destination_routes, shortest_distance_path, result_string = GetShortestPath("BFP", final_destination)
 
     routes, coordinates = GetCoordinates(destination_routes)
 
     firetruck_icon = PhotoImage(file="firetruck.png")
 
-    view_btn['command'] = lambda:show_notifier(destination_routes)
+    view_btn['command'] = lambda:show_notifier(destination_routes,shortest_distance_path, result_string)
 
     y_axis = 450
     for i in destination_routes:
@@ -1842,13 +1858,14 @@ def Set(barangay, destination):
     canvas.itemconfig(routes_label, text=f"Routes: ")
     canvas.itemconfig(total_distance_label, text=f"Total Distance: {(shortest_distance_path)} meters")
 
+
     print(coordinates)
 
     for i in range(len(coordinates) - 1):
         path_1 = map_widget.set_path([routes[i].position, routes[i+1].position, coordinates[i]])
 
     for i, coordinate in enumerate(coordinates):
-        root.after(1000 * i, lambda i=i, coordinate=tuple(coordinate): update_firetruck_position(coordinate, firetruck_icon))
+        root.after(500 * i, lambda i=i, coordinate=tuple(coordinate): update_firetruck_position(coordinate, firetruck_icon))
 
 
     view_btn['state'] = 'normal'
@@ -1931,7 +1948,7 @@ def MainMenu():
 
     canvas.create_text(420, 25, text="Select Purok:", anchor='center', fill='white', font=('century gothic', 10))
     purok_combo_var = StringVar()
-    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10), state='disabled')
+    purok_combo_box = ttk.Combobox(canvas, textvariable=purok_combo_var, width=30, height=5, font=('century gothic', 10))
     canvas.create_window(420, 50, window=purok_combo_box)
 
     # Bind the function to the <<ComboboxSelected>> event
@@ -1940,10 +1957,13 @@ def MainMenu():
     search_btn = Button(canvas, text="Search", command=lambda:Set(barangay_combo_var.get(), purok_combo_var.get()), width=15)
     canvas.create_window(625, 50, window=search_btn)
 
-    view_btn = Button(canvas, text="View", command=lambda:show_notifier("Hey"), width=10, height=1, state="disabled")
+    view_btn = Button(canvas, text="View", command=lambda:show_notifier(" "), width=10, height=1)
     canvas.create_window(1115, 50, window=view_btn)
 
-    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg="orange", command=RemoveCoordinates)
+    remove_coordinates_button = Button(root, text="Reset", fg="black", width=11, height=2, bg="orange",
+                                       command=RemoveCoordinates)
+    canvas.create_window(1110, 600, window=remove_coordinates_button)
+
     canvas.create_window(1110, 600, window=remove_coordinates_button)
     create_firetruck_icon()
     root.mainloop()
