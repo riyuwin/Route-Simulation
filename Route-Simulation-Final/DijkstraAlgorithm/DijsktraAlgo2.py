@@ -177,7 +177,7 @@ myGraph.addEdge("LAGONP3", "LAGONP2", 450, 2, 1, 2)
 myGraph.addEdge("LAGON", "LAGONP2", 450, 2, 1, 2)
 myGraph.addEdge("LAGON", "LAGONP5", 300, 1, 1, 2)
 myGraph.addEdge("LAGONP5", "LAGONP7", 230, 1, 1, 2)
-myGraph.addEdge("LAGON", "LAGONP6", 120, 1, 1, 2)
+myGraph.addEdge("LAGON", "LAGONP6", 120, 0.5, 1, 2)
 
 
 # ALAWIHAO
@@ -234,7 +234,7 @@ myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP6", 500, 2, 2, 2)
 myGraph.addEdge("CAMAMBUGANP6", "CAMAMBUGANP5", 450, 1, 2, 2)
 myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP2", 550, 2, 1, 4)
 myGraph.addEdge("CAMAMBUGANP2", "CAMAMBUGANP3", 190, 1, 1, 4)
-myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP1", 42, 1, 1, 4)
+myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP1", 42, 0.5, 1, 4)
 myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP4", 600, 2, 2, 2)
 myGraph.addEdge("CAMAMBUGANP2", "CAMAMBUGANP4", 450, 2, 2, 2)
 myGraph.addEdge("CAMAMBUGANP4", "CAMAMBUGANP5", 350, 1, 2, 2)
@@ -310,11 +310,11 @@ myGraph.addEdge("PAMORANGONP1", "MANCRUZP4", 338, 1, 1, 4)
 myGraph.addEdge("MAGANGP2R1", "MANCRUZP4", 464, 1, 1, 4)
 myGraph.addEdge("MANCRUZP4", "MANCRUZP2", 130, 1, 1, 2)
 myGraph.addEdge("MANCRUZP2", "MANCRUZP1", 641, 2, 1, 2)
-myGraph.addEdge("MANCRUZP1", "MANCRUZP3", 265, 1, 1, 2)
+myGraph.addEdge("MANCRUZP1", "MANCRUZP3", 265, 0.5, 1, 2)
 
-myGraph.addEdge("MANCRUZP4", "PAMORANGONP2", 130, 1, 1, 2)
-myGraph.addEdge("PAMORANGONP1", "PAMORANGONP3", 102, 1, 1, 2)
-myGraph.addEdge("PAMORANGONP3", "PAMORANGONP5", 68, 1, 1, 2)
+myGraph.addEdge("MANCRUZP4", "PAMORANGONP2", 130, 0.5, 1, 2)
+myGraph.addEdge("PAMORANGONP1", "PAMORANGONP3", 102, 0.5, 1, 2)
+myGraph.addEdge("PAMORANGONP3", "PAMORANGONP5", 68, 0.5, 1, 2)
 myGraph.addEdge("PAMORANGONP3", "PAMORANGONP4", 413, 2, 1, 2)
 myGraph.addEdge("PAMORANGONP3", "PAMORANGONP6", 891, 2, 1, 2) 
 myGraph.addEdge("PAMORANGONP4", "PAMORANGONP6", 1102, 2, 2, 2)
@@ -338,16 +338,16 @@ myGraph.addEdge("LAGONP4R1", "BRGY5P1", 574, 1, 2, 4)
 
 #myGraph.addEdge("LAGONP4R1", "BRGY5P2", 573, 1, 2, 4)
 
-myGraph.addEdge("LAGONP4R1", "BRGY5P3", 146, 2, 2, 2) 
-myGraph.addEdge("BRGY5P3", "BRGY5P1", 137, 1, 2, 2)
-myGraph.addEdge("BRGY5P1", "BRGY5P3", 137, 1, 2, 2)
+myGraph.addEdge("LAGONP4R1", "BRGY5P3", 146, 0.5, 2, 2) 
+myGraph.addEdge("BRGY5P3", "BRGY5P1", 137, 0.5, 2, 2)
+myGraph.addEdge("BRGY5P1", "BRGY5P3", 137, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY5P3", "BRGY5P3R1", 137, 1, 2, 2)
-myGraph.addEdge("BRGY5P3R1", "BRGY5P4", 159, 1, 2, 2)
+myGraph.addEdge("BRGY5P3", "BRGY5P3R1", 137, 0.5, 2, 2)
+myGraph.addEdge("BRGY5P3R1", "BRGY5P4", 159, 0.5, 2, 2)
 myGraph.addEdge("BRGY5P4", "BRGY5P5", 214, 0.5, 2, 2)
 
 myGraph.addEdge("BRGY5P3R1", "BRGY5P3R2", 450, 2, 3, 2)
-myGraph.addEdge("BRGY5P3R2", "BRGY5P2", 137, 2, 3, 2)
+myGraph.addEdge("BRGY5P3R2", "BRGY5P2", 137, 0.5, 3, 2)
 
 
 # PAMORANGON
@@ -365,26 +365,26 @@ myGraph.addNode("MANTAGBACP9R1")
 
 myGraph.addEdge("BFP", "MANTAGBACP9", 684, 3, 2, 2) 
 myGraph.addEdge("LAGONP4R1", "MANTAGBACP9", 300, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP9", "MANTAGBACP9R1", 117, 1, 2, 2)
+myGraph.addEdge("MANTAGBACP9", "MANTAGBACP9R1", 117, 0.5, 2, 2)
 myGraph.addEdge("MANTAGBACP9R1", "MANTAGBACP4", 210, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP4", "MANTAGBACP5", 125, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP5", "MANTAGBACP2R1", 125, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP2R1", "MANTAGBACP2", 172, 1, 2, 2)
+myGraph.addEdge("MANTAGBACP4", "MANTAGBACP5", 125, 0.5, 2, 2)
+myGraph.addEdge("MANTAGBACP5", "MANTAGBACP2R1", 125, 0.5, 2, 2)
+myGraph.addEdge("MANTAGBACP2R1", "MANTAGBACP2", 172, 0.5, 2, 2)
 
 
 myGraph.addEdge("LAGONP4R1", "MANTAGBACP6", 513, 1, 2, 4)
-myGraph.addEdge("MANTAGBACP6", "BRGY5P2", 52, 1, 2, 4)
-myGraph.addEdge("BRGY5P2", "BRGY6P4", 129, 1, 3, 4)
-myGraph.addEdge("BRGY5P2", "BRGY6P3", 129, 1, 3, 4)
+myGraph.addEdge("MANTAGBACP6", "BRGY5P2", 52, 0.5, 2, 4)
+myGraph.addEdge("BRGY5P2", "BRGY6P4", 129, 0.8, 3, 4)
+myGraph.addEdge("BRGY5P2", "BRGY6P3", 129, 0.8, 3, 4)
 
-myGraph.addEdge("MANTAGBACP6", "MANTAGBACP2R1", 66, 1, 2, 2)
+myGraph.addEdge("MANTAGBACP6", "MANTAGBACP2R1", 66, 0.5, 2, 2)
 myGraph.addEdge("MANTAGBACP2R1", "MANTAGBACP5", 102, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP2R1", "MANTAGBACP2", 172, 1, 2, 2)
+myGraph.addEdge("MANTAGBACP2R1", "MANTAGBACP2", 172, 0.7, 2, 2)
 
-myGraph.addEdge("MANTAGBACP9R1", "MANTAGBACP8", 123, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP8", "MANTAGBACP3", 114, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP3", "MANTAGBACP2", 112, 1, 2, 2)
-myGraph.addEdge("MANTAGBACP2", "MANTAGBACP1", 150, 1, 2, 2)
+myGraph.addEdge("MANTAGBACP9R1", "MANTAGBACP8", 123, 0.5, 2, 2)
+myGraph.addEdge("MANTAGBACP8", "MANTAGBACP3", 114, 0.5, 2, 2)
+myGraph.addEdge("MANTAGBACP3", "MANTAGBACP2", 112, 0.5, 2, 2)
+myGraph.addEdge("MANTAGBACP2", "MANTAGBACP1", 150, 0.5, 2, 2)
 
 # PAMORANGON
 myGraph.addNode("BRGY6P1")
@@ -398,11 +398,11 @@ myGraph.addEdge("BRGY5P5R1", "BRGY5P5R2", 480, 0.4, 2, 2)
 myGraph.addEdge("BRGY5P5R1", "BORABODP3", 1079, 0.4, 2, 2)
 myGraph.addEdge("BRGY5P5R2", "BRGY6P1", 100, 0.2, 2, 2)
 
-myGraph.addEdge("BRGY6P4", "MANTAGBACP1", 75, 1, 3, 4)
-myGraph.addEdge("BRGY5P3R2", "BRGY6P3", 92, 1, 1, 4)
-myGraph.addEdge("BRGY6P3", "BRGY6P2", 150, 1, 1, 4)
-myGraph.addEdge("BRGY6P2", "BRGY6P5", 147, 1, 2, 4)
-myGraph.addEdge("BRGY6P5", "BRGY6P1", 166, 1, 2, 4)
+myGraph.addEdge("BRGY6P4", "MANTAGBACP1", 75, 0.5, 3, 4)
+myGraph.addEdge("BRGY5P3R2", "BRGY6P3", 92, 0.5, 1, 4)
+myGraph.addEdge("BRGY6P3", "BRGY6P2", 150, 0.5, 1, 4)
+myGraph.addEdge("BRGY6P2", "BRGY6P5", 147, 0.5, 2, 4)
+myGraph.addEdge("BRGY6P5", "BRGY6P1", 166, 0.5, 2, 4)
 
 # PAMORANGON
 myGraph.addNode("GAHONONP1")
@@ -458,7 +458,7 @@ myGraph.addNode("BAGASBASP5")
 myGraph.addNode("BAGASBASP6")
 
 myGraph.addEdge("BORABODP5", "BAGASBASP2", 1379, 1, 1, 4)
-myGraph.addEdge("BAGASBASP2", "BAGASBASP3", 84, 1, 1, 4)
+myGraph.addEdge("BAGASBASP2", "BAGASBASP3", 84, 0.5, 1, 4)
 myGraph.addEdge("BAGASBASP2", "BAGASBASP1", 507, 1, 1, 4)
 myGraph.addEdge("BAGASBASP3", "BAGASBASP4", 362, 1, 2, 2)
 myGraph.addEdge("BAGASBASP4", "BAGASBASP5", 340, 1, 2, 2)
@@ -479,8 +479,8 @@ myGraph.addNode("BRGY7P3R1")
  # BARANGAY 7
 myGraph.addEdge("BRGY5P2", "BRGY7P1", 190, 1, 2, 4)
 myGraph.addEdge("BRGY7P1", "BRGY7P2", 270, 1, 2, 2)
-myGraph.addEdge("BRGY7P2", "BRGY7P3R1", 80, 1, 1, 4)
-myGraph.addEdge("BRGY7P3R1", "BRGY7P3", 70, 1, 1, 4)
+myGraph.addEdge("BRGY7P2", "BRGY7P3R1", 80, 0.5, 1, 4)
+myGraph.addEdge("BRGY7P3R1", "BRGY7P3", 70, 0.5, 1, 4)
 myGraph.addEdge("BRGY7P3", "BRGY7P4", 149, 1, 1, 4)
 myGraph.addEdge("BRGY7P4", "BRGY7P5", 252, 1, 1, 4)
 myGraph.addEdge("BRGY6P3", "BRGY7P6", 590, 1, 2, 2)
@@ -511,23 +511,23 @@ myGraph.addEdge("BRGY8P2", "BRGY8P4", 157, 1, 2, 2)
 myGraph.addEdge("BRGY7P2", "BRGY8P3", 74, 0.5, 2, 2)   
 myGraph.addEdge("BRGY8P3", "BRGY8P4", 92, 0.5, 2, 2)   
 
-myGraph.addEdge("BRGY8P3", "BRGY8P6", 97, 1, 2, 2)   
+myGraph.addEdge("BRGY8P3", "BRGY8P6", 97, 0.5, 2, 2)   
 myGraph.addEdge("BRGY8P4", "BRGY8P7", 157, 1, 2, 2)  
 myGraph.addEdge("BRGY8P4", "BRGY8P8", 157, 1, 2, 2)   
 
 myGraph.addEdge("BRGY8P7", "BRGY8P9", 247, 1, 2, 2)   
-myGraph.addEdge("BRGY8P3", "BRGY8P6", 97, 1, 2, 2)   
+myGraph.addEdge("BRGY8P3", "BRGY8P6", 97, 0.5, 2, 2)   
 
 
-myGraph.addEdge("BRGY8P3", "BRGY8P9R1", 100, 1, 2, 2)
-myGraph.addEdge("BRGY8P9R1", "BRGY8P5", 25, 1, 2, 2)
-myGraph.addEdge("BRGY7P3R1", "BRGY8P5", 100, 1, 2, 2)
-myGraph.addEdge("BRGY8P5", "BRGY8P6", 100, 1, 2, 2)
+myGraph.addEdge("BRGY8P3", "BRGY8P9R1", 100, 0.5, 2, 2)
+myGraph.addEdge("BRGY8P9R1", "BRGY8P5", 25, 0.5, 2, 2)
+myGraph.addEdge("BRGY7P3R1", "BRGY8P5", 100, 0.5, 2, 2)
+myGraph.addEdge("BRGY8P5", "BRGY8P6", 100, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY8P6", "BRGY8P9R1", 207, 1, 2, 2) 
-myGraph.addEdge("BRGY8P9R1", "BRGY8P9", 126, 1, 2, 2) 
+myGraph.addEdge("BRGY8P6", "BRGY8P9R1", 207, 0.5, 2, 2) 
+myGraph.addEdge("BRGY8P9R1", "BRGY8P9", 126, 0.5, 2, 2) 
  
-myGraph.addEdge("BRGY8P9", "BRGY8P9R3", 109, 1, 2, 2)  
+myGraph.addEdge("BRGY8P9", "BRGY8P9R3", 109, 0.5, 2, 2)  
 myGraph.addEdge("BRGY8P9R3", "BRGY8P10", 209, 1, 2, 2)  
  
 myGraph.addEdge("BRGY7P5", "BRGY8P10", 198, 1, 2, 2)  
@@ -544,7 +544,7 @@ myGraph.addNode("BRGYGUBATP5TSIKO")
 
 
 myGraph.addEdge("BRGY7P5", "BRGYGUBATP1GUYABANO", 237, 1, 2, 4)
-myGraph.addEdge("BRGYGUBATP1GUYABANO", "BRGYGUBATP2UBAS", 94, 1, 2, 2)  
+myGraph.addEdge("BRGYGUBATP1GUYABANO", "BRGYGUBATP2UBAS", 94, 0.5, 2, 2)  
 myGraph.addEdge("BRGYGUBATP1GUYABANO", "BRGYGUBATP3BAYABAS", 465, 2, 2, 4)
 myGraph.addEdge("BRGYGUBATP3BAYABAS", "BRGYGUBATP4ATIS", 483, 2, 2, 4)  
 myGraph.addEdge("BRGYGUBATP3BAYABAS", "BRGYGUBATP4ATIS", 483, 1, 2, 4)  
@@ -567,25 +567,25 @@ myGraph.addNode('BRGY1P5R2')
 
 myGraph.addEdge("BRGY8P2", "BRGY1P1", 130, 1, 2, 4)
 
-myGraph.addEdge("BRGY1P1", "BRGY1P2", 114, 1, 2, 2)
-myGraph.addEdge("BRGY1P2", "BRGY1P3", 212, 1, 2, 2) 
+myGraph.addEdge("BRGY1P1", "BRGY1P2", 114, 0.5, 2, 2)
+myGraph.addEdge("BRGY1P2", "BRGY1P3", 212, 0.5, 2, 2) 
 myGraph.addEdge("BRGY1P3", "BRGY1P6", 83, 0.5, 2, 2)  
 myGraph.addEdge("BRGY1P6", "BRGY1P7", 89, 0.5, 2, 2)  
 myGraph.addEdge("BRGY1P7", "BRGY1P8", 366, 1, 2, 2)  
 
 myGraph.addEdge("BRGY1P1", "BRGY1P4", 222, 1, 2, 2)
-myGraph.addEdge("BRGY1P2", "BRGY1P4R1", 188, 1, 2, 2)
-myGraph.addEdge("BRGY1P4", "BRGY1P4R1", 117, 1, 2, 2)
+myGraph.addEdge("BRGY1P2", "BRGY1P4R1", 188, 0.5, 2, 2)
+myGraph.addEdge("BRGY1P4", "BRGY1P4R1", 117, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY1P5", "BRGY1P5R1", 118, 1, 2, 2)
-myGraph.addEdge("BRGY1P5R1", "BRGY1P5R2", 210, 1, 2, 2)
+myGraph.addEdge("BRGY1P5", "BRGY1P5R1", 118, 0.5, 2, 2)
+myGraph.addEdge("BRGY1P5R1", "BRGY1P5R2", 210, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY1P3", "BRGY1P4R2", 162, 1, 2, 2)
-myGraph.addEdge("BRGY1P4R1", "BRGY1P4R2", 211, 1, 2, 2)
+myGraph.addEdge("BRGY1P3", "BRGY1P4R2", 162, 0.5, 2, 2)
+myGraph.addEdge("BRGY1P4R1", "BRGY1P4R2", 211, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY1P4R2", "BRGY1P5R2", 51, 1, 2, 2)
+myGraph.addEdge("BRGY1P4R2", "BRGY1P5R2", 51, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY1P4", "BRGY1P5", 68, 1, 2, 2)
+myGraph.addEdge("BRGY1P4", "BRGY1P5", 68, 0.5, 2, 2)
 
 
 
@@ -605,8 +605,8 @@ myGraph.addEdge("BRGY3P3", "BRGY3P4", 61, 0.5, 2, 2)
 myGraph.addEdge("BRGY3P4", "BRGY3P5", 88, 0.5, 2, 2)
 myGraph.addEdge("BRGY3P5", "BRGY3P6", 88, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY3P6", "CAMAMBUGANP4", 215, 1, 2, 2)
-myGraph.addEdge("BRGY1P5", "BRGY3P6", 156, 1, 2, 2)
+myGraph.addEdge("BRGY3P6", "CAMAMBUGANP4", 215, 0.5, 2, 2)
+myGraph.addEdge("BRGY1P5", "BRGY3P6", 156, 0.5, 2, 2)
 
 
 myGraph.addNode("BRGY2P1")
@@ -635,22 +635,22 @@ myGraph.addEdge("BRGY2P8R2", "BRGY2P8R3", 71, 0.5, 2, 4)
 myGraph.addEdge("BRGY2P8R3", "BRGY2P7", 69, 0.5, 2, 4)
 myGraph.addEdge("BRGY2P7", "BRGY2P7R1", 69, 0.5, 2, 4)
 
-myGraph.addEdge("BRGY2P7R1", "BRGY2P7R2", 83, 1, 2, 4)
+myGraph.addEdge("BRGY2P7R1", "BRGY2P7R2", 83, 0.5, 2, 4)
 
 myGraph.addEdge("BRGY2P7R2", "PAMORANGONP1", 500, 1, 2, 4)
 
-myGraph.addEdge("BRGY2P1", "BRGY2P2", 76, 1, 2, 2)
-myGraph.addEdge("BRGY2P2", "BRGY2P3", 74, 1, 2, 2)
-myGraph.addEdge("BRGY2P3", "BRGY2P4", 66, 1, 2, 2)
+myGraph.addEdge("BRGY2P1", "BRGY2P2", 76, 0.5, 2, 2)
+myGraph.addEdge("BRGY2P2", "BRGY2P3", 74, 0.5, 2, 2)
+myGraph.addEdge("BRGY2P3", "BRGY2P4", 66, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY2P8R1", "BRGY2P2", 130, 1, 2, 2)
-myGraph.addEdge("BRGY2P8R2", "BRGY2P3", 130, 1, 2, 2)
-myGraph.addEdge("BRGY2P8R3", "BRGY2P4", 130, 1, 2, 2)
+myGraph.addEdge("BRGY2P8R1", "BRGY2P2", 130, 0.5, 2, 2)
+myGraph.addEdge("BRGY2P8R2", "BRGY2P3", 130, 0.5, 2, 2)
+myGraph.addEdge("BRGY2P8R3", "BRGY2P4", 130, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY2P7", "BRGY2P5", 127, 1, 2, 2)
+myGraph.addEdge("BRGY2P7", "BRGY2P5", 127, 0.5, 2, 2)
 
-myGraph.addEdge("BRGY2P7", "BRGY2P5", 127, 1, 2, 2)
-myGraph.addEdge("BRGY2P7R1", "BRGY2P6", 118, 1, 2, 2)
+myGraph.addEdge("BRGY2P7", "BRGY2P5", 127, 0.5, 2, 2)
+myGraph.addEdge("BRGY2P7R1", "BRGY2P6", 118, 0.5, 2, 2)
 
     # SAN ISIDRO
 myGraph.addNode("SANISIDROP1")

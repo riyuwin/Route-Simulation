@@ -179,7 +179,7 @@ def path_notifier(all_paths):
     for path in all_paths:
         # Calculate the sum of the second elements in each sublist
         total_distance = sum(sublist[1] for sublist in path)
-        total_duration = sum(sublist[2] for sublist in path) 
+        total_duration = round(sum(sublist[2] for sublist in path), 2) 
         avg_congestion = round(sum(sublist[2] for sublist in path) / len(path), 2)
         avg_conditions = round(sum(sublist[3] for sublist in path) / len(path), 2)
 
