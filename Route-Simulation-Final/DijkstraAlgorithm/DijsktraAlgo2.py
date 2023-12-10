@@ -146,6 +146,7 @@ def display_all_paths_info(paths_info, graph):
         print(f"Average Traffic Congestion: {round(total_traffic_congestion / len(path_info), 2)}")
         print(f"Average Road Condition: {round(total_road_condition / len(path_info), 2)}\n")
 
+    #print(all_paths)
     return all_paths
 
 # Example usage
@@ -168,13 +169,13 @@ myGraph.addNode("LAGONP7")
 
 
 myGraph.addEdge("BFP", "LAGONP1", 350, 0.5, 2, 2) 
-myGraph.addEdge("BFP", "LAGONP4", 464, 1, 1, 2) 
-myGraph.addEdge("BFP", "LAGONP4R1", 400, 1, 1, 2) 
+myGraph.addEdge("BFP", "LAGONP4", 464, 0.5, 1, 2) 
+myGraph.addEdge("BFP", "LAGONP4R1", 400, 0.5, 1, 2) 
 
-myGraph.addEdge("LAGONP1", "LAGON", 450, 1, 1, 2)
-myGraph.addEdge("LAGONP4", "LAGONP3", 450, 1, 1, 2)
-myGraph.addEdge("LAGONP3", "LAGONP2", 450, 1, 1, 2)
-myGraph.addEdge("LAGON", "LAGONP2", 450, 1, 1, 2)
+myGraph.addEdge("LAGONP1", "LAGON", 450, 0.5, 1, 2)
+myGraph.addEdge("LAGONP4", "LAGONP3", 450, 0.5, 1, 2)
+myGraph.addEdge("LAGONP3", "LAGONP2", 450, 0.5, 1, 2)
+myGraph.addEdge("LAGON", "LAGONP2", 450, 0.5, 1, 2)
 myGraph.addEdge("LAGON", "LAGONP5", 300, 0.5, 1, 2)
 myGraph.addEdge("LAGONP5", "LAGONP7", 230, 0.5, 1, 2)
 myGraph.addEdge("LAGON", "LAGONP6", 120, 0.5, 1, 2)
@@ -230,13 +231,13 @@ myGraph.addNode("CAMAMBUGANP6")
 myGraph.addNode("CAMAMBUGANP7") 
 
 myGraph.addEdge("LAGONP6", "CAMAMBUGANP7", 550, 1, 1, 4)
-myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP6", 500, 2, 2, 2)
+myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP6", 500, 1, 2, 2)
 myGraph.addEdge("CAMAMBUGANP6", "CAMAMBUGANP5", 450, 1, 2, 2)
-myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP2", 550, 2, 1, 4)
+myGraph.addEdge("CAMAMBUGANP7", "CAMAMBUGANP2", 550, 1, 1, 4)
 myGraph.addEdge("CAMAMBUGANP2", "CAMAMBUGANP3", 190, 1, 1, 4)
 myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP1", 42, 0.5, 1, 4)
-myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP4", 600, 2, 2, 2)
-myGraph.addEdge("CAMAMBUGANP2", "CAMAMBUGANP4", 450, 2, 2, 2)
+myGraph.addEdge("CAMAMBUGANP3", "CAMAMBUGANP4", 600, 1, 2, 2)
+myGraph.addEdge("CAMAMBUGANP2", "CAMAMBUGANP4", 450, 1, 2, 2)
 myGraph.addEdge("CAMAMBUGANP4", "CAMAMBUGANP5", 350, 1, 2, 2)
 
 # BARANGAY6

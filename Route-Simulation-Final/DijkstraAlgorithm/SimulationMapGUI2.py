@@ -17,6 +17,7 @@ def get_index_by_purok(loc_list, purok):
             return puroks.index(purok)
     return None  # Kung hindi makita ang purok, pwede mong i-handle depende sa iyong pangangailangan
 
+
 # get purok
 all_purok = {
     'Awitan': ["Purok 1","Purok 2","Purok 3"], 
@@ -31,13 +32,13 @@ all_purok = {
     'Barangay 7': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
     'Barangay 8': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9', 'Purok 10'],
     'Barangay Gubat': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5'],
-    'Barangay Pasig': [ 'Purok 1','Purok 2','Purok 3', 'Purok 4', 'Purok 5', 'Purok 6',  'Purok 7',   'Purok 8', ],
+    'Barangay 2': [ 'Purok 1','Purok 2','Purok 3', 'Purok 4', 'Purok 5', 'Purok 6',  'Purok 7',   'Purok 8', ],
     'Borabod': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
     'Calasgasan': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
     'Camambugan': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5", "Purok 6","Purok 7"],
     'Cobangbang': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
     'Gahonon': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
-    'Lagon': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7"],
+    'Lag-on': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7"],
     'Mantagbac': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9'],
     'Magang': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
     'Mambalite': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
@@ -53,7 +54,7 @@ all_location = {
     'Alawihao': ['ALAWIHAOP1', 'ALAWIHAOP2', 'ALAWIHAOP3', 'ALAWIHAOP4', 'ALAWIHAOP5', 'ALAWIHAOP6', 'ALAWIHAOP7', 'ALAWIHAOP8', 'ALAWIHAOP9', 'ALAWIHAOP10'],
     'Bagasbas': ["BAGASBASP1","BAGASBASP2","BAGASBASP3", "BAGASBASP4","BAGASBASP5","BAGASBASP6"],
     'Barangay 1': ["BRGY1P1","BRGY1P2","BRGY1P3","BRGY1P4","BRGY1P5","BRGY1P6","BRGY1P7","BRGY1P8"],
-    'Barangay Pasig': [ 'BRGY2P1','BRGY2P2','BRGY2P3', 'BRGY2P4', 'BRGY2P5','BRGY2P6',  'BRGY2P7',   'BRGY2P8', ],
+    'Barangay 2': [ 'BRGY2P1','BRGY2P2','BRGY2P3', 'BRGY2P4', 'BRGY2P5','BRGY2P6',  'BRGY2P7',   'BRGY2P8', ],
     'Barangay 3': ["BRGY3P1","BRGY3P2","BRGY3P3","BRGY3P4","BRGY3P5","BRGY3P6"],
     'Barangay 5': ["BRGY5P1", "BRGY5P2", "BRGY5P3","BRGY5P4", "BRGY5P5", "BRGY5P6"],
     'Barangay 6': ["BRGY6P1", "BRGY6P2", "BRGY6P3","BRGY6P4", "BRGY6P5"],
@@ -67,7 +68,7 @@ all_location = {
     'Cobangbang': ["COBANGBANGP1","COBANGBANGP2","COBANGBANGP3","COBANGBANGP4","COBANGBANGP5","COBANGBANGP6"],
     'Dogongan': ['DOGONGANP1', 'DOGONGANP2','DOGONGANP3','DOGONGANP4','DOGONGANP5','DOGONGANP6'],
     'Gahonon': ['GAHONONP1', 'GAHONONP2', 'GAHONONP3', 'GAHONONP4', 'GAHONONP5', 'GAHONONP6'],
-    'Lagon': ["LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
+    'Lag-on': ["LAGONP1","LAGONP2","LAGONP3","LAGONP4","LAGONP5","LAGONP6","LAGONP7"],
     'Mambalite': ['MAMBALITEP1', 'MAMBALITEP2', 'MAMBALITEP3', 'MAMBALITEP4', 'MAMBALITEP5', 'MAMBALITEP6', 'MAMBALITEP7'],
     'Mantagbac': ['MANTAGBACP1', 'MANTAGBACP2', 'MANTAGBACP3', 'MANTAGBACP4', 'MANTAGBACP5', 'MANTAGBACP6', 'MANTAGBACP7', 'MANTAGBACP8', 'MANTAGBACP9'],
     'Magang': ['MAGANGP1', 'MAGANGP2', 'MAGANGP3', 'MAGANGP4', 'MAGANGP5', 'MAGANGP6'],
@@ -101,16 +102,44 @@ def on_select(event):
     values = tree.item(selected_item, 'values')
     print(f'You selected: {values}') 
 
-def all_on_select(event):
-    selected_item = routes_tree.selection()
+def all_on_select(event): 
+     
+    
+    selected_item = all_tree.selection()
     if selected_item:
-        item_values = routes_tree.item(selected_item)['values']
+        item_values = all_tree.item(selected_item)['values']
         print(f"Selected item values: {item_values}")
+
+        route_number = item_values[0].split(" ")[-1]
+
+        new_path = selected_routes[int(route_number)]
+
+        final_route = ['BFP']
+        for i in new_path:
+            print(i[0])
+            final_route.append(i[0])
+
+        GetCoordinates(final_route)    
         
 
+def compute_response_time(total_distance_meters, traffic_condition, road_condition): 
+    # Coefficients 
+    a = 0.7
+    b = 0.2
+    c = 0.1
+
+    # Formula 
+    response_time = a * (total_distance_meters / 1000) + b * traffic_condition + c * road_condition
+
+    return response_time
+
 def path_notifier(all_paths):
+    global all_tree, selected_routes
+
+    selected_routes = all_paths
+
     # Create a Treeview widget with three columns
-    tree = ttk.Treeview(notifier_window, columns=('Routes', 'Distance', 'Time Travel', 'Traffic Congestions', 'Road Conditions'), show='headings')
+    tree = ttk.Treeview(notifier_window, columns=('Routes', 'Distance', 'Time Travel', 'Traffic Congestions', 'Road Conditions'), show='headings', height=14)
 
     # Define column headings
     tree.heading('Routes', text='Routes')
@@ -128,10 +157,28 @@ def path_notifier(all_paths):
             
     routes_details = []
 
-    for route_number, path in enumerate(all_paths, start=1):
+        
+    for num, path in enumerate(all_paths, start=1):
+        print(f'Route {num} Details:')
+        
+        for incident in path:
+            total_distance = incident[1]
+            total_duration = round(incident[2], 2) 
+            avg_congestion = round(incident[3], 2)
+            avg_conditions = round(incident[4], 2)
+            
+            response_time = round(compute_response_time(total_distance, avg_congestion, avg_conditions), 2)
+
+            print(f"{incident[0]}, {total_distance}, Response Time: {response_time}, {total_duration}, {avg_congestion}, {avg_conditions}")
+
+            routes_details.append((f"Route {num}. {incident[0]}", f"{incident[1]} meters", f"{response_time} mins", incident[3], f"{incident[4]}-lane road"))
+
+        print('\n')
+
+    '''for route_number, path in enumerate(all_paths, start=1):
         for sublist in path:
             print(f"Route {route_number}. {sublist[0]}", sublist[1], sublist[2], sublist[3], sublist[4])
-            routes_details.append((f"Route {route_number}. {sublist[0]}", f"{sublist[1]} meters", f"{sublist[2]} mins", sublist[3], f"{sublist[4]}-lane road"))
+            routes_details.append((f"Route {route_number}. {sublist[0]}", f"{sublist[1]} meters", f"{sublist[2]} mins", sublist[3], f"{sublist[4]}-lane road"))'''
 
     '''for i in all_paths:
         for index, k in enumerate(i):
@@ -144,7 +191,7 @@ def path_notifier(all_paths):
 
     # Pack the Treeview
     #tree.pack(pady=10)
-    notifier_canvas.create_window(700, 290, window=tree)
+    notifier_canvas.create_window(700, 320, window=tree)
 
     # Create a label for output
     listbox_label = tk.Label(root, text="")
@@ -156,19 +203,19 @@ def path_notifier(all_paths):
     # ----------------- NEW ---------------------------------------------
 
     # Create a Treeview widget with three columns
-    all_tree = ttk.Treeview(notifier_window, columns=('Route', 'Total Distance', 'Total Time Travel', 'Average Traffic Congestions', 'Average Road Conditions'), show='headings')
+    all_tree = ttk.Treeview(notifier_window, columns=('Route', 'Total Distance', 'Total Response Time', 'Average Traffic Congestions', 'Average Road Conditions'), show='headings', height=14)
 
     # Define column headings
     all_tree.heading('Route', text='Route')
     all_tree.heading('Total Distance', text='Total Distance')
-    all_tree.heading('Total Time Travel', text='Total Time Travel')
+    all_tree.heading('Total Response Time', text='Total Response Time')
     all_tree.heading('Average Traffic Congestions', text='Average Traffic Congestions')
     all_tree.heading('Average Road Conditions', text='Average Road Conditions')
 
     # Set the width of each column
     all_tree.column('Route', width=150)  # Adjust the width as needed
     all_tree.column('Total Distance', width=100)  # Adjust the width as needed
-    all_tree.column('Total Time Travel', width=100)  # Adjust the width as needed
+    all_tree.column('Total Response Time', width=100)  # Adjust the width as needed
     all_tree.column('Average Traffic Congestions', width=130)  # Adjust the width as needed
     all_tree.column('Average Road Conditions', width=100)  # Adjust the width as needed
              
@@ -176,12 +223,60 @@ def path_notifier(all_paths):
     # Initialize a variable to store the route number
     route_number = 1
 
-    for path in all_paths:
+    min_response_time = float('inf')  # In
+    route_num_response_time = float('inf')
+
+    min_total_response_time = float('inf')  # Initialize to positive infinity
+    min_route_details = None
+
+    for num, path in enumerate(all_paths, start=1):
+        print(f'Route {num} Details:')
+        total_response_time = 0
+        total_distance_ = []
+        avg_congestion_ = []
+        avg_conditions_ = []
+        
+        for incident in path:
+            total_distance = incident[1]
+            total_duration = round(incident[2], 2) 
+            avg_congestion = round(incident[3], 2)
+            avg_conditions = round(incident[4], 2)
+                
+
+            total_distance_.append(total_distance) 
+            avg_congestion_.append(avg_congestion)
+            avg_conditions_.append(avg_conditions)
+
+            response_time = compute_response_time(total_distance, avg_congestion, avg_conditions)
+            response_time = round(response_time, 2)
+
+            print(f"{incident[0]}, {total_distance}, Response Time: {response_time}, {total_duration}, {avg_congestion}, {avg_conditions}")
+            
+            total_response_time += response_time
+ 
+
+        print(f'Total Response Time for Route {num}: {total_response_time:.2f} {sum(total_distance_)} \n')
+        routes_total_details.append((f'Route {num}', f'{sum(total_distance_)} meters', f'{total_response_time:.2f} mins', f'{round(sum(avg_congestion_[3] for sublist in path) / len(path), 2)}', f'{round(sum(avg_conditions_[2] for sublist in path) / len(path), 2)}')) 
+                
+        # Check for the minimum total response time
+        if total_response_time < min_total_response_time:
+            min_total_response_time = total_response_time
+            min_route_details = f"Route {num}, Total Response Time: {total_response_time:.2f} {total_distance}"
+                    
+            destination_details = Label(notifier_window, text=f'Suggested shortest path: Route {num}', font=('century gothic', 10))
+            notifier_canvas.create_window(400, 90, window=destination_details)
+        
+    '''for path in all_paths:
         # Calculate the sum of the second elements in each sublist
         total_distance = sum(sublist[1] for sublist in path)
         total_duration = round(sum(sublist[2] for sublist in path), 2) 
         avg_congestion = round(sum(sublist[2] for sublist in path) / len(path), 2)
         avg_conditions = round(sum(sublist[3] for sublist in path) / len(path), 2)
+    
+        response_time = compute_response_time(total_distance, avg_congestion, avg_conditions)
+
+        # Round response_time to two decimal places
+        response_time = round(response_time, 2)
 
         # Print the route number and total distance
         print(f"Route {route_number}: Total Distance: {total_distance}")
@@ -190,10 +285,15 @@ def path_notifier(all_paths):
         # Print the route number and averages
         print(f"Route {route_number}: Average Congestion = {avg_congestion}, Average Conditions = {avg_conditions}")
 
-        routes_total_details.append((f'Route {route_number}', f'{total_distance} meters', f'{total_duration} mins', f'{avg_congestion}', f'{avg_conditions}')) 
+        routes_total_details.append((f'Route {route_number}', f'{total_distance} meters', f'{response_time} mins', f'{avg_congestion}', f'{avg_conditions}')) 
         
+        # Check if current response_time is the new minimum
+        if response_time < min_response_time:
+            min_response_time = response_time
+            route_num_response_time = route_number
+
         # Increment the route number
-        route_number += 1
+        route_number += 1'''
 
 
     for row in routes_total_details:
@@ -201,16 +301,17 @@ def path_notifier(all_paths):
 
     # Pack the Treeview
     #tree.pack(pady=10)
-    notifier_canvas.create_window(100, 290, window=all_tree)
+    notifier_canvas.create_window(100, 320, window=all_tree)
+
+    
 
     # Bind the event handler for item selection
-    all_tree.bind("<ButtonRelease-1>", on_select)
-
+    all_tree.bind("<ButtonRelease-1>", all_on_select)
 
 
 
 def show_all_paths(all_paths, shortest_path_details, destination, barangay):
-    global tree, listbox_label, routes_tree, notifier_window, notifier_canvas
+    global tree, listbox_label, routes_tree, notifier_window, notifier_canvas, distance_label
     print(shortest_path_details, 'asfsafas')
 
     # Create a Toplevel window
@@ -243,8 +344,6 @@ def show_all_paths(all_paths, shortest_path_details, destination, barangay):
 
     print(f"The route with the shortest total time is Route {shortest_route} with a total time of {min_total_time} minutes")
 
-    destination_details = Label(notifier_window, text=f'Suggested shortest path: Route {shortest_route}', font=('century gothic', 10))
-    notifier_canvas.create_window(400, 90, window=destination_details)
 
     destination_details = Label(notifier_window, text=f'Route: From BFP to Barangay {barangay} {destination}', font=('century gothic', 10))
     notifier_canvas.create_window(400, 120, window=destination_details)
@@ -252,8 +351,8 @@ def show_all_paths(all_paths, shortest_path_details, destination, barangay):
 
     path_notifier(all_paths)
 
-    ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
-    ok_button.pack()
+    '''ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
+    ok_button.pack()'''
 
 
 def show_notifier(all_paths, shortest_path_details, destination, route_only):
@@ -281,9 +380,6 @@ def show_notifier(all_paths, shortest_path_details, destination, route_only):
 
     distance_details = Label(notifier_window, text=f'Total Distance: {shortest_path_details["Total Distance"]} meters', font=('century gothic', 10))
     notifier_canvas.create_window(710, 170, window=distance_details)
-
-    duration_details = Label(notifier_window, text=f'Total Time Travel: {shortest_path_details["Total Duration"]} mins', font=('century gothic', 10))
-    notifier_canvas.create_window(710, 200, window=duration_details)
 
     avg_traffic_details = Label(notifier_window, text=f'Average Traffic Congestion: {shortest_path_details["Average Traffic Congestion"]}', font=('century gothic', 10))
     notifier_canvas.create_window(710, 240, window=avg_traffic_details)
@@ -320,9 +416,27 @@ def show_notifier(all_paths, shortest_path_details, destination, route_only):
 
     routes_details = []
 
+    total_time_travelled = []
+
+    num = 1
+    min_response_time = float('inf')  # Inisyal na value para sa minimum response time
+    route_num_response_time = float('inf')  # Inisyal na value para sa minimum response time
+
     for num, (i) in enumerate(route_only):
         print(f'{num+1}. {i[0]}')
+
+        response_time = compute_response_time(i[1], i[3], i[4])
+    
+        # Round response_time to two decimal places
+        response_time = round(response_time, 2)
+        total_time_travelled.append(response_time)
+
         routes_details.append((f'{num+1}. {i[0]}', f'{i[1]}', f'{i[2]}', f'{i[3]}', f'{i[4]}'))
+
+        # Check if current response_time is the new minimum
+        if response_time < min_response_time:
+            min_response_time = response_time
+            route_num_response_time = num
 
     for row in routes_details:
         tree.insert('', tk.END, values=row)
@@ -337,6 +451,9 @@ def show_notifier(all_paths, shortest_path_details, destination, route_only):
 
     # Bind the event handler for item selection
     tree.bind("<ButtonRelease-1>", on_select)
+    
+    duration_details = Label(notifier_window, text=f'Total Response Time: {sum(total_time_travelled)} mins', font=('century gothic', 10))
+    notifier_canvas.create_window(710, 200, window=duration_details)
 
     ok_button = ttk.Button(notifier_window, text="OK", command=notifier_window.destroy)
     ok_button.pack()
@@ -356,15 +473,15 @@ def GetCoordinates(routes):
         if i == 'BFP':
 
             if routes[1] == "LAGONP4":
-                BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
+                BFP = map_widget.set_marker(14.1181492, 122.9458283, text="LAGONP4")
 
                 raw_coordinates.append([14.1181492, 122.9458283])
 
                 raw_routes.append(BFP)
             elif routes[1] == "LAGONP4R1":
                 BFP = map_widget.set_marker(14.1181492, 122.9458283, text="BFP")
-                BFPR1 = map_widget.set_marker(14.1176889, 122.9459710, text="")
-                BFPR2 = map_widget.set_marker(14.1191091, 122.9504383, text="LAGONP4")
+                BFPR1 = map_widget.set_marker(14.1176889, 122.9459710, text="LAGONP4R1")
+                BFPR2 = map_widget.set_marker(14.1191091, 122.9504383, text="LAGONP4R1")
 
                 raw_coordinates.append([14.1181492, 122.9458283])
                 raw_coordinates.append([14.1192002, 122.9503752])
