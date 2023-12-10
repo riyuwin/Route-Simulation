@@ -1120,13 +1120,13 @@ def GetCoordinates(routes):
             raw_routes.append(PAMORANGONP6)
 
         if i == 'BRGY5P1':
-            PAMORANGONP6R1 = map_widget.set_marker(14.1197996, 122.9493845, text="BRGY5P1") 
+            #PAMORANGONP6R1 = map_widget.set_marker(14.1197996, 122.9493845, text="BRGY5P1") 
             PAMORANGONP6R2 = map_widget.set_marker(14.1208192, 122.9501033, text="BRGY5P1") 
 
-            raw_coordinates.append([14.1197996, 122.9493845]) 
+            #raw_coordinates.append([14.1197996, 122.9493845]) 
             raw_coordinates.append([14.1208192, 122.9501033]) 
 
-            raw_routes.append(PAMORANGONP6R1) 
+            #raw_routes.append(PAMORANGONP6R1) 
             raw_routes.append(PAMORANGONP6R2) 
 
         

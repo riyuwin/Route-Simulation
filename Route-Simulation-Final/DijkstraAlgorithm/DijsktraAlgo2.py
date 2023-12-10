@@ -167,16 +167,16 @@ myGraph.addNode("LAGONP6")
 myGraph.addNode("LAGONP7")
 
 
-myGraph.addEdge("BFP", "LAGONP1", 350, 1, 2, 2) 
-myGraph.addEdge("BFP", "LAGONP4", 464, 2, 1, 2) 
-myGraph.addEdge("BFP", "LAGONP4R1", 400, 3, 1, 2) 
+myGraph.addEdge("BFP", "LAGONP1", 350, 0.5, 2, 2) 
+myGraph.addEdge("BFP", "LAGONP4", 464, 1, 1, 2) 
+myGraph.addEdge("BFP", "LAGONP4R1", 400, 1, 1, 2) 
 
 myGraph.addEdge("LAGONP1", "LAGON", 450, 1, 1, 2)
 myGraph.addEdge("LAGONP4", "LAGONP3", 450, 1, 1, 2)
-myGraph.addEdge("LAGONP3", "LAGONP2", 450, 2, 1, 2)
-myGraph.addEdge("LAGON", "LAGONP2", 450, 2, 1, 2)
-myGraph.addEdge("LAGON", "LAGONP5", 300, 1, 1, 2)
-myGraph.addEdge("LAGONP5", "LAGONP7", 230, 1, 1, 2)
+myGraph.addEdge("LAGONP3", "LAGONP2", 450, 1, 1, 2)
+myGraph.addEdge("LAGON", "LAGONP2", 450, 1, 1, 2)
+myGraph.addEdge("LAGON", "LAGONP5", 300, 0.5, 1, 2)
+myGraph.addEdge("LAGONP5", "LAGONP7", 230, 0.5, 1, 2)
 myGraph.addEdge("LAGON", "LAGONP6", 120, 0.5, 1, 2)
 
 
