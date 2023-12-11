@@ -82,6 +82,7 @@ def display_path_info(path_info, start_node, end_node, graph):
         total_distance += distance  # Accumulate total distance
         total_traffic_congestion += traffic_congestion
         total_road_condition += road_condition
+        
         path_sequence.append((previous_node, current_node, distance, duration, traffic_congestion, road_condition))
         current_node = previous_node
 
@@ -91,11 +92,13 @@ def display_path_info(path_info, start_node, end_node, graph):
     shortest_distance = []
     route_only_shortest_distance = ["BFP"]
 
-    print("Shortest Path:")
+    #print("Shortest Path:")
     for step in path_sequence:
         from_node, to_node, distance, duration, traffic_congestion, road_condition = step
         print(f"From {from_node} to {to_node}: Distance {distance} units, Duration {duration} mins, Traffic Congestion {traffic_congestion}, Road Condition {road_condition}")
-        shortest_distance.append([to_node, distance, duration, traffic_congestion, road_condition])
+        
+        total_distance =  round(compute_response_time(distance, traffic_congestion, road_condition), 2)
+        shortest_distance.append([to_node, distance, total_distance, traffic_congestion, road_condition])
         route_only_shortest_distance.append(to_node)
     
     avg_total_traffic_congestion = round(total_traffic_congestion / len(path_sequence), 2)
@@ -721,6 +724,17 @@ start_node = "BFP"
 end_node = "COBANGBANGP2"
 
 
+def compute_response_time(total_distance_meters, traffic_condition, road_condition): 
+    # Coefficients 
+    a = 0.7
+    b = 0.2
+    c = 0.1
+
+    # Formula 
+    response_time = a * (total_distance_meters / 1000) + b * traffic_condition + c * road_condition
+
+    return response_time
+
 def GetShortestPath(start_node, end_node):
     all_paths_info = []
     all_paths = dfs_paths(myGraph, start_node, end_node)
@@ -741,13 +755,16 @@ def GetShortestPath(start_node, end_node):
                 if edge[0] == to_node:
                     distance, duration, traffic_congestion, road_condition = edge[1:]
                     total_duration += duration
-                    total_distance += distance
+                    total_distance += distance 
                     total_traffic_congestion += traffic_congestion
                     total_road_condition += road_condition
-                    path_info.append((from_node, to_node, distance, duration, traffic_congestion, road_condition))
+                    total_distance =  round(compute_response_time(total_distance, total_traffic_congestion, total_road_condition), 2)
+                    path_info.append((from_node, to_node, distance, total_distance, traffic_congestion, road_condition))
                     break  # Exit the loop once the correct edge is found
 
         all_paths_info.append(path_info)
+
+        
 
     print("All Possible Paths:")
     all = display_all_paths_info(all_paths_info, myGraph)

@@ -46,7 +46,7 @@ def main_menu():
                 if event.key == pygame.K_RETURN:
                     if selected == "start":
                         # Run another script using subprocess
-                        subprocess.run(["python", "SimulationMapGUI.py"])
+                        subprocess.run(["python", "SimulationMapGUI2.py"])
                         menu = False  # Exit the menu loop
                     if selected == "quit":
                         pygame.quit()

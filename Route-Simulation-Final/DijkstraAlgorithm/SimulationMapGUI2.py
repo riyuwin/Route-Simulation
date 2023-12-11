@@ -26,13 +26,13 @@ all_purok = {
     'Dogongan': ['Purok 1', 'Purok 2','Purok 3','Purok 4','Purok 5','Purok 6'],
     'Bagasbas': ["Purok 1","Purok 2","Purok 3", "Purok 4","Purok 5","Purok 6"],
     'Barangay 3': ["Purok 1", "Purok 2", "Purok 3", "Purok 4", "Purok 5", "Purok 6"],
-    'Barangay 1': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7","Purok 8"],
+    #'Barangay 1': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6","Purok 7","Purok 8"],
     'Barangay 5': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5", "Purok 6"],
     'Barangay 6': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5"],
     'Barangay 7': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7'],
     'Barangay 8': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6', 'Purok 7', 'Purok 8', 'Purok 9', 'Purok 10'],
     'Barangay Gubat': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5'],
-    'Barangay 2': [ 'Purok 1','Purok 2','Purok 3', 'Purok 4', 'Purok 5', 'Purok 6',  'Purok 7',   'Purok 8', ],
+    #'Barangay 2': [ 'Purok 1','Purok 2','Purok 3', 'Purok 4', 'Purok 5', 'Purok 6',  'Purok 7',   'Purok 8', ],
     'Borabod': ["Purok 1","Purok 2","Purok 3","Purok 4","Purok 5","Purok 6"],
     'Calasgasan': ['Purok 1', 'Purok 2', 'Purok 3', 'Purok 4', 'Purok 5', 'Purok 6'],
     'Camambugan': ["Purok 1", "Purok 2", "Purok 3","Purok 4", "Purok 5", "Purok 6","Purok 7"],
@@ -53,8 +53,8 @@ all_location = {
     'Awitan': ["AWITANP1","AWITANP2","AWITANP3"], 
     'Alawihao': ['ALAWIHAOP1', 'ALAWIHAOP2', 'ALAWIHAOP3', 'ALAWIHAOP4', 'ALAWIHAOP5', 'ALAWIHAOP6', 'ALAWIHAOP7', 'ALAWIHAOP8', 'ALAWIHAOP9', 'ALAWIHAOP10'],
     'Bagasbas': ["BAGASBASP1","BAGASBASP2","BAGASBASP3", "BAGASBASP4","BAGASBASP5","BAGASBASP6"],
-    'Barangay 1': ["BRGY1P1","BRGY1P2","BRGY1P3","BRGY1P4","BRGY1P5","BRGY1P6","BRGY1P7","BRGY1P8"],
-    'Barangay 2': [ 'BRGY2P1','BRGY2P2','BRGY2P3', 'BRGY2P4', 'BRGY2P5','BRGY2P6',  'BRGY2P7',   'BRGY2P8', ],
+    #'Barangay 1': ["BRGY1P1","BRGY1P2","BRGY1P3","BRGY1P4","BRGY1P5","BRGY1P6","BRGY1P7","BRGY1P8"],
+    #'Barangay 2': [ 'BRGY2P1','BRGY2P2','BRGY2P3', 'BRGY2P4', 'BRGY2P5','BRGY2P6',  'BRGY2P7',   'BRGY2P8', ],
     'Barangay 3': ["BRGY3P1","BRGY3P2","BRGY3P3","BRGY3P4","BRGY3P5","BRGY3P6"],
     'Barangay 5': ["BRGY5P1", "BRGY5P2", "BRGY5P3","BRGY5P4", "BRGY5P5", "BRGY5P6"],
     'Barangay 6': ["BRGY6P1", "BRGY6P2", "BRGY6P3","BRGY6P4", "BRGY6P5"],
@@ -248,9 +248,9 @@ def path_notifier(all_paths):
             avg_conditions_.append(avg_conditions)
 
             response_time = compute_response_time(total_distance, avg_congestion, avg_conditions)
-            response_time = round(response_time, 2)
+            response_time123 = round(response_time, 2)
 
-            print(f"{incident[0]}, {total_distance}, Response Time: {response_time}, {total_duration}, {avg_congestion}, {avg_conditions}")
+            print(f"{incident[0]}, {total_distance}, Response Time: {response_time123}, {total_duration}, {avg_congestion}, {avg_conditions}")
             
             total_response_time += response_time
  
